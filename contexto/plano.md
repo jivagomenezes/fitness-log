@@ -30,8 +30,8 @@ base + limiar → VO2máx → específico de 5K → polimento (taper).
 
 ## Calibrações atuais
 
-- FC máxima medida: pelo menos 192 bpm (10K de 19/09/2026). Zonas do Apple Watch devem usar máx ~192 pelo método HRR (reserva de FC); o app de terceiros precisa estar alinhado em HRR também.
-- Z2: FC ≤ 150. Em set/2026 segura ~8,8 km/h a FC 140 na esteira (em julho eram 6–8 km/h).
+- FC máxima medida: pelo menos 192 bpm (10K de 19/09/2026). Apple Watch já configurado com máx 192 pelo método HRR (reserva de FC); apps de terceiros precisam estar alinhados em HRR também.
+- Z2: até 151 bpm (Watch recalibrado com FC máx 192, método HRR, em set/2026). Em set/2026 segura ~8,8 km/h a FC 140 na esteira (em julho eram 6–8 km/h).
 - Intervalado da fase de base: tiros a 13,3 km/h, não passar de 13,5 km/h. Tiros a 14,25 km/h foram rápidos demais (FC pico 183 e recuperação ruim).
 
 ## Equipamentos

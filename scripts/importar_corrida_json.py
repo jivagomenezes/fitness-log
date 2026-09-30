@@ -60,6 +60,7 @@ def main():
         return
     data = ini.date().isoformat()
     n = sum(1 for r in linhas if r["data"] == data) + 1
+    manuais = [r for r in linhas if r["data"] == data and r["fonte"] == "manual" and not r["fonte_id"]]
     row = {
         "id": f"{data}-{n}", "data": data, "inicio": ini.strftime("%H:%M"), "tipo": a.tipo, "local": local,
         "distancia_km": f"{val(j, 'distance'):.2f}", "duracao": fdur(val(j, "duration")),
@@ -68,6 +69,26 @@ def main():
         "cadencia_spm": val(j, "cadence") or "", "elevacao_m": val(j, "elevationAscended") or "",
         "rpe": a.rpe, "temperatura_c": temp, "fonte": "apple_watch", "fonte_id": j["uuid"], "notas": a.notas,
     }
+    if len(manuais) == 1:
+        # já existe registro manual desse dia: completa com os dados do relógio,
+        # mantendo id, tipo, local e notas informados à mão
+        m = manuais[0]
+        for k, v in row.items():
+            if k in ("id", "tipo", "notas", "rpe") and m[k]:
+                continue
+            if k == "local" and m[k]:
+                continue
+            m[k] = v
+        m["notas"] = m["notas"] or row["notas"]
+        with CSV.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(linhas[0].keys()))
+            w.writeheader()
+            w.writerows(linhas)
+        print(f"completado registro manual {m['id']} ({m['tipo']}) com dados do relógio: "
+              f"{m['distancia_km']} km em {m['duracao']} (FC {m['fc_media']}/{m['fc_max']})")
+        return
+    if len(manuais) > 1:
+        sys.exit(f"há {len(manuais)} registros manuais em {data}: completar à mão")
     with CSV.open("a", newline="", encoding="utf-8") as f:
         csv.DictWriter(f, fieldnames=list(row)).writerow(row)
     print(f"gravado: {row['id']} {a.tipo} {row['distancia_km']} km em {row['duracao']} "

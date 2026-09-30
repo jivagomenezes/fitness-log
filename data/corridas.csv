@@ -1,3 +1,5 @@
 id,data,inicio,tipo,local,distancia_km,duracao,fc_media,fc_max,z1_s,z2_s,z3_s,z4_s,z5_s,cadencia_spm,elevacao_m,rpe,temperatura_c,fonte,fonte_id,notas
 2026-09-21-1,2026-09-21,19:43,z2,esteira,5.07,32:41,142,152,441,1500,6,0,0,163,24,,,apple_watch,05013F31-87B9-4910-9005-385032A7FBA7,
-2026-09-28-1,2026-09-28,18:48,tempo,esteira,8.21,48:37,153,177,543,605,994,762,0,160,77,,,apple_watch,24F38976-88BD-4A70-869F-8E11BD02FC7E,"tipo a confirmar (26% Z4, 34% Z3); academia de braços logo depois"
+2026-09-22-1,2026-09-22,,z2,,,25:00,,,,,,,,,,,,manual,,aprox.: 5 min para entrar na Z2 + 20 min em Z2 (informado de memória)
+2026-09-25-1,2026-09-25,,z2,esteira,,,,,,,,,,,,,,manual,,"40 min Z2 + 4 strides (14 km/h por 25 s, recuperação 90 s a 8,5 km/h)"
+2026-09-28-1,2026-09-28,18:48,intervalado,esteira,8.21,48:37,153,177,543,605,994,762,0,160,77,,,apple_watch,24F38976-88BD-4A70-869F-8E11BD02FC7E,"10 min aquecimento + 5×800 m a ~13,3 km/h (média), intervalos de 800 m; academia de braços logo depois"

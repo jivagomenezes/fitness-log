@@ -203,7 +203,13 @@ def secao_timeline(hoje, corridas, series, rec):
         if c["data"] and inicio <= c["data"] <= hoje:
             p = f", {fpace(c['pace'])}" if c["pace"] else ""
             fc = f", FC {fnum(c['fc_media'], 0)}" if c["fc_media"] else ""
-            por_dia[c["data"]].append(f"🏃 {c['tipo']} {fnum(c['km'], 2)} km{p}{fc}")
+            if c["km"]:
+                qt = f"{fnum(c['km'], 2)} km"
+            elif c["seg"]:
+                qt = f"{fdur(c['seg'])} (sem distância)"
+            else:
+                qt = "(sem distância/tempo)"
+            por_dia[c["data"]].append(f"🏃 {c['tipo']} {qt}{p}{fc}")
     sess = defaultdict(lambda: {"series": 0, "ex": set()})
     for s in series:
         if s["data"] and inicio <= s["data"] <= hoje and s["tipo_serie"] != "aquecimento":
