@@ -16,6 +16,8 @@ types (Portuguese aliases accepted: fcr, sono, passos, kcal_ativas, kcal_repouso
   rhr          resting heart rate (bpm) → latest sample of the day
   sleep        sleep stages (Core/Deep/REM/Awake/In Bed or Principal/Profundo/REM/Acordado/Na Cama)
                → hours asleep in the night ending that day (union of intervals, overlaps counted once)
+  vo2max       Apple Watch VO2 max estimate ("Cardio Fitness", mL/kg/min) → latest sample of the day
+               (aliases: vo2, cardio_fitness, preparo_cardiovascular)
   steps, active_kcal, basal_kcal
                daily totals (the shortcut asks Health to "group by day"); the HIGHEST total received for
                a day wins, since totals only grow — the next morning's run closes the previous day.
@@ -42,7 +44,9 @@ CSV = ROOT / "data" / "daily_health.csv"
 
 TYPE_ALIASES = {"hrv": "hrv", "rhr": "rhr", "fcr": "rhr", "sleep": "sleep", "sono": "sleep",
                 "steps": "steps", "passos": "steps", "active_kcal": "active_kcal", "kcal_ativas": "active_kcal",
-                "basal_kcal": "basal_kcal", "kcal_repouso": "basal_kcal"}
+                "basal_kcal": "basal_kcal", "kcal_repouso": "basal_kcal",
+                "vo2max": "vo2max", "vo2_max": "vo2max", "vo2": "vo2max", "cardio_fitness": "vo2max",
+                "preparo_cardiovascular": "vo2max"}
 STAGES = {
     "deep": "deep", "asleepdeep": "deep", "profundo": "deep",
     "rem": "rem", "asleeprem": "rem",
@@ -53,9 +57,10 @@ STAGES = {
     "in bed": None, "inbed": None, "na cama": None, "em cama": None,
 }
 DAILY_TOTALS = ("steps", "active_kcal", "basal_kcal")
-NEW_COLUMNS = ["deep_sleep_h", "rem_sleep_h", "steps", "active_kcal", "basal_kcal"]
+NEW_COLUMNS = ["deep_sleep_h", "rem_sleep_h", "steps", "active_kcal", "basal_kcal", "vo2max"]
 FORMATS = {"hrv_ms": "{:.0f}", "resting_hr": "{:.0f}", "sleep_h": "{:.2f}", "deep_sleep_h": "{:.2f}",
-           "rem_sleep_h": "{:.2f}", "steps": "{:.0f}", "active_kcal": "{:.0f}", "basal_kcal": "{:.0f}"}
+           "rem_sleep_h": "{:.2f}", "steps": "{:.0f}", "active_kcal": "{:.0f}", "basal_kcal": "{:.0f}",
+           "vo2max": "{:.1f}"}
 warnings = []
 
 
@@ -135,13 +140,16 @@ def compute(samples, file_dates):
         per_day[day][s["type"]] = max(per_day[day].get(s["type"], 0), v)
 
     # night / daily metrics
-    for day in set(file_dates) | set(per_day):
+    point_days = {s["start"].date() for s in samples if s["type"] in ("rhr", "vo2max")}
+    for day in set(file_dates) | set(per_day) | point_days:
         night_start = datetime.combine(day - timedelta(days=1), time(18, 0))
         night_end = datetime.combine(day, time(14, 0))
         hrv = [num(s["value"]) for s in samples
                if s["type"] == "hrv" and night_start <= s["start"] <= night_end and num(s["value"]) is not None]
         rhr = [(s["start"], num(s["value"])) for s in samples
                if s["type"] == "rhr" and s["start"].date() == day and num(s["value"]) is not None]
+        vo2 = [(s["start"], num(s["value"])) for s in samples
+               if s["type"] == "vo2max" and s["start"].date() == day and num(s["value"]) is not None]
         stages = {"light": [], "deep": [], "rem": []}
         for s in samples:
             if s["type"] != "sleep" or not (night_start <= s["end"] <= night_end):
@@ -156,6 +164,8 @@ def compute(samples, file_dates):
             d["hrv_ms"] = statistics.mean(hrv)
         if rhr:
             d["resting_hr"] = max(rhr)[1]
+        if vo2:
+            d["vo2max"] = max(vo2)[1]
         asleep = stages["light"] + stages["deep"] + stages["rem"]
         if asleep:
             d["sleep_h"] = hours(asleep)

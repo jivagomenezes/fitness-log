@@ -97,5 +97,6 @@ Personal records come from here (chip time), not from the watch.
 | resting_hr | resting heart rate (bpm) |
 | sleep_h, deep_sleep_h, rem_sleep_h | hours asleep in the night ending that day (overlapping samples counted once) |
 | steps, active_kcal, basal_kcal | daily totals from Apple Health (highest total received; the next morning closes the day) |
+| vo2max | Apple Watch VO2 max estimate ("Cardio Fitness", mL/kg/min), latest sample of the day |
 | source | `bevel` · `health` · `bevel+health` |
 | notes | free text |

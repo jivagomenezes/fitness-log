@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 14:49. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 16:06. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -146,3 +146,4 @@ Séries por grupo muscular (últimos 7 dias): peito 14, triceps 8, ombro 6, bice
 | passos | – | – | 0/0 |
 | kcal ativas | – | – | 0/0 |
 | kcal em repouso | – | – | 0/0 |
+| VO2máx estimado (Watch) | – | – | 0/0 |

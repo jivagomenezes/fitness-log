@@ -32,7 +32,7 @@ LOCATIONS = {"treadmill", "road", "track"}
 WORKOUTS = {"A", "B", "C", "D", "other"}
 SET_TYPES = {"normal", "warmup", "drop", "failure", ""}
 HEALTH_METRICS = ("bevel_recovery_pct", "bevel_strain_pct", "bevel_sleep_pct", "hrv_ms", "resting_hr", "sleep_h",
-                  "deep_sleep_h", "rem_sleep_h", "steps", "active_kcal", "basal_kcal")
+                  "deep_sleep_h", "rem_sleep_h", "steps", "active_kcal", "basal_kcal", "vo2max")
 
 # --- display labels (the summary is read in Portuguese) ---
 PT_RUN_TYPE = {"interval": "intervalado", "tempo": "tempo", "long": "longao", "z2": "z2",
@@ -418,7 +418,8 @@ def section_health(health, st):
     labels = {"bevel_recovery_pct": "recuperação Bevel (%)", "bevel_strain_pct": "esforço Bevel (%)",
               "bevel_sleep_pct": "sono Bevel (%)", "hrv_ms": "HRV noite (ms)", "resting_hr": "FC repouso",
               "sleep_h": "sono (h)", "deep_sleep_h": "sono profundo (h)", "rem_sleep_h": "sono REM (h)",
-              "steps": "passos", "active_kcal": "kcal ativas", "basal_kcal": "kcal em repouso"}
+              "steps": "passos", "active_kcal": "kcal ativas", "basal_kcal": "kcal em repouso",
+              "vo2max": "VO2máx estimado (Watch)"}
     out += ["| métrica | média 7d | base (28d anteriores) | dias com dado (7d/base) |", "|---|---|---|---|"]
     for c, label in labels.items():
         (m7, n7), (mb, nb) = st[c]

@@ -2,10 +2,10 @@
 
 O atalho lê do app Saúde as amostras dos últimos 2 dias e grava um arquivo em `raw/health/YYYY-MM-DD_HHMM.txt`
 no repositório, pela API do GitHub. A sincronização (`scripts/import_health.py`) transforma isso em
-`hrv_ms`, `resting_hr`, `sleep_h`, `deep_sleep_h`, `rem_sleep_h`, `steps`, `active_kcal` e `basal_kcal`
+`hrv_ms`, `resting_hr`, `sleep_h`, `deep_sleep_h`, `rem_sleep_h`, `steps`, `active_kcal`, `basal_kcal` e `vo2max`
 em `data/daily_health.csv`.
 
-Formato de cada linha: `type;start;end;value[;unit]` com `type` = `hrv`, `rhr`, `sleep`, `steps`,
+Formato de cada linha: `type;start;end;value[;unit]` com `type` = `hrv`, `rhr`, `sleep`, `vo2max`, `steps`,
 `active_kcal` ou `basal_kcal`. O atalho pode rodar várias vezes por dia: as amostras são juntadas sem repetir.
 
 ## 1. Token do GitHub (uma vez)
@@ -31,6 +31,7 @@ Create a shortcut named "Health → fitness_log" that runs without asking anythi
    and VALUE is the sample's Value as a plain number.
 3. Do the same for Resting Heart Rate, using the prefix rhr instead of hrv.
 4. Do the same for Sleep Analysis, using the prefix sleep; here VALUE is the sleep stage (Core, Deep, REM, Awake, In Bed).
+   Do the same for Cardio Fitness (VO2 Max), using the prefix vo2max.
 5. Find Health Samples of type Steps whose Start Date is in the last 2 days, grouped by Day.
    Repeat with each daily total and add: steps;START;END;VALUE
 6. Do the same for Active Energy with the prefix active_kcal, and for Resting Energy with the prefix basal_kcal,
@@ -56,6 +57,11 @@ Create a shortcut named "Health → fitness_log" that runs without asking anythi
 - O *Valor* das amostras não carrega texto junto (ex.: "48 ms" também funciona, mas o ideal é só o número).
 - A URL termina com a variável FileName seguida de `.txt`.
 - O token foi colado no cabeçalho `Authorization`, depois de `Bearer ` (com espaço).
+
+**Permissão de envio (obrigatória):** o app Atalhos bloqueia o envio de muitos itens de saúde para fora do iPhone
+(erro "está tentando compartilhar N itens do app Saúde, o que não é permitido"). Libere em
+**Ajustes → Apps → Atalhos → Avançado → Permitir Compartilhar Grandes Quantidades de Dados**. Na primeira execução,
+quando perguntar se pode enviar para `api.github.com`, escolha **Permitir Sempre**.
 
 **Teste:** rode o atalho uma vez à mão. Deve aparecer "Saúde enviada ✅" e um arquivo novo em `raw/health/`
 no GitHub. Se aparecer um erro, mande o texto do erro (sem o token) para uma conversa do Projeto.
