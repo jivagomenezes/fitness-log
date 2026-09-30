@@ -212,3 +212,16 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-09-22,C,Face Pull,1,normal,12.5,15,,,20285876191
 2026-09-22,C,Face Pull,2,normal,15,10,,,20285876191
 2026-09-22,C,Face Pull,3,normal,12.5,15,,,20285876191
+2026-09-30,other,Remada Sentada (Máquina),1,warmup,35,14,,Hevy 'Treino noturno',20397004963
+2026-09-30,other,Remada Sentada (Máquina),2,normal,45,10,9.5,,20397004963
+2026-09-30,other,Remada Sentada (Máquina),3,failure,55,8,,,20397004963
+2026-09-30,other,Remada Sentada (Máquina),4,failure,55,7,,,20397004963
+2026-09-30,other,Remada Sentada (Máquina),5,drop,40,6,,,20397004963
+2026-09-30,other,Tríceps na Polia com Corda,1,normal,20,10,,,20397004963
+2026-09-30,other,Tríceps na Polia com Corda,2,normal,20,10,,,20397004963
+2026-09-30,other,Tríceps na Polia com Corda,3,failure,17.5,9,,,20397004963
+2026-09-30,other,Tríceps na Polia com Corda,4,drop,15,4,,,20397004963
+2026-09-30,other,Tríceps na Polia com Corda,5,drop,12.5,3,,,20397004963
+2026-09-30,other,Puxada Alta (Cabo),1,normal,40,11,,,20397004963
+2026-09-30,other,Puxada Alta (Cabo),2,normal,50,9,9.5,,20397004963
+2026-09-30,other,Puxada Alta (Cabo),3,failure,55,9,,,20397004963

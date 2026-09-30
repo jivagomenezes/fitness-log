@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 17:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 21:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -12,7 +12,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 30/09 (hoje) | descanso / sem registro | 55% · 0% · 82% · 52 ms · 1.7k passos |
+| qua 30/09 (hoje) | 🏃 tempo 7.04 km, 6:02/km, FC 157; 🏋️ treino outro (12 séries, 3 exercícios) | 55% · 0% · 82% · 52 ms · 1.7k passos |
 | ter 29/09 | 🏋️ treino B (23 séries, 7 exercícios) | 35% · 63% · 78% · 53 ms · 12.9k passos |
 | seg 28/09 | 🏃 intervalado 8.21 km, 5:55/km, FC 153; 🏋️ treino outro (12 séries, 4 exercícios) | 73% · 80% · 80% · 52 ms · 21.0k passos |
 | dom 27/09 | descanso / sem registro | 79% · 6% · 87% · 58 ms · 2.7k passos |
@@ -31,7 +31,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 28/09 (atual) | 8.2 | 1 | 40% | 2 | 35 | 10130 |
+| 28/09 (atual) | 15.2 | 2 | 40% | 3 | 47 | 13684 |
 | 21/09 | 18.7 | 3 | 88% | 3 | 58 | 19862 |
 | 14/09 | 29.4 | 5 | 38% | 1 | 19 | 6049 |
 | 07/09 | 29.3 | 4 | 60% | 3 | 62 | 23100 |
@@ -53,12 +53,12 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| qua 30/09 | tempo | esteira | 7.04 | 42:30 | 6:02/km | 157/177 | – | – | Tempo 20 min a 12,0 km/h (5:00/km), limiar; voltas Strava: aquecimento 2,13 km (FC média 143), bloco 3,73 km em 20:08 (FC média 168, máx 177), desaquecimento 1,10 km (FC média 158); academia (remada/puxada/tríceps) logo antes |
 | seg 28/09 | intervalado | esteira | 8.21 | 48:37 | 5:55/km | 153/177 | 40% · 34% · 26% | – | VO2 5×800 m a ~4:32/km (13,2–13,3 km/h), rec 90 s a 8,5 km/h; FC nos tiros subindo 158→171; 1º treino do bloco 5K, pós-resfriado; academia de braços logo depois |
 | sex 25/09 | z2 | esteira | 9.51 | 1:00:02 | 6:19/km | 148/168 | 78% · 21% · 2% | – | 40 min Z2 + 4 strides (14 km/h por 25 s, recuperação 90 s a 8,5 km/h) |
 | ter 22/09 | z2 | esteira | 4.09 | 25:33 | 6:15/km | 142/152 | 98% · 2% · 0% | – | 5 min para entrar na Z2 + 20 min em Z2 |
 | seg 21/09 | z2 | esteira | 5.07 | 32:41 | 6:27/km | 142/152 | 100% · 0% · 0% | – |  |
 | sáb 19/09 | prova | rua | 10.11 | 55:16 | 5:28/km | 174/192 | 2% · 1% · 97% | – | 10K com amigos, 30 °C; o calor foi o limitador; FC máx 192 medida aqui |
-| qui 17/09 | z2 | esteira | 6.01 | 39:42 | 6:36/km | 147/180 | 64% · 24% · 13% | – | shakeout pré-prova: Z2 + 4 strides. Zonas ainda com FC máx 186 |
 
 ## Intervalados — tiros
 
@@ -119,7 +119,8 @@
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Scott (Halter) | 08/09 | 30 kg × 10 | 3 | – |  |
 | outro | core | Abdominal (Máquina) | 28/09 | 30 kg × 15 | 3 | 25 kg × 15 | ↑ |
-| outro | costas | Puxada Alta (Cabo) | 08/09 | 55 kg × 10 | 3 | – |  |
+| outro | costas | Puxada Alta (Cabo) | 30/09 | 55 kg × 9 | 3 | 55 kg × 10 | ↓ |
+| outro | costas | Remada Sentada (Máquina) | 30/09 | 55 kg × 8 | 4 | – |  |
 | outro | gluteo | Cadeira Abdutora (Máquina) | 11/09 | 70 kg × 10 | 4 | – |  |
 | outro | ombro | Desenvolvimento de Ombros Sentado (Máquina) | 02/09 | 78 kg × 8 | 4 | – |  |
 | outro | ombro | Elevação Lateral (Máquina) | 11/09 | 20 kg × 13 | 4 | – |  |
@@ -127,9 +128,9 @@
 | outro | triceps | Extensão de Tríceps (Corda) | 28/09 | 21 kg × 10 | 3 | – |  |
 | outro | triceps | Extensão de Tríceps (Máquina) | 08/09 | 45 kg × 10 | 4 | 45 kg × 10 | → |
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 08/09 | 10 kg × 10 | 3 | – |  |
-| outro | triceps | Tríceps na Polia com Corda | 28/09 | 10 kg × 12 | 2 | 25 kg × 12 | ↓ |
+| outro | triceps | Tríceps na Polia com Corda | 30/09 | 20 kg × 10 | 5 | 10 kg × 12 | ↑ |
 
-Séries por grupo muscular (últimos 7 dias): peito 14, triceps 8, ombro 6, biceps 4, core 3
+Séries por grupo muscular (últimos 7 dias): peito 14, triceps 13, costas 7, ombro 6, biceps 4, core 3
 
 ## Recuperação
 
