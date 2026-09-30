@@ -1,9 +1,9 @@
 date,bevel_recovery_pct,bevel_strain_pct,bevel_sleep_pct,hrv_ms,resting_hr,sleep_h,deep_sleep_h,rem_sleep_h,steps,active_kcal,basal_kcal,vo2max,source,notes
 2026-09-23,82,62,93,,,,,,,,,,bevel,
 2026-09-24,87,12,95,,,,,,,,,,bevel,
-2026-09-25,92,61,96,,,,,,,,,,bevel,
-2026-09-26,15,9,77,46,,,,,,,,,bevel+health,
-2026-09-27,79,6,87,58,,,,,,,,,bevel+health,
-2026-09-28,73,80,80,52,55,,,,20953,1441,1997,,bevel+health,sono da noite 27→28 não importado: a busca de sono do atalho começou à meia-noite de 28/09
+2026-09-25,92,61,96,,63,,,,22496,1339,2000,,bevel+health,
+2026-09-26,15,9,77,46,63,7.92,0.50,2.59,4117,346,1875,,bevel+health,
+2026-09-27,79,6,87,58,57,8.41,0.65,2.32,2732,285,1880,,bevel+health,
+2026-09-28,73,80,80,52,55,6.72,0.76,1.23,20953,1441,1997,,bevel+health,
 2026-09-29,35,63,78,53,64,6.47,0.91,1.34,12904,1051,1973,,bevel+health,
-2026-09-30,55,0,82,52,60,7.80,0.44,2.50,1720,183,1359,,bevel+health,esforço do dia em curso (parcial)
+2026-09-30,55,0,82,52,60,7.80,0.44,2.50,1720,184,1379,,bevel+health,esforço do dia em curso (parcial)
