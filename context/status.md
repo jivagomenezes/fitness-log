@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 16:47. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-09-30 16:53. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -12,9 +12,9 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 30/09 (hoje) | descanso / sem registro | 55% · 0% · 82% · 52 ms · 2.0k passos |
-| ter 29/09 | 🏋️ treino B (23 séries, 7 exercícios) | 35% · 63% · 78% · 53 ms · 21.2k passos |
-| seg 28/09 | 🏃 intervalado 8.21 km, 5:55/km, FC 153; 🏋️ treino outro (12 séries, 4 exercícios) | 73% · 80% · 80% · 28.6k passos |
+| qua 30/09 (hoje) | descanso / sem registro | 55% · 0% · 82% · 52 ms |
+| ter 29/09 | 🏋️ treino B (23 séries, 7 exercícios) | 35% · 63% · 78% · 53 ms · 13.1k passos |
+| seg 28/09 | 🏃 intervalado 8.21 km, 5:55/km, FC 153; 🏋️ treino outro (12 séries, 4 exercícios) | 73% · 80% · 80% · 20.7k passos |
 | dom 27/09 | descanso / sem registro | 79% · 6% · 87% |
 | sáb 26/09 | descanso / sem registro | 15% · 9% · 77% |
 | sex 25/09 | 🏃 z2 9.51 km, 6:19/km, FC 148 | 92% · 61% · 96% |
@@ -139,11 +139,11 @@ Séries por grupo muscular (últimos 7 dias): peito 14, triceps 8, ombro 6, bice
 | esforço Bevel (%) | 33 | 62 | 7/1 |
 | sono Bevel (%) | 85 | 93 | 7/1 |
 | HRV noite (ms) | 52.5 | – | 2/0 |
-| FC repouso | 58.3 | – | 3/0 |
+| FC repouso | 59.3 | – | 3/0 |
 | sono (h) | 7.1 | – | 2/0 |
 | sono profundo (h) | 0.7 | – | 2/0 |
 | sono REM (h) | 1.9 | – | 2/0 |
-| passos | 17247 | – | 3/0 |
-| kcal ativas | 887 | – | 3/0 |
-| kcal em repouso | 1755 | – | 3/0 |
+| passos | 16893 | – | 2/0 |
+| kcal ativas | – | – | 0/0 |
+| kcal em repouso | – | – | 0/0 |
 | VO2máx estimado (Watch) | – | – | 0/0 |

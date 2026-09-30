@@ -50,6 +50,11 @@ Create a shortcut named "Health → fitness_log" that runs without asking anythi
 11. If the result contains "content", show the notification "Saúde enviada ✅". Otherwise show a notification with the result.
 ```
 
+**Filtro de fonte (obrigatório nos totais):** em *Passos*, *Energia Ativa*, *Energia em Repouso* e
+*Frequência Cardíaca em Repouso*, acrescente na ação *Encontrar Amostras de Saúde* o filtro
+**Fonte é Apple Watch de Jivago**. Sem ele, o "Agrupar por Dia" soma iPhone + relógio (os passos saíram ~8 mil
+maiores que no app Saúde) e a FC de repouso mistura o valor do relógio com o de apps de terceiros.
+
 **Conferir no atalho gerado (é aqui que a IA costuma errar):**
 - As datas de START e END estão em **ISO 8601** (toque na variável › formato de data). Se vierem em outro formato,
   o importador ainda entende `dd/mm/aaaa, HH:MM`, mas ISO é o mais seguro.

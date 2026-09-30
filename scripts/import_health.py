@@ -13,14 +13,16 @@ Each shortcut run writes raw/health/YYYY-MM-DD_HHMM.txt, one sample per line:
 
 types (Portuguese aliases accepted: fcr, sono, passos, kcal_ativas, kcal_repouso):
   hrv          HRV samples (ms, Apple Watch SDNN) → NIGHT mean (18:00 the day before to 14:00)
-  rhr          resting heart rate (bpm) → mean of the day's samples (as the Health app shows it)
+  rhr          resting heart rate (bpm) → the Apple Watch daily sample (interval); point samples written by
+               third-party apps are only used when there is no watch value
   sleep        sleep stages (Core/Deep/REM/Awake/In Bed or Essencial/Profundo/REM/Sem Dormir/Na Cama)
                → hours asleep in the night ending that day (union of intervals, overlaps counted once)
   vo2max       Apple Watch VO2 max estimate ("Cardio Fitness", mL/kg/min) → latest sample of the day
                (aliases: vo2, cardio_fitness, preparo_cardiovascular)
   steps, active_kcal, basal_kcal
-               daily totals (the shortcut asks Health to "group by day"); the HIGHEST total received for
-               a day wins, since totals only grow — the next morning's run closes the previous day.
+               daily totals (the shortcut asks Health to "group by day", filtered to the Apple Watch source
+               so iPhone + Watch are not summed); the MOST RECENT file reporting a day wins — the next
+               morning's run closes the previous day. Files in IGNORE_TOTALS_FROM are skipped for totals.
                Energy in kJ is converted to kcal.
 
 Samples from all files are merged (repeated lines count once), so the shortcut can run any number of times.
@@ -58,6 +60,8 @@ STAGES = {
     "in bed": None, "inbed": None, "na cama": None, "em cama": None,
 }
 DAILY_TOTALS = ("steps", "active_kcal", "basal_kcal")
+# files whose daily totals are known to be wrong (shortcut summed iPhone + Apple Watch before the source filter)
+IGNORE_TOTALS_FROM = {"2026-09-30_1642.txt"}
 NEW_COLUMNS = ["deep_sleep_h", "rem_sleep_h", "steps", "active_kcal", "basal_kcal", "vo2max"]
 FORMATS = {"hrv_ms": "{:.0f}", "resting_hr": "{:.0f}", "sleep_h": "{:.2f}", "deep_sleep_h": "{:.2f}",
            "rem_sleep_h": "{:.2f}", "steps": "{:.0f}", "active_kcal": "{:.0f}", "basal_kcal": "{:.0f}",
@@ -122,7 +126,8 @@ def read_samples():
                 continue
             try:
                 samples.append({"type": kind, "start": when(p[1]), "end": when(p[2]), "value": p[3],
-                                "unit": p[4].lower() if len(p) > 4 else "", "ref": f"{f.name}:{n}"})
+                                "unit": p[4].lower() if len(p) > 4 else "", "ref": f"{f.name}:{n}",
+                                "file": f.name})
             except ValueError as e:
                 warnings.append(f"{f.name}:{n}: {e}")
         mine = [s["start"] for s in samples[first:]]
@@ -134,15 +139,21 @@ def read_samples():
 def compute(samples, file_dates, coverage):
     per_day = defaultdict(dict)
 
-    # daily totals: highest value received for each day
+    # daily totals: the most recent file that reports a day wins (a later file has the more complete day,
+    # and a corrected shortcut overrides an older wrong value)
+    latest = {}
     for s in samples:
-        if s["type"] not in DAILY_TOTALS or num(s["value"]) is None:
+        if s["type"] not in DAILY_TOTALS or num(s["value"]) is None or s["file"] in IGNORE_TOTALS_FROM:
             continue
         v = num(s["value"])
         if s["type"].endswith("kcal") and (s["unit"] in ("kj", "kilojoule", "quilojoule") or "kj" in s["value"].lower()):
             v /= 4.184
         day = s["start"].date()
-        per_day[day][s["type"]] = max(per_day[day].get(s["type"], 0), v)
+        key = (day, s["type"])
+        if key not in latest or s["file"] >= latest[key][0]:
+            latest[key] = (s["file"], v)
+    for (day, kind), (_, v) in latest.items():
+        per_day[day][kind] = v
 
     # night / daily metrics
     point_days = {s["start"].date() for s in samples if s["type"] in ("rhr", "vo2max")}
@@ -156,8 +167,9 @@ def compute(samples, file_dates, coverage):
             warnings.append(f"{day}: night skipped (not fully covered by any file; start may be cut off)")
         hrv = [num(s["value"]) for s in samples
                if s["type"] == "hrv" and night_start <= s["start"] <= night_end and num(s["value"]) is not None]
-        rhr = [(s["start"], num(s["value"])) for s in samples
-               if s["type"] == "rhr" and s["start"].date() == day and num(s["value"]) is not None]
+        rhr_full = [(s["start"], num(s["value"]), s["end"]) for s in samples
+                    if s["type"] == "rhr" and s["start"].date() == day and num(s["value"]) is not None]
+        rhr = [(st, v) for st, v, _ in rhr_full]
         vo2 = [(s["start"], num(s["value"])) for s in samples
                if s["type"] == "vo2max" and s["start"].date() == day and num(s["value"]) is not None]
         stages = {"light": [], "deep": [], "rem": []}
@@ -173,7 +185,10 @@ def compute(samples, file_dates, coverage):
         if hrv and night_ok:
             d["hrv_ms"] = statistics.mean(hrv)
         if rhr:
-            d["resting_hr"] = statistics.mean(v for _, v in rhr)
+            # the Apple Watch daily value is an interval sample; point samples (start == end) come from
+            # third-party apps — use the watch value when there is one
+            watch = [(st, v) for st, v, en in rhr_full if en > st]
+            d["resting_hr"] = max(watch)[1] if watch else statistics.mean(v for _, v in rhr)
         if vo2:
             d["vo2max"] = max(vo2)[1]
         asleep = stages["light"] + stages["deep"] + stages["rem"]
