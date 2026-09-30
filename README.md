@@ -66,4 +66,5 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 Todo exercício novo em `academia.csv` precisa de uma linha aqui (o script avisa).
 
 ### recuperacao.csv — 1 linha por dia
-`data` · `hrv_ms` · `fc_repouso` · `sono_h` · `recuperacao_pct` (score do Bevel, 0–100) · `fonte` · `notas`.
+`data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` · `fc_repouso` · `sono_h` · `fonte` · `notas`.
+Recuperação e sono são os scores da manhã daquele dia; esforço é a carga acumulada no próprio dia.

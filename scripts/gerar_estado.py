@@ -24,6 +24,7 @@ FC_TIRO_ALERTA = 183          # na fase de base, tiro acima disso = rápido dema
 DIAS_TIMELINE = 14
 SEMANAS_VOLUME = 6
 QUEDA_HRV_ALERTA = 0.10       # média 7d abaixo da linha de base 28d em mais de 10%
+RECUP_BAIXA = 40              # score de recuperação do Bevel abaixo disso (hoje/ontem) gera alerta
 
 TIPOS_CORRIDA = {"intervalado", "tempo", "longao", "z2", "regenerativo", "prova", "teste"}
 DUROS = {"intervalado", "tempo", "prova", "teste"}
@@ -169,7 +170,7 @@ def carregar():
     for r in ler("recuperacao.csv"):
         ref = r["_linha"]
         r["data"] = dt(r["data"], ref)
-        for c in ("hrv_ms", "fc_repouso", "sono_h", "recuperacao_pct"):
+        for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h"):
             r[c] = num(r[c], ref, c)
         datas_rec.append(r["data"])
         rec.append(r)
@@ -198,12 +199,17 @@ def secao_timeline(hoje, corridas, series, rec):
         por_dia[d].append(f"🏋️ treino {t} ({v['series']} séries, {len(v['ex'])} exercícios)")
     rmap = {r["data"]: r for r in rec}
 
-    out = ["## Últimos 14 dias", "", "| dia | atividades | HRV / FC rep. |", "|---|---|---|"]
+    out = ["## Últimos 14 dias", "", "| dia | atividades | recup. · esforço · sono (Bevel) · HRV |", "|---|---|---|"]
     d = hoje
     while d >= inicio:
         ativ = "; ".join(por_dia.get(d, [])) or "descanso / sem registro"
         r = rmap.get(d)
-        rv = f"{fnum(r['hrv_ms'], 0)} ms / {fnum(r['fc_repouso'], 0)}" if r and r["hrv_ms"] else "–"
+        rv = "–"
+        if r:
+            partes = [f"{fnum(r[c], 0)}%" if r[c] is not None else "–" for c in ("recuperacao_pct", "esforco_pct", "sono_pct")]
+            if r["hrv_ms"]:
+                partes.append(f"{fnum(r['hrv_ms'], 0)} ms")
+            rv = " · ".join(partes)
         marca = " (hoje)" if d == hoje else ""
         out.append(f"| {dia_label(d)}{marca} | {ativ} | {rv} |")
         d -= timedelta(days=1)
@@ -332,14 +338,15 @@ def stats_rec(rec, hoje):
     fim_base = i7 - timedelta(days=1)
     i_base = fim_base - timedelta(days=27)
     return {c: (media(c, i7, hoje), media(c, i_base, fim_base))
-            for c in ("hrv_ms", "fc_repouso", "sono_h", "recuperacao_pct")}
+            for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h")}
 
 
 def secao_recuperacao(rec, st):
     out = ["## Recuperação", ""]
     if not rec:
         return out + ["Sem dados de recuperação registrados.", ""]
-    nomes = {"hrv_ms": "HRV (ms)", "fc_repouso": "FC repouso", "sono_h": "sono (h)", "recuperacao_pct": "recuperação Bevel (%)"}
+    nomes = {"recuperacao_pct": "recuperação Bevel (%)", "esforco_pct": "esforço Bevel (%)", "sono_pct": "sono Bevel (%)",
+             "hrv_ms": "HRV (ms)", "fc_repouso": "FC repouso", "sono_h": "sono (h)"}
     out += ["| métrica | média 7d | base (28d anteriores) | dias com dado (7d/base) |", "|---|---|---|---|"]
     for c, n in nomes.items():
         (m7, n7), (m28, n28) = st[c]
@@ -371,6 +378,10 @@ def alertas(hoje, corridas, tiros, series, rec, st, semanas, vol):
     (h7, n7), (h28, n28) = st["hrv_ms"]
     if h7 and h28 and n7 >= 3 and n28 >= 7 and h7 < h28 * (1 - QUEDA_HRV_ALERTA):
         a.append(f"HRV 7d ({h7:.0f} ms) mais de {QUEDA_HRV_ALERTA:.0%} abaixo da base ({h28:.0f} ms) — considerar aliviar.")
+    for r in sorted(rec, key=lambda r: r["data"] or date.min)[-2:]:
+        if r["data"] and (hoje - r["data"]).days <= 1 and r["recuperacao_pct"] is not None \
+                and r["recuperacao_pct"] < RECUP_BAIXA:
+            a.append(f"Recuperação Bevel baixa em {r['data']:%d/%m}: {r['recuperacao_pct']:.0f}% (< {RECUP_BAIXA}%).")
     (r7, rn7), (r28, rn28) = st["fc_repouso"]
     if r7 and r28 and rn7 >= 3 and rn28 >= 7 and r7 >= r28 + 3:
         a.append(f"FC de repouso 7d ({r7:.0f}) ≥ 3 bpm acima da base ({r28:.0f}).")
