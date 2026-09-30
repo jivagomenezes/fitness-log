@@ -101,11 +101,12 @@ def hours(intervals):
 
 
 def read_samples():
-    seen, samples, file_dates = set(), [], set()
+    seen, samples, file_dates, coverage = set(), [], set(), []
     for f in sorted(RAW.glob("*.txt")):
         m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
         if m:
             file_dates.add(datetime.strptime(m.group(1), "%Y-%m-%d").date())
+        first = len(samples)
         for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             line = line.strip()
             if not line or line.lower().startswith(("type;", "tipo;")) or line in seen:
@@ -124,10 +125,13 @@ def read_samples():
                                 "unit": p[4].lower() if len(p) > 4 else "", "ref": f"{f.name}:{n}"})
             except ValueError as e:
                 warnings.append(f"{f.name}:{n}: {e}")
-    return samples, file_dates
+        mine = [s["start"] for s in samples[first:]]
+        if mine:
+            coverage.append(min(mine))  # the shortcut asks for "the last N days": this file starts here
+    return samples, file_dates, coverage
 
 
-def compute(samples, file_dates):
+def compute(samples, file_dates, coverage):
     per_day = defaultdict(dict)
 
     # daily totals: highest value received for each day
@@ -145,6 +149,11 @@ def compute(samples, file_dates):
     for day in set(file_dates) | set(per_day) | point_days:
         night_start = datetime.combine(day - timedelta(days=1), time(18, 0))
         night_end = datetime.combine(day, time(14, 0))
+        # a night is only complete if some file covers it from 18:00 the day before; otherwise the
+        # start of the night may have been cut off by the shortcut's date window — skip it
+        night_ok = any(c <= night_start for c in coverage)
+        if not night_ok and any(s["type"] in ("hrv", "sleep") and night_start <= s["end"] <= night_end for s in samples):
+            warnings.append(f"{day}: night skipped (not fully covered by any file; start may be cut off)")
         hrv = [num(s["value"]) for s in samples
                if s["type"] == "hrv" and night_start <= s["start"] <= night_end and num(s["value"]) is not None]
         rhr = [(s["start"], num(s["value"])) for s in samples
@@ -161,14 +170,14 @@ def compute(samples, file_dates):
             elif STAGES[key]:
                 stages[STAGES[key]].append((s["start"], s["end"]))
         d = per_day[day]
-        if hrv:
+        if hrv and night_ok:
             d["hrv_ms"] = statistics.mean(hrv)
         if rhr:
             d["resting_hr"] = statistics.mean(v for _, v in rhr)
         if vo2:
             d["vo2max"] = max(vo2)[1]
         asleep = stages["light"] + stages["deep"] + stages["rem"]
-        if asleep:
+        if asleep and night_ok:
             d["sleep_h"] = hours(asleep)
             d["deep_sleep_h"] = hours(stages["deep"])
             d["rem_sleep_h"] = hours(stages["rem"])
@@ -176,11 +185,11 @@ def compute(samples, file_dates):
 
 
 def main():
-    samples, file_dates = read_samples()
+    samples, file_dates, coverage = read_samples()
     if not samples:
         print("no samples in raw/health")
         return
-    result = compute(samples, file_dates)
+    result = compute(samples, file_dates, coverage)
 
     with CSV.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
