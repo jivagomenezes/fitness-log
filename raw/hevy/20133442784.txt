@@ -1,0 +1,46 @@
+Cadeira Abdutora (Máquina)
+Série 1: 65 kg x 10
+Série 2: 70 kg x 10
+Série 3: 70 kg x 10
+Série 4: 70 kg x 10
+
+Cadeira Adutora (Máquina)
+Série 1: 70 kg x 10
+Série 2: 70 kg x 10
+Série 3: 70 kg x 10
+Série 4: 75 kg x 8
+
+Elevação Lateral (Máquina)
+Série 1: 20 kg x 12
+Série 2: 20 kg x 11
+Série 3: 20 kg x 12
+Série 4: 20 kg x 13 [Drop]
+
+Crucifixo (Máquina)
+"Maquina merda da ttf alameda"
+Série 1: 35 kg x 10
+Série 2: 35 kg x 10
+Série 3: 35 kg x 10
+
+Rosca Scott (Máquina)
+Série 1: 25 kg x 8
+Série 2: 25 kg x 8
+Série 3: 20 kg x 9
+
+Supino Reto (Barra)
+Série 1: 60 kg x 10
+Série 2: 60 kg x 10
+Série 3: 65 kg x 9 [Failure]
+Série 4: 56.5 kg x 10
+
+Abdominal (Máquina)
+Série 1: 30 kg x 15
+Série 2: 30 kg x 10
+
+Desenvolvimento (Halter)
+Série 1: 35 kg x 10
+Série 2: 35 kg x 9 [Failure]
+
+Extensão de Tríceps Unilateral (Halter)
+Série 1: 10 kg x 20
+Série 2: 10 kg x 18

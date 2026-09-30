@@ -1,0 +1,120 @@
+{
+    "uuid": "3CAF48A8-E957-43E6-9915-7A4A418F5045",
+    "name": "Running",
+    "activity": {
+        "name": "Running",
+        "type": 37
+    },
+    "startDate": "2026-09-22T18:16:52Z",
+    "endDate": "2026-09-22T18:42:25Z",
+    "source": "Apple Watch de Jivago",
+    "location": "Indoor",
+    "zones": {
+        "zone5": {
+            "name": "Zone 5",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone4": {
+            "name": "Zone 4",
+            "rate": 0.0,
+            "time": {
+                "value": 0,
+                "unit": "sec"
+            }
+        },
+        "zone3": {
+            "name": "Zone 3",
+            "rate": 0.01826,
+            "time": {
+                "value": 28,
+                "unit": "sec"
+            }
+        },
+        "zone2": {
+            "name": "Zone 2",
+            "rate": 0.74913,
+            "time": {
+                "value": 1148,
+                "unit": "sec"
+            }
+        },
+        "zone1": {
+            "name": "Zone 1",
+            "rate": 0.20805,
+            "time": {
+                "value": 319,
+                "unit": "sec"
+            }
+        }
+    },
+    "duration": {
+        "value": 1533,
+        "unit": "sec"
+    },
+    "activeCalories": {
+        "value": 286,
+        "unit": "kcal"
+    },
+    "distance": {
+        "value": 4.09,
+        "unit": "km"
+    },
+    "speed": {
+        "value": 9.6,
+        "unit": "kph"
+    },
+    "averageIntensity": {
+        "value": 74,
+        "unit": "%"
+    },
+    "minIntensity": {
+        "value": 46,
+        "unit": "%"
+    },
+    "maxIntensity": {
+        "value": 79,
+        "unit": "%"
+    },
+    "averageMETs": {
+        "value": 10.1,
+        "unit": "METs"
+    },
+    "step": {
+        "value": 4220,
+        "unit": "steps"
+    },
+    "cadence": {
+        "value": 165,
+        "unit": "spm"
+    },
+    "elevationAscended": {
+        "value": 40,
+        "unit": "m"
+    },
+    "averageHeartRate": {
+        "value": 142,
+        "unit": "bpm"
+    },
+    "minHeartRate": {
+        "value": 90,
+        "unit": "bpm"
+    },
+    "maxHeartRate": {
+        "value": 152,
+        "unit": "bpm"
+    },
+    "weather": {
+        "humidity": "42%",
+        "temperature": "28°C"
+    },
+    "device": {
+        "name": "Star Trac",
+        "manufacturer": "Star Trac",
+        "model": "com.apple.health.fitnessmachinemodel.treadmill",
+        "localIdentifier": "com.healthd.fitnessmachine"
+    }
+}

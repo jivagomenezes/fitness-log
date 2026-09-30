@@ -8,14 +8,18 @@ data/            tabelas (CSV, UTF-8, separador vírgula, decimal com ponto)
 contexto/
   plano.md         o programa: objetivos, estrutura semanal, calibrações (editado à mão)
   estado_atual.md  GERADO — resumo dos últimos dias, volume, cargas, recuperação, alertas
+  ultima_sync.txt  hora (UTC) da última sincronização bem-sucedida com Strava/Saúde
 scripts/
   gerar_estado.py           valida os CSVs e regenera contexto/estado_atual.md
   importar_corrida_json.py  importa corrida do Apple Watch (JSON) para corridas.csv
-raw/             exportações brutas (Hevy CSV, Strava JSON, prints) — fora do git
+  importar_hevy_texto.py    importa treino do Hevy em texto (app ou descrição do Strava) para academia.csv
+  importar_saude.py         importa HRV, FC de repouso e sono enviados pelo atalho do iPhone
+raw/             camada bruta, versionada: JSON do Apple Watch, raw/hevy/ (texto do Hevy), raw/saude/ (atalho do iPhone)
 ```
 
 Fluxo: registrar treino → `python3 scripts/gerar_estado.py` → commit.
 Corrida exportada do Apple Watch em JSON: `python3 scripts/importar_corrida_json.py raw/arquivo.json --tipo z2`.
+O GitHub é a fonte: toda gravação é feita num clone e enviada com push; o Mac só faz `git pull`.
 O `estado_atual.md` e o `plano.md` vão para o conhecimento do Projeto "Fitness 2026" no Claude,
 para que toda conversa comece com o contexto real. Protocolo completo em `CLAUDE.md`.
 
@@ -79,5 +83,5 @@ Todo exercício novo em `academia.csv` precisa de uma linha aqui (o script avisa
 Os recordes pessoais saem daqui (tempo de chip), não do relógio.
 
 ### recuperacao.csv — 1 linha por dia
-`data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` · `fc_repouso` · `sono_h` · `fonte` · `notas`.
+`data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` (média da noite, SDNN do Apple Watch) · `fc_repouso` · `sono_h` · `sono_profundo_h` · `sono_rem_h` (app Saúde, via atalho) · `fonte` · `notas`.
 Recuperação e sono são os scores da manhã daquele dia; esforço é a carga acumulada no próprio dia.
