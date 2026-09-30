@@ -1,24 +1,36 @@
 #!/usr/bin/env python3
 """Importa as amostras do app Saúde enviadas pelo atalho do iPhone (raw/saude/*.txt) para data/recuperacao.csv.
 
-Formato de cada arquivo (um por execução do atalho, nome AAAA-MM-DD_HHMM.txt):
-    tipo;inicio;fim;valor
+Cada execução do atalho grava um arquivo raw/saude/AAAA-MM-DD_HHMM.txt, uma amostra por linha:
+    tipo;inicio;fim;valor[;unidade]
+
     hrv;2026-09-30T03:12:45+01:00;2026-09-30T03:13:45+01:00;48
     fcr;2026-09-30T00:00:00+01:00;2026-09-30T08:00:00+01:00;52
     sono;2026-09-29T23:40:00+01:00;2026-09-30T00:55:00+01:00;Principal
-tipo: hrv (ms, SDNN do Apple Watch), fcr (FC de repouso, bpm), sono (fase: Principal/Profundo/REM/Acordado/Na Cama,
-ou Core/Deep/REM/Awake/In Bed). As datas podem vir em ISO 8601 ou em "dd/mm/aaaa, HH:MM".
+    passos;2026-09-30T00:00:00+01:00;2026-10-01T00:00:00+01:00;11234
+    kcal_ativas;2026-09-30T00:00:00+01:00;2026-10-01T00:00:00+01:00;612;kcal
+    kcal_repouso;2026-09-30T00:00:00+01:00;2026-10-01T00:00:00+01:00;1788;kcal
 
-A data do registro é a do nome do arquivo (a manhã em que o atalho rodou); a "noite" é das 18:00 da véspera
-às 14:00 desse dia. Se houver mais de um arquivo no mesmo dia, vale o mais recente.
-Faz upsert: preenche hrv_ms, fc_repouso e sono_* do dia sem apagar os scores do Bevel.
+tipos:
+  hrv           amostras de HRV (ms, SDNN do Apple Watch) — média da NOITE (18:00 da véspera às 14:00)
+  fcr           FC de repouso (bpm) — a amostra mais recente do dia
+  sono          fases do sono (Principal/Profundo/REM/Acordado/Na Cama ou Core/Deep/REM/Awake/In Bed)
+                — horas dormidas na noite que termina naquele dia (união dos intervalos, sem contar 2×)
+  passos, kcal_ativas, kcal_repouso
+                totais do dia (o atalho pede ao Saúde "agrupado por dia"); vale o MAIOR total recebido
+                para o dia, porque o total só cresce — a execução da manhã seguinte fecha o dia anterior.
+                Energia em kJ é convertida para kcal.
 
-Uso:  python3 scripts/importar_saude.py            (processa todos os arquivos de raw/saude)
+Todas as amostras de todos os arquivos são juntadas (linhas repetidas contam uma vez), então o atalho pode
+rodar quantas vezes quiser. Faz upsert em recuperacao.csv sem apagar os scores do Bevel.
+
+Uso:  python3 scripts/importar_saude.py
 """
 import csv
 import re
 import statistics
 import sys
+from collections import defaultdict
 from datetime import datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -37,6 +49,8 @@ FASES = {
     "acordado": None, "desperto": None, "awake": None,
     "na cama": None, "em cama": None, "in bed": None, "inbed": None,
 }
+DIARIOS = {"passos": "passos", "kcal_ativas": "kcal_ativas", "kcal_repouso": "kcal_repouso"}
+NOVAS_COLUNAS = ["sono_profundo_h", "sono_rem_h", "passos", "kcal_ativas", "kcal_repouso"]
 avisos = []
 
 
@@ -60,77 +74,113 @@ def quando(s):
     raise ValueError(f"data não reconhecida: {s!r}")
 
 
-def uniao_horas(intervalos):
-    tot, fim_atual, ini_atual = 0.0, None, None
+def horas(intervalos):
+    """Horas cobertas pela união dos intervalos (trechos sobrepostos contam uma vez)."""
+    tot, ini_a, fim_a = 0.0, None, None
     for ini, fim in sorted(intervalos):
-        if fim_atual is None or ini > fim_atual:
-            if fim_atual is not None:
-                tot += (fim_atual - ini_atual).total_seconds()
-            ini_atual, fim_atual = ini, fim
+        if fim_a is None or ini > fim_a:
+            if fim_a is not None:
+                tot += (fim_a - ini_a).total_seconds()
+            ini_a, fim_a = ini, fim
         else:
-            fim_atual = max(fim_atual, fim)
-    if fim_atual is not None:
-        tot += (fim_atual - ini_atual).total_seconds()
+            fim_a = max(fim_a, fim)
+    if fim_a is not None:
+        tot += (fim_a - ini_a).total_seconds()
     return tot / 3600
 
 
-def resumo(arquivo, dia):
-    noite_ini = datetime.combine(dia - timedelta(days=1), time(18, 0))
-    noite_fim = datetime.combine(dia, time(14, 0))
-    hrv, fcr, fases = [], [], {"leve": [], "profundo": [], "rem": []}
-    for n, linha in enumerate(arquivo.read_text(encoding="utf-8").splitlines(), 1):
-        linha = linha.strip()
-        if not linha or linha.lower().startswith("tipo;"):
-            continue
-        partes = [p.strip() for p in linha.split(";")]
-        if len(partes) < 4:
-            avisos.append(f"{arquivo.name}:{n}: linha incompleta")
-            continue
-        tipo, ini, fim, valor = partes[0].lower(), quando(partes[1]), quando(partes[2]), partes[3]
-        if tipo == "hrv" and noite_ini <= ini <= noite_fim and num(valor) is not None:
-            hrv.append(num(valor))
-        elif tipo == "fcr" and num(valor) is not None:
-            fcr.append((ini, num(valor)))
-        elif tipo == "sono" and noite_ini <= fim <= noite_fim:
-            chave = valor.lower().replace("_", " ").strip()
-            if chave not in FASES:
-                avisos.append(f"{arquivo.name}:{n}: fase de sono desconhecida '{valor}' (não contada)")
-                continue
-            if FASES[chave]:
-                fases[FASES[chave]].append((ini, fim))
-    todas = fases["leve"] + fases["profundo"] + fases["rem"]
-    return {
-        "hrv_ms": f"{statistics.mean(hrv):.0f}" if hrv else "",
-        "fc_repouso": f"{max(fcr)[1]:.0f}" if fcr else "",
-        "sono_h": f"{uniao_horas(todas):.2f}" if todas else "",
-        "sono_profundo_h": f"{uniao_horas(fases['profundo']):.2f}" if fases["profundo"] else "",
-        "sono_rem_h": f"{uniao_horas(fases['rem']):.2f}" if fases["rem"] else "",
-    }
-
-
-def main():
-    arquivos = {}
+def ler_amostras():
+    vistas, amostras, datas_arquivos = set(), [], set()
     for a in sorted(RAW.glob("*.txt")):
         m = re.match(r"(\d{4}-\d{2}-\d{2})", a.name)
         if m:
-            arquivos[m.group(1)] = a  # o mais recente do dia sobrescreve
-    if not arquivos:
-        print("nenhum arquivo em raw/saude")
+            datas_arquivos.add(datetime.strptime(m.group(1), "%Y-%m-%d").date())
+        for n, linha in enumerate(a.read_text(encoding="utf-8").splitlines(), 1):
+            linha = linha.strip()
+            if not linha or linha.lower().startswith("tipo;") or linha in vistas:
+                continue
+            vistas.add(linha)
+            p = [x.strip() for x in linha.split(";")]
+            if len(p) < 4:
+                avisos.append(f"{a.name}:{n}: linha incompleta")
+                continue
+            try:
+                amostras.append({"tipo": p[0].lower(), "ini": quando(p[1]), "fim": quando(p[2]),
+                                 "valor": p[3], "unidade": p[4].lower() if len(p) > 4 else "",
+                                 "ref": f"{a.name}:{n}"})
+            except ValueError as e:
+                avisos.append(f"{a.name}:{n}: {e}")
+    return amostras, datas_arquivos
+
+
+def calcular(amostras, datas_arquivos):
+    por_dia = defaultdict(dict)
+
+    # totais diários: maior valor recebido por dia
+    for s in amostras:
+        col = DIARIOS.get(s["tipo"])
+        if not col or num(s["valor"]) is None:
+            continue
+        v = num(s["valor"])
+        if col.startswith("kcal") and (s["unidade"] in ("kj", "kilojoule", "quilojoule") or "kj" in s["valor"].lower()):
+            v /= 4.184
+        dia = s["ini"].date()
+        por_dia[dia][col] = max(por_dia[dia].get(col, 0), v)
+
+    # métricas da noite / do dia
+    dias = set(datas_arquivos) | set(por_dia)
+    for dia in dias:
+        n_ini = datetime.combine(dia - timedelta(days=1), time(18, 0))
+        n_fim = datetime.combine(dia, time(14, 0))
+        hrv = [num(s["valor"]) for s in amostras
+               if s["tipo"] == "hrv" and n_ini <= s["ini"] <= n_fim and num(s["valor"]) is not None]
+        fcr = [(s["ini"], num(s["valor"])) for s in amostras
+               if s["tipo"] == "fcr" and s["ini"].date() == dia and num(s["valor"]) is not None]
+        fases = {"leve": [], "profundo": [], "rem": []}
+        for s in amostras:
+            if s["tipo"] != "sono" or not (n_ini <= s["fim"] <= n_fim):
+                continue
+            chave = s["valor"].lower().replace("_", " ").strip()
+            if chave not in FASES:
+                avisos.append(f"{s['ref']}: fase de sono desconhecida '{s['valor']}' (não contada)")
+            elif FASES[chave]:
+                fases[FASES[chave]].append((s["ini"], s["fim"]))
+        d = por_dia[dia]
+        if hrv:
+            d["hrv_ms"] = statistics.mean(hrv)
+        if fcr:
+            d["fc_repouso"] = max(fcr)[1]
+        todas = fases["leve"] + fases["profundo"] + fases["rem"]
+        if todas:
+            d["sono_h"] = horas(todas)
+            d["sono_profundo_h"] = horas(fases["profundo"])
+            d["sono_rem_h"] = horas(fases["rem"])
+    return {k: v for k, v in por_dia.items() if v}
+
+
+FORMATOS = {"hrv_ms": "{:.0f}", "fc_repouso": "{:.0f}", "sono_h": "{:.2f}", "sono_profundo_h": "{:.2f}",
+            "sono_rem_h": "{:.2f}", "passos": "{:.0f}", "kcal_ativas": "{:.0f}", "kcal_repouso": "{:.0f}"}
+
+
+def main():
+    amostras, datas_arquivos = ler_amostras()
+    if not amostras:
+        print("nenhuma amostra em raw/saude")
         return
+    resultado = calcular(amostras, datas_arquivos)
+
     with CSV.open(newline="", encoding="utf-8") as f:
         leitor = csv.DictReader(f)
         campos, linhas = list(leitor.fieldnames), list(leitor)
     anterior = "sono_h"
-    for c in ("sono_profundo_h", "sono_rem_h"):
+    for c in NOVAS_COLUNAS:
         if c not in campos:
             campos.insert(campos.index(anterior) + 1, c)
         anterior = c
     por_data = {r["data"]: r for r in linhas}
-    for d, a in sorted(arquivos.items()):
-        r = resumo(a, datetime.strptime(d, "%Y-%m-%d").date())
-        if not any(r.values()):
-            avisos.append(f"{a.name}: nenhuma amostra da noite encontrada")
-            continue
+
+    for dia, vals in sorted(resultado.items()):
+        d = dia.isoformat()
         linha = por_data.get(d)
         if linha is None:
             linha = {k: "" for k in campos}
@@ -139,17 +189,16 @@ def main():
             por_data[d] = linha
         elif "saude" not in (linha.get("fonte") or ""):
             linha["fonte"] = f"{linha['fonte']}+saude" if linha.get("fonte") else "saude"
-        for k, v in r.items():
-            if v:
-                linha[k] = v
-        print(f"{d}: HRV {r['hrv_ms'] or '–'} ms · FC repouso {r['fc_repouso'] or '–'} · "
-              f"sono {r['sono_h'] or '–'} h (profundo {r['sono_profundo_h'] or '–'}, REM {r['sono_rem_h'] or '–'})")
+        for k, v in vals.items():
+            linha[k] = FORMATOS[k].format(v)
+        print(f"{d}: " + " · ".join(f"{k} {linha[k]}" for k in FORMATOS if linha.get(k)))
+
     linhas.sort(key=lambda r: r["data"])
     with CSV.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=campos)
         w.writeheader()
         w.writerows({k: r.get(k, "") for k in campos} for r in linhas)
-    for x in avisos:
+    for x in sorted(set(avisos)):
         print(f"aviso: {x}", file=sys.stderr)
 
 

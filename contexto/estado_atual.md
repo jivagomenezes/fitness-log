@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 14:20. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 14:28. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -10,7 +10,7 @@
 
 ## Últimos 14 dias
 
-| dia | atividades | recup. · esforço · sono (Bevel) · HRV |
+| dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
 | qua 30/09 (hoje) | descanso / sem registro | 55% · 0% · 82% |
 | ter 29/09 | 🏋️ treino B (23 séries, 7 exercícios) | 35% · 63% · 78% |
@@ -138,6 +138,11 @@ Séries por grupo muscular (últimos 7 dias): peito 14, triceps 8, ombro 6, bice
 | recuperação Bevel (%) | 62.3 | 82 | 7/1 |
 | esforço Bevel (%) | 33 | 62 | 7/1 |
 | sono Bevel (%) | 85 | 93 | 7/1 |
-| HRV (ms) | – | – | 0/0 |
+| HRV noite (ms) | – | – | 0/0 |
 | FC repouso | – | – | 0/0 |
 | sono (h) | – | – | 0/0 |
+| sono profundo (h) | – | – | 0/0 |
+| sono REM (h) | – | – | 0/0 |
+| passos | – | – | 0/0 |
+| kcal ativas | – | – | 0/0 |
+| kcal em repouso | – | – | 0/0 |

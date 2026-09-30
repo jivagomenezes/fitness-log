@@ -185,8 +185,9 @@ def carregar():
     for r in ler("recuperacao.csv"):
         ref = r["_linha"]
         r["data"] = dt(r["data"], ref)
-        for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h"):
-            r[c] = num(r[c], ref, c)
+        for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h",
+                  "sono_profundo_h", "sono_rem_h", "passos", "kcal_ativas", "kcal_repouso"):
+            r[c] = num(r.get(c, ""), ref, c)
         datas_rec.append(r["data"])
         rec.append(r)
     for d in {d for d in datas_rec if datas_rec.count(d) > 1}:
@@ -252,7 +253,7 @@ def secao_timeline(hoje, corridas, series, rec):
         por_dia[d].append(f"🏋️ treino {t} ({v['series']} séries, {len(v['ex'])} exercícios)")
     rmap = {r["data"]: r for r in rec}
 
-    out = ["## Últimos 14 dias", "", "| dia | atividades | recup. · esforço · sono (Bevel) · HRV |", "|---|---|---|"]
+    out = ["## Últimos 14 dias", "", "| dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |", "|---|---|---|"]
     d = hoje
     while d >= inicio:
         ativ = "; ".join(por_dia.get(d, [])) or "descanso / sem registro"
@@ -262,6 +263,8 @@ def secao_timeline(hoje, corridas, series, rec):
             partes = [f"{fnum(r[c], 0)}%" if r[c] is not None else "–" for c in ("recuperacao_pct", "esforco_pct", "sono_pct")]
             if r["hrv_ms"]:
                 partes.append(f"{fnum(r['hrv_ms'], 0)} ms")
+            if r["passos"]:
+                partes.append(f"{r['passos'] / 1000:.1f}k passos")
             rv = " · ".join(partes)
         marca = " (hoje)" if d == hoje else ""
         out.append(f"| {dia_label(d)}{marca} | {ativ} | {rv} |")
@@ -396,7 +399,8 @@ def stats_rec(rec, hoje):
     fim_base = i7 - timedelta(days=1)
     i_base = fim_base - timedelta(days=27)
     return {c: (media(c, i7, hoje), media(c, i_base, fim_base))
-            for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h")}
+            for c in ("recuperacao_pct", "esforco_pct", "sono_pct", "hrv_ms", "fc_repouso", "sono_h",
+                  "sono_profundo_h", "sono_rem_h", "passos", "kcal_ativas", "kcal_repouso")}
 
 
 def secao_recuperacao(rec, st):
@@ -404,11 +408,14 @@ def secao_recuperacao(rec, st):
     if not rec:
         return out + ["Sem dados de recuperação registrados.", ""]
     nomes = {"recuperacao_pct": "recuperação Bevel (%)", "esforco_pct": "esforço Bevel (%)", "sono_pct": "sono Bevel (%)",
-             "hrv_ms": "HRV (ms)", "fc_repouso": "FC repouso", "sono_h": "sono (h)"}
+             "hrv_ms": "HRV noite (ms)", "fc_repouso": "FC repouso", "sono_h": "sono (h)",
+             "sono_profundo_h": "sono profundo (h)", "sono_rem_h": "sono REM (h)", "passos": "passos",
+             "kcal_ativas": "kcal ativas", "kcal_repouso": "kcal em repouso"}
     out += ["| métrica | média 7d | base (28d anteriores) | dias com dado (7d/base) |", "|---|---|---|---|"]
     for c, n in nomes.items():
         (m7, n7), (m28, n28) = st[c]
-        out.append(f"| {n} | {fnum(m7, 1)} | {fnum(m28, 1)} | {n7}/{n28} |")
+        casas = 0 if (m7 or 0) >= 100 else 1
+        out.append(f"| {n} | {fnum(m7, casas)} | {fnum(m28, casas)} | {n7}/{n28} |")
     return out + [""]
 
 

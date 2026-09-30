@@ -83,5 +83,5 @@ Todo exercício novo em `academia.csv` precisa de uma linha aqui (o script avisa
 Os recordes pessoais saem daqui (tempo de chip), não do relógio.
 
 ### recuperacao.csv — 1 linha por dia
-`data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` (média da noite, SDNN do Apple Watch) · `fc_repouso` · `sono_h` · `sono_profundo_h` · `sono_rem_h` (app Saúde, via atalho) · `fonte` · `notas`.
+`data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` (média da noite, SDNN do Apple Watch) · `fc_repouso` · `sono_h` · `sono_profundo_h` · `sono_rem_h` · `passos` · `kcal_ativas` · `kcal_repouso` (app Saúde, via atalho; totais do dia) · `fonte` · `notas`.
 Recuperação e sono são os scores da manhã daquele dia; esforço é a carga acumulada no próprio dia.

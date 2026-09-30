@@ -62,7 +62,8 @@ esquemas e convenções estão no `README.md` (dicionário de dados). Responder 
      WeightTraining sem descrição do Hevy (treino só no relógio) não entra na tabela de séries.
    - Ignorar alongamento/mobilidade (PhysicalTherapy), caminhada e outros esportes.
 3. **App Saúde**: o atalho do iPhone grava em `raw/saude/AAAA-MM-DD_HHMM.txt`. Rodar `python3 scripts/importar_saude.py`
-   (idempotente: preenche HRV, FC de repouso e sono em `recuperacao.csv` sem apagar os scores do Bevel).
+   (idempotente: preenche HRV da noite, FC de repouso, sono, passos e calorias em `recuperacao.csv`
+   sem apagar os scores do Bevel).
 4. Se houve dado novo: passos 6–8 do registro (gerar estado, commit `sync: <resumo>`, push, atualizar o Projeto).
 5. Gravar a hora atual (UTC, ISO 8601) em `contexto/ultima_sync.txt` e commitar junto — mesmo sem dado novo,
    para registrar que a sincronização rodou.
