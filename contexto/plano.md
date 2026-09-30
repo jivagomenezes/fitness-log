@@ -10,7 +10,7 @@ o dia a dia fica em `estado_atual.md` (gerado).
   - principal: 4:30/km (22:30)
   - ousada: 4:15/km (21:15)
 - Médio prazo: 5K abaixo de 20 minutos.
-- Referências: **10K PR 47:43** (chip, 4:46/km) na São Silvestre de Lisboa, 15/12/2024 (noite, tempo favorável). Corrida dos Descobrimentos 30/11/2025: 51:17 (5:08/km, FC média 176). 10K em 19/09/2026: 55:16 (~5:28/km) com 30 °C — o calor, não a forma, foi o limitador. Histórico completo em `data/provas.csv`.
+- Referências: **10K PR 47:43** (chip, 4:46/km) na São Silvestre de Lisboa, 15/12/2024 (noite, tempo favorável). Corrida dos Descobrimentos 30/11/2025: 51:24 no chip (5:08/km, FC média 176). 10K em 19/09/2026: 55:16 (~5:28/km) com 30 °C — o calor, não a forma, foi o limitador. Histórico completo em `data/provas.csv`.
 
 ## Filosofia
 
