@@ -38,6 +38,7 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | z1_s … z5_s | segundos em cada zona de FC (zonas do Apple Watch, método HRR) |
 | cadencia_spm | cadência média (passos/min) |
 | elevacao_m | subida acumulada (na esteira reflete a inclinação) |
+| potencia_w, gct_ms, oscilacao_cm, passada_m | dinâmica de corrida do Apple Watch (potência, tempo de contato com o solo, oscilação vertical, passada) — só na rua |
 | rpe | esforço percebido 1–10 |
 | temperatura_c | relevante para provas e corridas na rua |
 | fonte | `strava` · `manual` · `apple_watch` · `bevel` |

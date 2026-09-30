@@ -36,6 +36,7 @@ def main():
     ap.add_argument("--tipo", required=True, choices=sorted(TIPOS))
     ap.add_argument("--rpe", default="")
     ap.add_argument("--notas", default="")
+    ap.add_argument("--notas-merge", default="", help="texto acrescentado às notas de um registro manual completado")
     a = ap.parse_args()
 
     j = json.loads(Path(a.arquivo).read_text(encoding="utf-8"))
@@ -54,7 +55,9 @@ def main():
         temp = t
 
     with CSV.open(newline="", encoding="utf-8") as f:
-        linhas = list(csv.DictReader(f))
+        leitor = csv.DictReader(f)
+        campos = leitor.fieldnames
+        linhas = list(leitor)
     if any(r["fonte_id"] == j["uuid"] for r in linhas):
         print(f"já importado: {j['uuid']}")
         return
@@ -67,6 +70,8 @@ def main():
         "fc_media": val(j, "averageHeartRate") or "", "fc_max": val(j, "maxHeartRate") or "",
         "z1_s": z[0], "z2_s": z[1], "z3_s": z[2], "z4_s": z[3], "z5_s": z[4],
         "cadencia_spm": val(j, "cadence") or "", "elevacao_m": val(j, "elevationAscended") or "",
+        "potencia_w": val(j, "runningPower") or "", "gct_ms": val(j, "runningGroundContactTime") or "",
+        "oscilacao_cm": val(j, "runningVerticalOscillation") or "", "passada_m": val(j, "runningStrideLength") or "",
         "rpe": a.rpe, "temperatura_c": temp, "fonte": "apple_watch", "fonte_id": j["uuid"], "notas": a.notas,
     }
     if len(manuais) == 1:
@@ -80,8 +85,10 @@ def main():
                 continue
             m[k] = v
         m["notas"] = m["notas"] or row["notas"]
+        if a.notas_merge:
+            m["notas"] = f"{m['notas']}; {a.notas_merge}" if m["notas"] else a.notas_merge
         with CSV.open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=list(linhas[0].keys()))
+            w = csv.DictWriter(f, fieldnames=campos)
             w.writeheader()
             w.writerows(linhas)
         print(f"completado registro manual {m['id']} ({m['tipo']}) com dados do relógio: "
@@ -90,7 +97,7 @@ def main():
     if len(manuais) > 1:
         sys.exit(f"há {len(manuais)} registros manuais em {data}: completar à mão")
     with CSV.open("a", newline="", encoding="utf-8") as f:
-        csv.DictWriter(f, fieldnames=list(row)).writerow(row)
+        csv.DictWriter(f, fieldnames=campos).writerow({k: row.get(k, "") for k in campos})
     print(f"gravado: {row['id']} {a.tipo} {row['distancia_km']} km em {row['duracao']} "
           f"(FC {row['fc_media']}/{row['fc_max']}, {local}, início {row['inicio']})")
 
