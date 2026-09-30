@@ -46,7 +46,7 @@
 | data | prova | km | chip | pace | oficial | lugar geral / escalão |
 |---|---|---|---|---|---|---|
 | 19/09/2026 | 10K com amigos | 10 | 55:16 | 5:32/km | – | – / – |
-| 30/11/2025 | Corrida 10 km — Meia Maratona dos Descobrimentos (Generali Tranquilidade) | 10 | 51:24 | 5:08/km | 54:24 | 994 / 392 |
+| 30/11/2025 | Corrida 10 km da Meia Maratona dos Descobrimentos (Generali Tranquilidade) | 10 | 51:24 | 5:08/km | 54:24 | 994 / 392 |
 | 15/12/2024 | São Silvestre de Lisboa (El Corte Inglés) | 10 | 47:43 | 4:46/km | 48:52 | 1163 / 379 |
 
 ## Corridas recentes
