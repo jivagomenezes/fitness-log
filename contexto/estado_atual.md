@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 12:39. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 12:47. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -47,7 +47,7 @@
 | ter 22/09 | z2 | esteira | 4.09 | 25:33 | 6:15/km | 142/152 | 98% · 2% · 0% | – | 5 min para entrar na Z2 + 20 min em Z2 |
 | seg 21/09 | z2 | esteira | 5.07 | 32:41 | 6:27/km | 142/152 | 100% · 0% · 0% | – |  |
 | sáb 19/09 | prova | rua | 10.11 | 55:16 | 5:28/km | 174/192 | 2% · 1% · 97% | – | 10K com amigos, 30 °C; o calor foi o limitador; FC máx 192 medida aqui |
-| qui 17/09 | z2 | esteira | 6.01 | 39:42 | 6:36/km | 147/180 | 64% · 24% · 13% | – | tipo inferido pelas zonas — confirmar (60% Z2, 23% Z3, 13% Z4-5, máx 180) — progressivo ou teste? |
+| qui 17/09 | z2 | esteira | 6.01 | 39:42 | 6:36/km | 147/180 | 64% · 24% · 13% | – | shakeout pré-prova: Z2 + 4 strides. Zonas ainda com FC máx 186 |
 
 ## Intervalados — tiros
 
@@ -61,9 +61,14 @@
 | 4 | 13.3 | 4:31/km | 800 m | – | – | – |
 | 5 | 13.3 | 4:31/km | 800 m | – | – | – |
 
-**qui 10/09** (2026-09-10-1) — tipo inferido pelas zonas — confirmar (49% Z4, 6% Z5, 16% Z1 = recuperações?)
+**seg 14/09** (2026-09-14-1) — último treino forte antes do 10K: 10 min aquec + 4×1 km a ~12–12,5 km/h (≈5:00/km, aproximado) c/ 1:30 de trote. Zonas ainda com FC máx 186
 
-_tiros não detalhados_
+| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
+|---|---|---|---|---|---|---|
+| 1 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
+| 2 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
+| 3 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
+| 4 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
 
 ## Academia — cargas por exercício
 
