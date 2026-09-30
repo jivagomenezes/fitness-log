@@ -1,5 +1,5 @@
-data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
-2026-09-23,A,Agachamento (Smith),1,aquecimento,20,15,,Hevy 'Treino noturno' 18:15 https://hevy.com/workout/AHfSYOPQhyw,20300732690
+date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
+2026-09-23,A,Agachamento (Smith),1,warmup,20,15,,Hevy 'Treino noturno' 18:15 https://hevy.com/workout/AHfSYOPQhyw,20300732690
 2026-09-23,A,Agachamento (Smith),2,normal,50,10,,,20300732690
 2026-09-23,A,Agachamento (Smith),3,normal,60,10,,,20300732690
 2026-09-23,A,Agachamento (Smith),4,normal,60,10,9.5,,20300732690
@@ -14,33 +14,33 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-23,A,Agachamento Búlgaro (Halter),3,normal,20,10,,,20300732690
 2026-09-23,A,Agachamento Búlgaro (Halter),4,normal,20,10,,,20300732690
 2026-09-23,A,Panturrilha em Pé Unilateral (Máquina),1,normal,55,12,,,20300732690
-2026-09-23,A,Panturrilha em Pé Unilateral (Máquina),2,falha,55,10,,,20300732690
+2026-09-23,A,Panturrilha em Pé Unilateral (Máquina),2,failure,55,10,,,20300732690
 2026-09-23,A,Panturrilha em Pé Unilateral (Máquina),3,drop,50,5,,,20300732690
 2026-09-23,A,Panturrilha em Pé Unilateral (Máquina),4,normal,50,15,,,20300732690
-2026-09-28,outro,Rosca Direta (Halter),1,normal,12.5,20,,"Hevy 'Treino noturno' 19:48 (braços + abdômen, depois da corrida) https://hevy.com/workout/HQTvdhHs8in",20368682557
-2026-09-28,outro,Rosca Direta (Halter),2,normal,12.5,20,,,20368682557
-2026-09-28,outro,Rosca Direta (Halter),3,normal,12.5,14,,,20368682557
-2026-09-28,outro,Rosca Direta (Halter),4,drop,10,8,,,20368682557
-2026-09-28,outro,Abdominal (Máquina),1,normal,25,12,,,20368682557
-2026-09-28,outro,Abdominal (Máquina),2,normal,27.5,15,,,20368682557
-2026-09-28,outro,Abdominal (Máquina),3,normal,30,15,,,20368682557
-2026-09-28,outro,Extensão de Tríceps (Corda),1,normal,21,10,,,20368682557
-2026-09-28,outro,Extensão de Tríceps (Corda),2,falha,21,9,,,20368682557
-2026-09-28,outro,Extensão de Tríceps (Corda),3,falha,21,8,,,20368682557
-2026-09-28,outro,Tríceps na Polia com Corda,1,normal,10,12,,,20368682557
-2026-09-28,outro,Tríceps na Polia com Corda,2,normal,10,12,,,20368682557
+2026-09-28,other,Rosca Direta (Halter),1,normal,12.5,20,,"Hevy 'Treino noturno' 19:48 (braços + abdômen, depois da corrida) https://hevy.com/workout/HQTvdhHs8in",20368682557
+2026-09-28,other,Rosca Direta (Halter),2,normal,12.5,20,,,20368682557
+2026-09-28,other,Rosca Direta (Halter),3,normal,12.5,14,,,20368682557
+2026-09-28,other,Rosca Direta (Halter),4,drop,10,8,,,20368682557
+2026-09-28,other,Abdominal (Máquina),1,normal,25,12,,,20368682557
+2026-09-28,other,Abdominal (Máquina),2,normal,27.5,15,,,20368682557
+2026-09-28,other,Abdominal (Máquina),3,normal,30,15,,,20368682557
+2026-09-28,other,Extensão de Tríceps (Corda),1,normal,21,10,,,20368682557
+2026-09-28,other,Extensão de Tríceps (Corda),2,failure,21,9,,,20368682557
+2026-09-28,other,Extensão de Tríceps (Corda),3,failure,21,8,,,20368682557
+2026-09-28,other,Tríceps na Polia com Corda,1,normal,10,12,,,20368682557
+2026-09-28,other,Tríceps na Polia com Corda,2,normal,10,12,,,20368682557
 2026-09-29,B,Supino Inclinado (Halter),1,normal,35,8,,Hevy 'Segunda - Push Day 1' 17:38 https://hevy.com/workout/qzeqjJx33lE,20382218491
 2026-09-29,B,Supino Inclinado (Halter),2,normal,30,10,,,20382218491
 2026-09-29,B,Supino Inclinado (Halter),3,normal,30,9,,,20382218491
-2026-09-29,B,Supino Reto em Pé,1,aquecimento,20,16,,,20382218491
+2026-09-29,B,Supino Reto em Pé,1,warmup,20,16,,,20382218491
 2026-09-29,B,Supino Reto em Pé,2,normal,60,10,10,,20382218491
 2026-09-29,B,Supino Reto em Pé,3,normal,60,10,10,,20382218491
-2026-09-29,B,Supino Reto em Pé,4,falha,60,8,,,20382218491
-2026-09-29,B,Supino Reto em Pé,5,falha,55,8,,,20382218491
+2026-09-29,B,Supino Reto em Pé,4,failure,60,8,,,20382218491
+2026-09-29,B,Supino Reto em Pé,5,failure,55,8,,,20382218491
 2026-09-29,B,Crucifixo Inclinado (Halter),1,normal,20,10,,,20382218491
 2026-09-29,B,Crucifixo Inclinado (Halter),2,normal,20,10,,,20382218491
-2026-09-29,B,Crucifixo Inclinado (Halter),3,falha,20,9,10,,20382218491
-2026-09-29,B,Crucifixo Inclinado (Halter),4,falha,20,9,,,20382218491
+2026-09-29,B,Crucifixo Inclinado (Halter),3,failure,20,9,10,,20382218491
+2026-09-29,B,Crucifixo Inclinado (Halter),4,failure,20,9,,,20382218491
 2026-09-29,B,Desenvolvimento de Ombros (Halter),1,normal,40,10,10,,20382218491
 2026-09-29,B,Desenvolvimento de Ombros (Halter),2,normal,40,7,10,,20382218491
 2026-09-29,B,Desenvolvimento de Ombros (Halter),3,normal,35,10,9.5,,20382218491
@@ -50,26 +50,26 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-29,B,Elevação Lateral (Cabo),1,normal,12.5,24,,,20382218491
 2026-09-29,B,Elevação Lateral (Cabo),2,normal,12.5,22,,,20382218491
 2026-09-29,B,Elevação Lateral (Cabo),3,normal,12.5,20,,,20382218491
-2026-09-29,B,Extensão de Tríceps Unilateral (Halter),1,falha,10,24,,,20382218491
-2026-09-29,B,Extensão de Tríceps Unilateral (Halter),2,falha,10,22,,,20382218491
-2026-09-29,B,Extensão de Tríceps Unilateral (Halter),3,falha,10,20,,corrigido: Hevy registrou 0; foram 10 + 10,20382218491
-2026-09-02,outro,Desenvolvimento de Ombros Sentado (Máquina),1,normal,60,11,,Hevy 'Treinamento noturno',20009533702
-2026-09-02,outro,Desenvolvimento de Ombros Sentado (Máquina),2,normal,70,10,,,20009533702
-2026-09-02,outro,Desenvolvimento de Ombros Sentado (Máquina),3,normal,70,10,,,20009533702
-2026-09-02,outro,Desenvolvimento de Ombros Sentado (Máquina),4,normal,78,8,,,20009533702
-2026-09-02,outro,Extensão de Tríceps (Máquina),1,normal,40,10,,,20009533702
-2026-09-02,outro,Extensão de Tríceps (Máquina),2,normal,45,10,,,20009533702
-2026-09-02,outro,Extensão de Tríceps (Máquina),3,normal,45,10,,,20009533702
-2026-09-02,outro,Cadeira Flexora (Máquina),1,normal,30,20,,,20009533702
-2026-09-02,outro,Cadeira Flexora (Máquina),2,normal,30,20,,,20009533702
-2026-09-02,outro,Cadeira Flexora (Máquina),3,normal,30,20,,,20009533702
-2026-09-02,outro,Cadeira Flexora (Máquina),4,normal,25,10,,,20009533702
-2026-09-02,outro,Rosca Direta (Máquina),1,normal,20,20,,,20009533702
-2026-09-02,outro,Rosca Direta (Máquina),2,normal,20,20,,,20009533702
-2026-09-02,outro,Rosca Direta (Máquina),3,normal,20,20,,,20009533702
-2026-09-02,outro,Crucifixo (Máquina),1,normal,20,11,,,20009533702
-2026-09-02,outro,Crucifixo (Máquina),2,normal,25,12,,,20009533702
-2026-09-04,A,Agachamento Pêndulo (Máquina),1,aquecimento,,1,,Hevy '3 - Lower Body',20037097005
+2026-09-29,B,Extensão de Tríceps Unilateral (Halter),1,failure,10,24,,,20382218491
+2026-09-29,B,Extensão de Tríceps Unilateral (Halter),2,failure,10,22,,,20382218491
+2026-09-29,B,Extensão de Tríceps Unilateral (Halter),3,failure,10,20,,corrigido: Hevy registrou 0; foram 10 + 10,20382218491
+2026-09-02,other,Desenvolvimento de Ombros Sentado (Máquina),1,normal,60,11,,Hevy 'Treinamento noturno',20009533702
+2026-09-02,other,Desenvolvimento de Ombros Sentado (Máquina),2,normal,70,10,,,20009533702
+2026-09-02,other,Desenvolvimento de Ombros Sentado (Máquina),3,normal,70,10,,,20009533702
+2026-09-02,other,Desenvolvimento de Ombros Sentado (Máquina),4,normal,78,8,,,20009533702
+2026-09-02,other,Extensão de Tríceps (Máquina),1,normal,40,10,,,20009533702
+2026-09-02,other,Extensão de Tríceps (Máquina),2,normal,45,10,,,20009533702
+2026-09-02,other,Extensão de Tríceps (Máquina),3,normal,45,10,,,20009533702
+2026-09-02,other,Cadeira Flexora (Máquina),1,normal,30,20,,,20009533702
+2026-09-02,other,Cadeira Flexora (Máquina),2,normal,30,20,,,20009533702
+2026-09-02,other,Cadeira Flexora (Máquina),3,normal,30,20,,,20009533702
+2026-09-02,other,Cadeira Flexora (Máquina),4,normal,25,10,,,20009533702
+2026-09-02,other,Rosca Direta (Máquina),1,normal,20,20,,,20009533702
+2026-09-02,other,Rosca Direta (Máquina),2,normal,20,20,,,20009533702
+2026-09-02,other,Rosca Direta (Máquina),3,normal,20,20,,,20009533702
+2026-09-02,other,Crucifixo (Máquina),1,normal,20,11,,,20009533702
+2026-09-02,other,Crucifixo (Máquina),2,normal,25,12,,,20009533702
+2026-09-04,A,Agachamento Pêndulo (Máquina),1,warmup,,1,,Hevy '3 - Lower Body',20037097005
 2026-09-04,A,Agachamento Pêndulo (Máquina),2,normal,15,10,,,20037097005
 2026-09-04,A,Agachamento Pêndulo (Máquina),3,normal,25,10,,,20037097005
 2026-09-04,A,Agachamento Pêndulo (Máquina),4,normal,30,10,,,20037097005
@@ -84,55 +84,55 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-04,A,Levantamento Terra com Pernas Estendidas,3,normal,50,10,,,20037097005
 2026-09-04,A,Tríceps na Polia com Corda,1,normal,25,12,,,20037097005
 2026-09-04,A,Tríceps na Polia com Corda,2,normal,25,12,,,20037097005
-2026-09-08,outro,Crossover na Polia,1,aquecimento,40,10,,Hevy '4 - Upper Body',20091890951
-2026-09-08,outro,Crossover na Polia,2,normal,40,11,,,20091890951
-2026-09-08,outro,Crossover na Polia,3,normal,45,12,,,20091890951
-2026-09-08,outro,Crossover na Polia,4,normal,50,10,,,20091890951
-2026-09-08,outro,Tríceps na Polia Unilateral (Cabo),1,normal,10,10,,,20091890951
-2026-09-08,outro,Tríceps na Polia Unilateral (Cabo),2,normal,10,10,,,20091890951
-2026-09-08,outro,Tríceps na Polia Unilateral (Cabo),3,normal,6.5,20,,,20091890951
-2026-09-08,outro,Puxada Alta (Cabo),1,normal,45,11,,,20091890951
-2026-09-08,outro,Puxada Alta (Cabo),2,normal,55,10,,,20091890951
-2026-09-08,outro,Puxada Alta (Cabo),3,normal,50,11,,,20091890951
-2026-09-08,outro,Extensão de Tríceps (Máquina),1,normal,45,10,,,20091890951
-2026-09-08,outro,Extensão de Tríceps (Máquina),2,falha,45,8,,,20091890951
-2026-09-08,outro,Extensão de Tríceps (Máquina),3,drop,40,5,,,20091890951
-2026-09-08,outro,Extensão de Tríceps (Máquina),4,normal,45,10,,,20091890951
-2026-09-08,outro,Rosca Scott (Halter),1,normal,30,10,,Barra 10kg,20091890951
-2026-09-08,outro,Rosca Scott (Halter),2,falha,30,8,,,20091890951
-2026-09-08,outro,Rosca Scott (Halter),3,falha,30,8,,,20091890951
-2026-09-08,outro,Desenvolvimento de Ombros (Halter),1,normal,35,10,,,20091890951
-2026-09-08,outro,Desenvolvimento de Ombros (Halter),2,normal,35,10,,,20091890951
-2026-09-08,outro,Desenvolvimento de Ombros (Halter),3,normal,35,8,,,20091890951
-2026-09-11,outro,Cadeira Abdutora (Máquina),1,normal,65,10,,Hevy 'Treino noturno',20133442784
-2026-09-11,outro,Cadeira Abdutora (Máquina),2,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Abdutora (Máquina),3,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Abdutora (Máquina),4,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Adutora (Máquina),1,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Adutora (Máquina),2,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Adutora (Máquina),3,normal,70,10,,,20133442784
-2026-09-11,outro,Cadeira Adutora (Máquina),4,normal,75,8,,,20133442784
-2026-09-11,outro,Elevação Lateral (Máquina),1,normal,20,12,,,20133442784
-2026-09-11,outro,Elevação Lateral (Máquina),2,normal,20,11,,,20133442784
-2026-09-11,outro,Elevação Lateral (Máquina),3,normal,20,12,,,20133442784
-2026-09-11,outro,Elevação Lateral (Máquina),4,drop,20,13,,,20133442784
-2026-09-11,outro,Crucifixo (Máquina),1,normal,35,10,,Maquina merda da ttf alameda,20133442784
-2026-09-11,outro,Crucifixo (Máquina),2,normal,35,10,,,20133442784
-2026-09-11,outro,Crucifixo (Máquina),3,normal,35,10,,,20133442784
-2026-09-11,outro,Rosca Scott (Máquina),1,normal,25,8,,,20133442784
-2026-09-11,outro,Rosca Scott (Máquina),2,normal,25,8,,,20133442784
-2026-09-11,outro,Rosca Scott (Máquina),3,normal,20,9,,,20133442784
-2026-09-11,outro,Supino Reto (Barra),1,normal,60,10,,,20133442784
-2026-09-11,outro,Supino Reto (Barra),2,normal,60,10,,,20133442784
-2026-09-11,outro,Supino Reto (Barra),3,falha,65,9,,,20133442784
-2026-09-11,outro,Supino Reto (Barra),4,normal,56.5,10,,,20133442784
-2026-09-11,outro,Abdominal (Máquina),1,normal,30,15,,,20133442784
-2026-09-11,outro,Abdominal (Máquina),2,normal,30,10,,,20133442784
-2026-09-11,outro,Desenvolvimento (Halter),1,normal,35,10,,,20133442784
-2026-09-11,outro,Desenvolvimento (Halter),2,falha,35,9,,,20133442784
-2026-09-11,outro,Extensão de Tríceps Unilateral (Halter),1,normal,10,20,,,20133442784
-2026-09-11,outro,Extensão de Tríceps Unilateral (Halter),2,normal,10,18,,,20133442784
-2026-09-13,B,Crossover na Polia,1,aquecimento,35,10,,Hevy 'Segunda - Push Day 1',20162467414
+2026-09-08,other,Crossover na Polia,1,warmup,40,10,,Hevy '4 - Upper Body',20091890951
+2026-09-08,other,Crossover na Polia,2,normal,40,11,,,20091890951
+2026-09-08,other,Crossover na Polia,3,normal,45,12,,,20091890951
+2026-09-08,other,Crossover na Polia,4,normal,50,10,,,20091890951
+2026-09-08,other,Tríceps na Polia Unilateral (Cabo),1,normal,10,10,,,20091890951
+2026-09-08,other,Tríceps na Polia Unilateral (Cabo),2,normal,10,10,,,20091890951
+2026-09-08,other,Tríceps na Polia Unilateral (Cabo),3,normal,6.5,20,,,20091890951
+2026-09-08,other,Puxada Alta (Cabo),1,normal,45,11,,,20091890951
+2026-09-08,other,Puxada Alta (Cabo),2,normal,55,10,,,20091890951
+2026-09-08,other,Puxada Alta (Cabo),3,normal,50,11,,,20091890951
+2026-09-08,other,Extensão de Tríceps (Máquina),1,normal,45,10,,,20091890951
+2026-09-08,other,Extensão de Tríceps (Máquina),2,failure,45,8,,,20091890951
+2026-09-08,other,Extensão de Tríceps (Máquina),3,drop,40,5,,,20091890951
+2026-09-08,other,Extensão de Tríceps (Máquina),4,normal,45,10,,,20091890951
+2026-09-08,other,Rosca Scott (Halter),1,normal,30,10,,Barra 10kg,20091890951
+2026-09-08,other,Rosca Scott (Halter),2,failure,30,8,,,20091890951
+2026-09-08,other,Rosca Scott (Halter),3,failure,30,8,,,20091890951
+2026-09-08,other,Desenvolvimento de Ombros (Halter),1,normal,35,10,,,20091890951
+2026-09-08,other,Desenvolvimento de Ombros (Halter),2,normal,35,10,,,20091890951
+2026-09-08,other,Desenvolvimento de Ombros (Halter),3,normal,35,8,,,20091890951
+2026-09-11,other,Cadeira Abdutora (Máquina),1,normal,65,10,,Hevy 'Treino noturno',20133442784
+2026-09-11,other,Cadeira Abdutora (Máquina),2,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Abdutora (Máquina),3,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Abdutora (Máquina),4,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Adutora (Máquina),1,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Adutora (Máquina),2,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Adutora (Máquina),3,normal,70,10,,,20133442784
+2026-09-11,other,Cadeira Adutora (Máquina),4,normal,75,8,,,20133442784
+2026-09-11,other,Elevação Lateral (Máquina),1,normal,20,12,,,20133442784
+2026-09-11,other,Elevação Lateral (Máquina),2,normal,20,11,,,20133442784
+2026-09-11,other,Elevação Lateral (Máquina),3,normal,20,12,,,20133442784
+2026-09-11,other,Elevação Lateral (Máquina),4,drop,20,13,,,20133442784
+2026-09-11,other,Crucifixo (Máquina),1,normal,35,10,,Maquina merda da ttf alameda,20133442784
+2026-09-11,other,Crucifixo (Máquina),2,normal,35,10,,,20133442784
+2026-09-11,other,Crucifixo (Máquina),3,normal,35,10,,,20133442784
+2026-09-11,other,Rosca Scott (Máquina),1,normal,25,8,,,20133442784
+2026-09-11,other,Rosca Scott (Máquina),2,normal,25,8,,,20133442784
+2026-09-11,other,Rosca Scott (Máquina),3,normal,20,9,,,20133442784
+2026-09-11,other,Supino Reto (Barra),1,normal,60,10,,,20133442784
+2026-09-11,other,Supino Reto (Barra),2,normal,60,10,,,20133442784
+2026-09-11,other,Supino Reto (Barra),3,failure,65,9,,,20133442784
+2026-09-11,other,Supino Reto (Barra),4,normal,56.5,10,,,20133442784
+2026-09-11,other,Abdominal (Máquina),1,normal,30,15,,,20133442784
+2026-09-11,other,Abdominal (Máquina),2,normal,30,10,,,20133442784
+2026-09-11,other,Desenvolvimento (Halter),1,normal,35,10,,,20133442784
+2026-09-11,other,Desenvolvimento (Halter),2,failure,35,9,,,20133442784
+2026-09-11,other,Extensão de Tríceps Unilateral (Halter),1,normal,10,20,,,20133442784
+2026-09-11,other,Extensão de Tríceps Unilateral (Halter),2,normal,10,18,,,20133442784
+2026-09-13,B,Crossover na Polia,1,warmup,35,10,,Hevy 'Segunda - Push Day 1',20162467414
 2026-09-13,B,Crossover na Polia,2,normal,40,11,,,20162467414
 2026-09-13,B,Crossover na Polia,3,normal,50,12,,,20162467414
 2026-09-13,B,Crossover na Polia,4,normal,50,10,,,20162467414
@@ -148,7 +148,7 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-13,B,Abdominal,1,normal,,20,,,20162467414
 2026-09-13,B,Abdominal,2,normal,,20,,,20162467414
 2026-09-13,B,Abdominal,3,normal,,20,,,20162467414
-2026-09-15,C,Remada Inclinada com Apoio no Peito (Halter),1,aquecimento,30,10,,Hevy 'Sexta - Pull Day 2',20189949052
+2026-09-15,C,Remada Inclinada com Apoio no Peito (Halter),1,warmup,30,10,,Hevy 'Sexta - Pull Day 2',20189949052
 2026-09-15,C,Remada Inclinada com Apoio no Peito (Halter),2,normal,35,8,,,20189949052
 2026-09-15,C,Remada Inclinada com Apoio no Peito (Halter),3,normal,35,10,8.5,,20189949052
 2026-09-15,C,Remada Inclinada com Apoio no Peito (Halter),4,normal,40,12,,,20189949052
@@ -168,12 +168,12 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-15,C,Face Pull,2,normal,12.5,15,,,20189949052
 2026-09-15,C,Face Pull,3,normal,15,15,,,20189949052
 2026-09-15,C,Face Pull,4,normal,15,15,,,20189949052
-2026-09-21,B,Supino Inclinado (Barra),1,aquecimento,50,15,7,Hevy 'Segunda - Push Day 1',20271610397
+2026-09-21,B,Supino Inclinado (Barra),1,warmup,50,15,7,Hevy 'Segunda - Push Day 1',20271610397
 2026-09-21,B,Supino Inclinado (Barra),2,normal,60,10,,,20271610397
 2026-09-21,B,Supino Inclinado (Barra),3,normal,60,10,,,20271610397
 2026-09-21,B,Supino Reto (Halter),1,normal,45,10,,,20271610397
 2026-09-21,B,Supino Reto (Halter),2,normal,50,7,10,,20271610397
-2026-09-21,B,Supino Reto (Halter),3,falha,45,8,,,20271610397
+2026-09-21,B,Supino Reto (Halter),3,failure,45,8,,,20271610397
 2026-09-21,B,Crucifixo (Máquina),1,normal,35,11,,,20271610397
 2026-09-21,B,Crucifixo (Máquina),2,normal,30,9,,,20271610397
 2026-09-21,B,Crucifixo (Máquina),3,normal,30,8,,,20271610397
@@ -188,15 +188,15 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-21,B,Extensão de Tríceps Unilateral (Halter),3,normal,9,20,,,20271610397
 2026-09-21,B,Supino Iso-Lateral (Máquina),1,normal,60,10,,,20271610397
 2026-09-21,B,Supino Iso-Lateral (Máquina),2,normal,70,10,,,20271610397
-2026-09-21,B,Supino Iso-Lateral (Máquina),3,falha,70,8,,,20271610397
+2026-09-21,B,Supino Iso-Lateral (Máquina),3,failure,70,8,,,20271610397
 2026-09-21,B,Supino Iso-Lateral (Máquina),4,drop,60,3,,,20271610397
 2026-09-21,B,Crucifixo Reto (Halter),1,normal,25,10,,,20271610397
 2026-09-21,B,Crucifixo Reto (Halter),2,normal,25,8,,,20271610397
 2026-09-21,B,Crucifixo Reto (Halter),3,normal,20,8,,,20271610397
-2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),1,aquecimento,20,20,,Hevy 'Treino noturno',20285876191
+2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),1,warmup,20,20,,Hevy 'Treino noturno',20285876191
 2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),2,normal,25,10,9.5,,20285876191
 2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),3,normal,25,10,,,20285876191
-2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),4,falha,27.5,7,,,20285876191
+2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),4,failure,27.5,7,,,20285876191
 2026-09-22,C,Puxada com Corda e Braços Estendidos (Cabo),5,drop,25,3,,,20285876191
 2026-09-22,C,Puxada Alta - Pegada Fechada (Cabo),1,normal,45,10,,,20285876191
 2026-09-22,C,Puxada Alta - Pegada Fechada (Cabo),2,normal,50,8,,,20285876191
@@ -205,7 +205,7 @@ data,treino,exercicio,serie,tipo_serie,carga_kg,reps,rpe,notas,fonte_id
 2026-09-22,C,Rosca Scott (Barra),1,normal,20,10,,Barra acho q tinha 10kg,20285876191
 2026-09-22,C,Rosca Scott (Barra),2,normal,25,10,,,20285876191
 2026-09-22,C,Rosca Scott (Barra),3,normal,25,15,,,20285876191
-2026-09-22,C,Remada Inclinada com Apoio no Peito (Halter),1,aquecimento,30,10,,,20285876191
+2026-09-22,C,Remada Inclinada com Apoio no Peito (Halter),1,warmup,30,10,,,20285876191
 2026-09-22,C,Remada Inclinada com Apoio no Peito (Halter),2,normal,35,10,,,20285876191
 2026-09-22,C,Remada Inclinada com Apoio no Peito (Halter),3,normal,35,10,,,20285876191
 2026-09-22,C,Remada Inclinada com Apoio no Peito (Halter),4,normal,35,12,,,20285876191

@@ -1,4 +1,4 @@
-data,recuperacao_pct,esforco_pct,sono_pct,hrv_ms,fc_repouso,sono_h,sono_profundo_h,sono_rem_h,passos,kcal_ativas,kcal_repouso,fonte,notas
+date,bevel_recovery_pct,bevel_strain_pct,bevel_sleep_pct,hrv_ms,resting_hr,sleep_h,deep_sleep_h,rem_sleep_h,steps,active_kcal,basal_kcal,source,notes
 2026-09-23,82,62,93,,,,,,,,,bevel,
 2026-09-24,87,12,95,,,,,,,,,bevel,
 2026-09-25,92,61,96,,,,,,,,,bevel,

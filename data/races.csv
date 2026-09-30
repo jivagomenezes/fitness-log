@@ -1,4 +1,4 @@
-data,nome,local,distancia_km,tempo_chip,tempo_oficial,lugar_geral,lugar_escalao,corrida_id,notas
+date,name,location,distance_km,chip_time,gun_time,overall_place,category_place,run_id,notes
 2024-12-15,São Silvestre de Lisboa (El Corte Inglés),Lisboa,10,47:43,48:52,1163,379,2024-12-15-1,"prova noturna com tempo favorável; relógio marcou 9,75 km"
 2025-11-30,Corrida 10 km da Meia Maratona dos Descobrimentos (Generali Tranquilidade),Lisboa,10,51:24,54:24,994,392,,percurso plano (~6 m de desnível); FC média 176; parcial 5 km no certificado: 30:02
 2026-09-19,Corrida Jorge Pina para a Inclusão 2026,Portugal,10,55:16,,,,2026-09-19-1,30 °C; o calor foi o limitador; FC máx 192. Tempo informado (não é o oficial)
