@@ -105,17 +105,23 @@ def hours(intervals):
 
 
 def read_samples():
-    seen, samples, file_dates, coverage = set(), [], set(), []
+    """Merge the samples of every file. A line repeated across files counts once, and is attributed to the
+    MOST RECENT file that sent it (so daily totals follow the latest file, and ignored files do not win)."""
+    by_line, file_dates, coverage = {}, set(), []
     for f in sorted(RAW.glob("*.txt")):
         m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
         if m:
             file_dates.add(datetime.strptime(m.group(1), "%Y-%m-%d").date())
-        first = len(samples)
+        starts = []
         for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             line = line.strip()
-            if not line or line.lower().startswith(("type;", "tipo;")) or line in seen:
+            if not line or line.lower().startswith(("type;", "tipo;")):
                 continue
-            seen.add(line)
+            if line in by_line:
+                by_line[line]["file"] = f.name
+                by_line[line]["ref"] = f"{f.name}:{n}"
+                starts.append(by_line[line]["start"])
+                continue
             p = [x.strip() for x in line.split(";")]
             if len(p) < 4:
                 warnings.append(f"{f.name}:{n}: incomplete line")
@@ -125,15 +131,16 @@ def read_samples():
                 warnings.append(f"{f.name}:{n}: unknown type '{p[0]}'")
                 continue
             try:
-                samples.append({"type": kind, "start": when(p[1]), "end": when(p[2]), "value": p[3],
-                                "unit": p[4].lower() if len(p) > 4 else "", "ref": f"{f.name}:{n}",
-                                "file": f.name})
+                sample = {"type": kind, "start": when(p[1]), "end": when(p[2]), "value": p[3],
+                          "unit": p[4].lower() if len(p) > 4 else "", "ref": f"{f.name}:{n}", "file": f.name}
             except ValueError as e:
                 warnings.append(f"{f.name}:{n}: {e}")
-        mine = [s["start"] for s in samples[first:]]
-        if mine:
-            coverage.append(min(mine))  # the shortcut asks for "the last N days": this file starts here
-    return samples, file_dates, coverage
+                continue
+            by_line[line] = sample
+            starts.append(sample["start"])
+        if starts:
+            coverage.append(min(starts))  # the shortcut asks for "the last N days": this file starts here
+    return list(by_line.values()), file_dates, coverage
 
 
 def compute(samples, file_dates, coverage):
