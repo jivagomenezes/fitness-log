@@ -42,7 +42,8 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | rpe | esforço percebido 1–10 |
 | temperatura_c | relevante para provas e corridas na rua |
 | fonte | `strava` · `manual` · `apple_watch` · `bevel` |
-| fonte_id | id na fonte (uuid do Apple Watch, id do Strava) — usado para não importar duas vezes |
+| fonte_id | uuid do treino no Apple Watch (JSON) — evita importar duas vezes |
+| strava_id | id da atividade no Strava |
 | notas | texto livre: estrutura do treino, sensações |
 
 ### tiros.csv — 1 linha por tiro (liga com corridas.id)
@@ -60,6 +61,7 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | coluna | descrição |
 |---|---|
 | data | data da sessão |
+| fonte_id | id da atividade no Strava (evita importar duas vezes) |
 | treino | `A` (inferiores/core) · `B` (push) · `C` (pull) · `D` (core + circuito Z2) · `outro` |
 | exercicio | nome canônico, igual ao do Hevy (chave de `exercicios.csv`) |
 | serie | número da série |
@@ -69,7 +71,7 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | rpe | opcional |
 
 ### exercicios.csv — dimensão de exercícios
-`exercicio` (nome Hevy) · `nome_pt` · `grupo` (`peito`, `costas`, `ombro`, `biceps`, `triceps`, `quadriceps`, `posterior`, `gluteo`, `panturrilha`, `core`, `cardio`) · `notas`.
+`exercicio` (nome Hevy) · `nome_pt` · `grupo` (`peito`, `costas`, `ombro`, `biceps`, `triceps`, `quadriceps`, `posterior`, `gluteo`, `adutor`, `panturrilha`, `core`, `cardio`) · `notas`.
 Todo exercício novo em `academia.csv` precisa de uma linha aqui (o script avisa).
 
 ### provas.csv — 1 linha por prova (resultado oficial)

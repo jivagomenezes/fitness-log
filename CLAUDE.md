@@ -33,6 +33,21 @@ esquemas e convenções estão no `README.md` (dicionário de dados). Responder 
    com o conteúdo novo de `contexto/estado_atual.md`. Se `plano.md` mudou, atualizar `fitness_log/plano.md` também.
 9. Comentar brevemente o que chamar atenção (alertas novos, progressão de carga, FC dos tiros).
 
+## Sincronizar com o Strava (conector do Strava no Claude)
+
+1. Descobrir o último dia registrado (maior data em `corridas.csv` / `academia.csv`) e listar as atividades
+   do Strava desde 2 dias antes disso (`list_activities` com `range_start`).
+2. **Run** que não esteja em `corridas.csv` (`strava_id`): gravar com os dados do Strava (data, início, distância,
+   tempo, FC via `get_activity_performance`) e `fonte=strava`. O nome/descrição da atividade costuma dizer o treino
+   (ex.: "VO2 · 5×800m…"); se não disser, inferir pelas zonas e marcar "tipo a confirmar" nas notas.
+   Se depois chegar o JSON do Apple Watch, o importador completa o registro.
+3. **WeightTraining** com descrição "Registrado com hevyapp.com": salvar o texto em `raw/hevy/<id>.txt` e rodar
+   `scripts/importar_hevy_texto.py --data <data> --treino <A|B|C|D|outro> --fonte-id <id> --rotina "<nome>"`.
+   Treino pela rotina/conteúdo: Push → B, Pull → C, Lower/pernas → A; misto → outro. Exercício novo → `exercicios.csv`.
+   WeightTraining sem descrição do Hevy (treino só no relógio) não entra na tabela de séries.
+4. Ignorar alongamento/mobilidade (PhysicalTherapy), caminhada e outros esportes.
+5. Seguir os passos 6–9 do registro (gerar estado, commit, atualizar o Projeto, comentar).
+
 ## Regras
 
 - Nunca editar `contexto/estado_atual.md` à mão: ele é gerado.
