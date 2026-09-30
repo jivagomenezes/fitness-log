@@ -101,6 +101,16 @@ def fnum(x, casas=1):
     return f"{x:.{casas}f}".rstrip("0").rstrip(".") if casas else f"{x:.0f}"
 
 
+def fzonas(zs):
+    if not zs:
+        return "–"
+    z = [x or 0 for x in zs]
+    t = sum(z)
+    if not t:
+        return "–"
+    return f"{100 * (z[0] + z[1]) / t:.0f}% · {100 * z[2] / t:.0f}% · {100 * (z[3] + z[4]) / t:.0f}%"
+
+
 def seg_semana(d):
     return d - timedelta(days=d.weekday())
 
@@ -124,7 +134,12 @@ def carregar():
         for c in ("fc_media", "fc_max", "rpe", "temperatura_c"):
             r[c] = num(r[c], ref, c)
         r["pace"] = r["seg"] / r["km"] if r["km"] and r["seg"] else None
+        zs = [num(r.get(f"z{i}_s", ""), ref, f"z{i}_s") for i in range(1, 6)]
+        r["zs"] = zs if any(z is not None for z in zs) else None
         corridas.append(r)
+    fids = [c["fonte_id"] for c in corridas if c.get("fonte_id")]
+    for i in {i for i in fids if fids.count(i) > 1}:
+        erros.append(f"corridas.csv: fonte_id duplicado '{i}' (treino importado duas vezes)")
     ids = [c["id"] for c in corridas]
     for i in {i for i in ids if ids.count(i) > 1}:
         erros.append(f"corridas.csv: id duplicado '{i}'")
@@ -218,7 +233,8 @@ def secao_timeline(hoje, corridas, series, rec):
 
 def volume_semanal(hoje, corridas, series):
     semanas = [seg_semana(hoje) - timedelta(weeks=i) for i in range(SEMANAS_VOLUME)]
-    v = {s: {"km": 0.0, "km_facil": 0.0, "corridas": 0, "sessoes": set(), "series": 0, "ton": 0.0}
+    v = {s: {"km": 0.0, "km_facil": 0.0, "corridas": 0, "sessoes": set(), "series": 0, "ton": 0.0,
+             "z_facil": 0.0, "z_total": 0.0}
          for s in semanas}
     for c in corridas:
         if c["data"] and seg_semana(c["data"]) in v:
@@ -227,6 +243,10 @@ def volume_semanal(hoje, corridas, series):
             x["corridas"] += 1
             if c["tipo"] not in DUROS:
                 x["km_facil"] += c["km"] or 0
+            if c["zs"]:
+                zs = [z or 0 for z in c["zs"]]
+                x["z_facil"] += zs[0] + zs[1]
+                x["z_total"] += sum(zs)
     for s in series:
         if s["data"] and seg_semana(s["data"]) in v and s["tipo_serie"] != "aquecimento":
             x = v[seg_semana(s["data"])]
@@ -238,11 +258,11 @@ def volume_semanal(hoje, corridas, series):
 
 def secao_volume(hoje, semanas, v):
     out = ["## Volume semanal", "",
-           "| semana (seg) | km | corridas | % km fácil | sessões academia | séries | tonelagem (kg) |",
+           "| semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |",
            "|---|---|---|---|---|---|---|"]
     for s in semanas:
         x = v[s]
-        pf = f"{100 * x['km_facil'] / x['km']:.0f}%" if x["km"] else "–"
+        pf = f"{100 * x['z_facil'] / x['z_total']:.0f}%" if x["z_total"] else "–"
         atual = " (atual)" if s == seg_semana(hoje) else ""
         out.append(f"| {s:%d/%m}{atual} | {fnum(x['km'], 1) if x['km'] else '0'} | {x['corridas']} | {pf} | "
                    f"{len(x['sessoes'])} | {x['series']} | {x['ton']:.0f} |")
@@ -250,16 +270,16 @@ def secao_volume(hoje, semanas, v):
 
 
 def secao_corridas(corridas):
-    ult = sorted([c for c in corridas if c["data"]], key=lambda c: (c["data"], c["id"]))[-6:]
+    ult = sorted([c for c in corridas if c["data"]], key=lambda c: (c["data"], c.get("inicio", ""), c["id"]))[-6:]
     out = ["## Corridas recentes", ""]
     if not ult:
         return out + ["Sem corridas registradas.", ""]
-    out += ["| data | tipo | local | km | tempo | pace | FC méd/máx | RPE | notas |",
-            "|---|---|---|---|---|---|---|---|---|"]
+    out += ["| data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
     for c in reversed(ult):
         out.append(f"| {dia_label(c['data'])} | {c['tipo']} | {c['local'] or '–'} | {fnum(c['km'], 2)} | "
                    f"{fdur(c['seg']) if c['seg'] else '–'} | {fpace(c['pace']) if c['pace'] else '–'} | "
-                   f"{fnum(c['fc_media'], 0)}/{fnum(c['fc_max'], 0)} | {fnum(c['rpe'], 0)} | {c['notas'] or ''} |")
+                   f"{fnum(c['fc_media'], 0)}/{fnum(c['fc_max'], 0)} | {fzonas(c['zs'])} | {fnum(c['rpe'], 0)} | {c['notas'] or ''} |")
     return out + [""]
 
 
@@ -391,8 +411,10 @@ def alertas(hoje, corridas, tiros, series, rec, st, semanas, vol):
     if k2 and k1 > k2 * 1.15:
         a.append(f"Semana de {s_ant:%d/%m}: {k1:.1f} km, +{(k1 / k2 - 1):.0%} sobre a anterior ({k2:.1f} km).")
     k = vol[s_ant]
-    if k["km"] and k["km_facil"] / k["km"] < 0.7:
-        a.append(f"Semana de {s_ant:%d/%m}: só {k['km_facil'] / k['km']:.0%} do km em ritmo fácil (alvo ~80%).")
+    if k["z_total"] and k["z_facil"] / k["z_total"] < 0.7:
+        a.append(f"Semana de {s_ant:%d/%m}: só {k['z_facil'] / k['z_total']:.0%} do tempo de corrida em Z1–2 (alvo ~80%).")
+    elif not k["z_total"] and k["km"] and k["km_facil"] / k["km"] < 0.7:
+        a.append(f"Semana de {s_ant:%d/%m}: só {k['km_facil'] / k['km']:.0%} do km em treinos fáceis (alvo ~80%; sem dados de zona).")
     return a
 
 

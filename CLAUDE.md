@@ -14,13 +14,16 @@ esquemas e convenções estão no `README.md` (dicionário de dados). Responder 
 ## Registrar um treino (texto colado, print, exportação)
 
 1. **Extrair** os campos para o esquema da tabela certa:
-   - corrida → `corridas.csv` (+ `tiros.csv` se for intervalado com tiros identificáveis)
+   - corrida → `corridas.csv` (+ `tiros.csv` se for intervalado com tiros identificáveis);
+     JSON do Apple Watch → copiar para `raw/` e usar `scripts/importar_corrida_json.py --tipo <tipo>`
+     (o tipo do treino não vem no JSON: confirmar com o Jivago)
    - academia (texto do Hevy) → `academia.csv`, uma linha por série; aquecimento com `tipo_serie=aquecimento`
    - recuperação (Bevel / app Saúde) → `recuperacao.csv`, uma linha por dia
 2. **Nome do exercício** = nome exato do Hevy. Se for novo, acrescentar em `exercicios.csv` com `nome_pt` e `grupo`.
+   Halteres: carga = soma dos dois. Unilateral: reps = soma dos dois lados.
 3. **Não inventar dados.** Campo que não veio fica vazio. Se faltar algo importante (ex.: data, tipo da corrida),
    perguntar antes de gravar. Datas relativas ("ontem") são resolvidas no fuso de Lisboa.
-4. **Não duplicar:** conferir se já existe registro para a mesma data/tipo (ou mesmo `strava_id`) antes do append.
+4. **Não duplicar:** conferir se já existe registro para a mesma data/tipo (ou mesmo `fonte_id`) antes do append.
    Correção de dado errado = editar a linha existente, não criar outra.
 5. Mostrar ao Jivago, em poucas linhas, o que foi gravado.
 6. Rodar `python3 scripts/gerar_estado.py`. Se sair com erro, corrigir os dados e rodar de novo.

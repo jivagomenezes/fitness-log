@@ -9,11 +9,13 @@ contexto/
   plano.md         o programa: objetivos, estrutura semanal, calibrações (editado à mão)
   estado_atual.md  GERADO — resumo dos últimos dias, volume, cargas, recuperação, alertas
 scripts/
-  gerar_estado.py  valida os CSVs e regenera contexto/estado_atual.md
+  gerar_estado.py           valida os CSVs e regenera contexto/estado_atual.md
+  importar_corrida_json.py  importa corrida do Apple Watch (JSON) para corridas.csv
 raw/             exportações brutas (Hevy CSV, Strava JSON, prints) — fora do git
 ```
 
 Fluxo: registrar treino → `python3 scripts/gerar_estado.py` → commit.
+Corrida exportada do Apple Watch em JSON: `python3 scripts/importar_corrida_json.py raw/arquivo.json --tipo z2`.
 O `estado_atual.md` e o `plano.md` vão para o conhecimento do Projeto "Fitness 2026" no Claude,
 para que toda conversa comece com o contexto real. Protocolo completo em `CLAUDE.md`.
 
@@ -26,16 +28,20 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | coluna | descrição |
 |---|---|
 | id | `AAAA-MM-DD-n` (n = 1, 2… se houver mais de uma no dia) |
-| data | data da corrida |
+| data | data da corrida (fuso de Lisboa) |
+| inicio | hora de início `HH:MM` |
 | tipo | `intervalado` · `tempo` · `longao` · `z2` · `regenerativo` · `prova` · `teste` |
 | local | `esteira` · `rua` · `pista` |
 | distancia_km | distância total, incluindo aquecimento e desaquecimento |
 | duracao | tempo em movimento |
 | fc_media, fc_max | bpm |
+| z1_s … z5_s | segundos em cada zona de FC (zonas do Apple Watch, método HRR) |
+| cadencia_spm | cadência média (passos/min) |
+| elevacao_m | subida acumulada (na esteira reflete a inclinação) |
 | rpe | esforço percebido 1–10 |
 | temperatura_c | relevante para provas e corridas na rua |
 | fonte | `strava` · `manual` · `apple_watch` · `bevel` |
-| strava_id | id da atividade no Strava (chave para a futura ingestão automática) |
+| fonte_id | id na fonte (uuid do Apple Watch, id do Strava) — usado para não importar duas vezes |
 | notas | texto livre: estrutura do treino, sensações |
 
 ### tiros.csv — 1 linha por tiro (liga com corridas.id)
@@ -57,8 +63,8 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 | exercicio | nome canônico, igual ao do Hevy (chave de `exercicios.csv`) |
 | serie | número da série |
 | tipo_serie | `normal` · `aquecimento` · `drop` · `falha` (aquecimento fica fora do volume) |
-| carga_kg | carga como registrada no Hevy (halteres: por halter); peso corporal = vazio |
-| reps | repetições |
+| carga_kg | carga como registrada no Hevy. **Halteres: soma dos dois** (2 × 20 kg = 40). Peso corporal = vazio |
+| reps | repetições. **Unilateral: soma dos dois lados** (10 + 10 = 20) |
 | rpe | opcional |
 
 ### exercicios.csv — dimensão de exercícios
