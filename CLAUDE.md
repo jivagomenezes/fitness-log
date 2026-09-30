@@ -18,6 +18,7 @@ esquemas e convenções estão no `README.md` (dicionário de dados). Responder 
      JSON do Apple Watch → copiar para `raw/` e usar `scripts/importar_corrida_json.py --tipo <tipo>`
      (o tipo do treino não vem no JSON: confirmar com o Jivago)
    - academia (texto do Hevy) → `academia.csv`, uma linha por série; aquecimento com `tipo_serie=aquecimento`
+   - prova → além da corrida, o resultado oficial (chip, oficial, colocação) em `provas.csv`
    - recuperação (Bevel / app Saúde) → `recuperacao.csv`, uma linha por dia
 2. **Nome do exercício** = nome exato do Hevy. Se for novo, acrescentar em `exercicios.csv` com `nome_pt` e `grupo`.
    Halteres: carga = soma dos dois. Unilateral: reps = soma dos dois lados.

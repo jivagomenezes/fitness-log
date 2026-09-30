@@ -72,6 +72,10 @@ Nada de pace armazenado: pace e velocidade são sempre derivados de distância e
 `exercicio` (nome Hevy) · `nome_pt` · `grupo` (`peito`, `costas`, `ombro`, `biceps`, `triceps`, `quadriceps`, `posterior`, `gluteo`, `panturrilha`, `core`, `cardio`) · `notas`.
 Todo exercício novo em `academia.csv` precisa de uma linha aqui (o script avisa).
 
+### provas.csv — 1 linha por prova (resultado oficial)
+`data` · `nome` · `local` · `distancia_km` (distância oficial) · `tempo_chip` · `tempo_oficial` (tempo bruto) · `lugar_geral` · `lugar_escalao` · `corrida_id` (liga com os dados do relógio em `corridas.csv`) · `notas`.
+Os recordes pessoais saem daqui (tempo de chip), não do relógio.
+
 ### recuperacao.csv — 1 linha por dia
 `data` · `recuperacao_pct` · `esforco_pct` · `sono_pct` (scores do Bevel, 0–100) · `hrv_ms` · `fc_repouso` · `sono_h` · `fonte` · `notas`.
 Recuperação e sono são os scores da manhã daquele dia; esforço é a carga acumulada no próprio dia.

@@ -192,7 +192,39 @@ def carregar():
     for d in {d for d in datas_rec if datas_rec.count(d) > 1}:
         erros.append(f"recuperacao.csv: data duplicada {d}")
 
-    return corridas, tiros, series, rec
+    provas = []
+    for r in ler("provas.csv"):
+        ref = r["_linha"]
+        r["data"] = dt(r["data"], ref)
+        r["dist"] = num(r["distancia_km"], ref, "distancia_km")
+        r["chip"] = seg(r["tempo_chip"], ref, "tempo_chip")
+        if r["corrida_id"] and r["corrida_id"] not in idset:
+            erros.append(f"{ref}: corrida_id '{r['corrida_id']}' não existe em corridas.csv")
+        provas.append(r)
+
+    return corridas, tiros, series, rec, provas
+
+
+def secao_provas(provas):
+    out = ["## Provas e recordes", ""]
+    validas = [p for p in provas if p["data"] and p["dist"] and p["chip"]]
+    if not validas:
+        return out + ["Sem provas registradas.", ""]
+    prs = {}
+    for p in validas:
+        if p["dist"] not in prs or p["chip"] < prs[p["dist"]]["chip"]:
+            prs[p["dist"]] = p
+    for d, p in sorted(prs.items()):
+        out.append(f"- **PR {fnum(d, 1)} km: {fdur(p['chip'])}** ({fpace(p['chip'] / d)}) — {p['nome']}, {p['data']:%d/%m/%Y}")
+    if 10 in prs and 5 not in prs:
+        eq = prs[10]["chip"] * (5 / 10) ** 1.06
+        out.append(f"- Equivalente 5K do PR de 10K (Riegel): ~{fdur(eq)} ({fpace(eq / 5)})")
+    out += ["", "| data | prova | km | chip | pace | oficial | lugar geral / escalão |", "|---|---|---|---|---|---|---|"]
+    for p in sorted(validas, key=lambda p: p["data"], reverse=True):
+        lug = f"{p['lugar_geral'] or '–'} / {p['lugar_escalao'] or '–'}"
+        out.append(f"| {p['data']:%d/%m/%Y} | {p['nome']} | {fnum(p['dist'], 1)} | {fdur(p['chip'])} | "
+                   f"{fpace(p['chip'] / p['dist'])} | {p['tempo_oficial'] or '–'} | {lug} |")
+    return out + [""]
 
 
 # ---------- seções ----------
@@ -431,7 +463,7 @@ def main():
     args = ap.parse_args()
     hoje = datetime.strptime(args.hoje, "%Y-%m-%d").date() if args.hoje else date.today()
 
-    corridas, tiros, series, rec = carregar()
+    corridas, tiros, series, rec, provas = carregar()
     if erros:
         print("ERROS DE DADOS — estado_atual.md não foi gerado:", file=sys.stderr)
         for e in erros:
@@ -459,6 +491,7 @@ def main():
     doc += [""]
     doc += secao_timeline(hoje, corridas, series, rec) + [""]
     doc += secao_volume(hoje, semanas, vol) + [""]
+    doc += secao_provas(provas)
     doc += secao_corridas(corridas)
     doc += secao_tiros(corridas, tiros)
     doc += secao_academia(hoje, series)

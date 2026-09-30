@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 12:47. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/gerar_estado.py` em 2026-09-30 12:50. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 30/09/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -37,6 +37,17 @@
 | 07/09 | 29.3 | 4 | 60% | 0 | 0 | 0 |
 | 31/08 | 0 | 0 | – | 0 | 0 | 0 |
 | 24/08 | 0 | 0 | – | 0 | 0 | 0 |
+
+## Provas e recordes
+
+- **PR 10 km: 47:43** (4:46/km) — São Silvestre de Lisboa (El Corte Inglés), 15/12/2024
+- Equivalente 5K do PR de 10K (Riegel): ~22:53 (4:35/km)
+
+| data | prova | km | chip | pace | oficial | lugar geral / escalão |
+|---|---|---|---|---|---|---|
+| 19/09/2026 | 10K com amigos | 10 | 55:16 | 5:32/km | – | – / – |
+| 30/11/2025 | Corrida dos Descobrimentos | 10 | 51:17 | 5:08/km | – | – / – |
+| 15/12/2024 | São Silvestre de Lisboa (El Corte Inglés) | 10 | 47:43 | 4:46/km | 48:52 | 1163 / 379 |
 
 ## Corridas recentes
 
