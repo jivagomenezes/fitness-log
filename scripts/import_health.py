@@ -107,12 +107,12 @@ def hours(intervals):
 def read_samples():
     """Merge the samples of every file. A line repeated across files counts once, and is attributed to the
     MOST RECENT file that sent it (so daily totals follow the latest file, and ignored files do not win)."""
-    by_line, file_dates, coverage = {}, set(), []
+    by_line, file_dates, coverage = {}, set(), defaultdict(list)
     for f in sorted(RAW.glob("*.txt")):
         m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
         if m:
             file_dates.add(datetime.strptime(m.group(1), "%Y-%m-%d").date())
-        starts = []
+        starts = defaultdict(list)
         for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
             line = line.strip()
             if not line or line.lower().startswith(("type;", "tipo;")):
@@ -120,7 +120,7 @@ def read_samples():
             if line in by_line:
                 by_line[line]["file"] = f.name
                 by_line[line]["ref"] = f"{f.name}:{n}"
-                starts.append(by_line[line]["start"])
+                starts[by_line[line]["type"]].append(by_line[line]["start"])
                 continue
             p = [x.strip() for x in line.split(";")]
             if len(p) < 4:
@@ -137,9 +137,11 @@ def read_samples():
                 warnings.append(f"{f.name}:{n}: {e}")
                 continue
             by_line[line] = sample
-            starts.append(sample["start"])
-        if starts:
-            coverage.append(min(starts))  # the shortcut asks for "the last N days": this file starts here
+            starts[kind].append(sample["start"])
+        for kind, st in starts.items():
+            # each search in the shortcut asks for "the last N days" (N may differ per type): this file's
+            # samples of that type start here
+            coverage[kind].append(min(st))
     return list(by_line.values()), file_dates, coverage
 
 
@@ -164,14 +166,16 @@ def compute(samples, file_dates, coverage):
 
     # night / daily metrics
     point_days = {s["start"].date() for s in samples if s["type"] in ("rhr", "vo2max")}
-    for day in set(file_dates) | set(per_day) | point_days:
+    night_days = {(s["end"] + timedelta(hours=10)).date() for s in samples if s["type"] in ("hrv", "sleep")}
+    for day in set(file_dates) | set(per_day) | point_days | night_days:
         night_start = datetime.combine(day - timedelta(days=1), time(18, 0))
         night_end = datetime.combine(day, time(14, 0))
-        # a night is only complete if some file covers it from 18:00 the day before; otherwise the
-        # start of the night may have been cut off by the shortcut's date window — skip it
-        night_ok = any(c <= night_start for c in coverage)
-        if not night_ok and any(s["type"] in ("hrv", "sleep") and night_start <= s["end"] <= night_end for s in samples):
-            warnings.append(f"{day}: night skipped (not fully covered by any file; start may be cut off)")
+        # a night is only complete if some file covers it from 18:00 the day before (checked per type: the
+        # shortcut's searches may use different windows); otherwise its start may be cut off — skip it
+        night_ok = {k: any(c <= night_start for c in coverage[k]) for k in ("hrv", "sleep")}
+        for k, ok in night_ok.items():
+            if not ok and any(s["type"] == k and night_start <= s["end"] <= night_end for s in samples):
+                warnings.append(f"{day}: {k} skipped (night not fully covered by any file; start may be cut off)")
         hrv = [num(s["value"]) for s in samples
                if s["type"] == "hrv" and night_start <= s["start"] <= night_end and num(s["value"]) is not None]
         rhr_full = [(s["start"], num(s["value"]), s["end"]) for s in samples
@@ -189,7 +193,7 @@ def compute(samples, file_dates, coverage):
             elif STAGES[key]:
                 stages[STAGES[key]].append((s["start"], s["end"]))
         d = per_day[day]
-        if hrv and night_ok:
+        if hrv and night_ok["hrv"]:
             d["hrv_ms"] = statistics.mean(hrv)
         if rhr:
             # the Apple Watch daily value is an interval sample; point samples (start == end) come from
@@ -199,7 +203,7 @@ def compute(samples, file_dates, coverage):
         if vo2:
             d["vo2max"] = max(vo2)[1]
         asleep = stages["light"] + stages["deep"] + stages["rem"]
-        if asleep and night_ok:
+        if asleep and night_ok["sleep"]:
             d["sleep_h"] = hours(asleep)
             d["deep_sleep_h"] = hours(stages["deep"])
             d["rem_sleep_h"] = hours(stages["rem"])
