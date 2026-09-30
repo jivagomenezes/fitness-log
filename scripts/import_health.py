@@ -13,8 +13,8 @@ Each shortcut run writes raw/health/YYYY-MM-DD_HHMM.txt, one sample per line:
 
 types (Portuguese aliases accepted: fcr, sono, passos, kcal_ativas, kcal_repouso):
   hrv          HRV samples (ms, Apple Watch SDNN) → NIGHT mean (18:00 the day before to 14:00)
-  rhr          resting heart rate (bpm) → latest sample of the day
-  sleep        sleep stages (Core/Deep/REM/Awake/In Bed or Principal/Profundo/REM/Acordado/Na Cama)
+  rhr          resting heart rate (bpm) → mean of the day's samples (as the Health app shows it)
+  sleep        sleep stages (Core/Deep/REM/Awake/In Bed or Essencial/Profundo/REM/Sem Dormir/Na Cama)
                → hours asleep in the night ending that day (union of intervals, overlaps counted once)
   vo2max       Apple Watch VO2 max estimate ("Cardio Fitness", mL/kg/min) → latest sample of the day
                (aliases: vo2, cardio_fitness, preparo_cardiovascular)
@@ -51,9 +51,10 @@ STAGES = {
     "deep": "deep", "asleepdeep": "deep", "profundo": "deep",
     "rem": "rem", "asleeprem": "rem",
     "core": "light", "asleepcore": "light", "light": "light", "principal": "light", "leve": "light",
+    "essencial": "light",
     "asleep": "light", "asleepunspecified": "light", "unspecified": "light",
     "dormindo": "light", "a dormir": "light", "sono": "light", "não especificado": "light",
-    "awake": None, "acordado": None, "desperto": None,
+    "awake": None, "acordado": None, "desperto": None, "sem dormir": None,
     "in bed": None, "inbed": None, "na cama": None, "em cama": None,
 }
 DAILY_TOTALS = ("steps", "active_kcal", "basal_kcal")
@@ -163,7 +164,7 @@ def compute(samples, file_dates):
         if hrv:
             d["hrv_ms"] = statistics.mean(hrv)
         if rhr:
-            d["resting_hr"] = max(rhr)[1]
+            d["resting_hr"] = statistics.mean(v for _, v in rhr)
         if vo2:
             d["vo2max"] = max(vo2)[1]
         asleep = stages["light"] + stages["deep"] + stages["rem"]
