@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-01 07:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-01 21:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qui 01/10/2026 · **Bloco 5K:** semana 2 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -12,7 +12,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qui 01/10 (hoje) | descanso / sem registro | – · – · – · 51 ms |
+| qui 01/10 (hoje) | 🏋️ treino A (18 séries, 7 exercícios) | – · – · – · 51 ms |
 | qua 30/09 | 🏃 tempo 7.04 km, 6:02/km, FC 157; 🏋️ treino outro (12 séries, 3 exercícios) | 55% · 0% · 82% · 52 ms · 13.7k passos |
 | ter 29/09 | 🏋️ treino B (23 séries, 7 exercícios) | 35% · 63% · 78% · 53 ms · 12.9k passos |
 | seg 28/09 | 🏃 intervalado 8.21 km, 5:55/km, FC 153; 🏋️ treino outro (12 séries, 4 exercícios) | 73% · 80% · 80% · 52 ms · 21.0k passos |
@@ -31,7 +31,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 28/09 (atual) | 15.2 | 2 | 40% | 3 | 47 | 13684 |
+| 28/09 (atual) | 15.2 | 2 | 40% | 4 | 65 | 22650 |
 | 21/09 | 18.7 | 3 | 88% | 3 | 58 | 19862 |
 | 14/09 | 29.4 | 5 | 38% | 1 | 19 | 6049 |
 | 07/09 | 29.3 | 4 | 60% | 3 | 62 | 23100 |
@@ -85,12 +85,17 @@
 
 | treino | grupo | exercício | última | melhor série | séries | anterior | |
 |---|---|---|---|---|---|---|---|
+| A | adutor | Cadeira Adutora (Máquina) | 01/10 | 50 kg × 10 | 2 | 75 kg × 8 | ↓ |
+| A | core | Abdominal Declinado (com Peso) | 01/10 | 10 kg × 12 | 3 | – |  |
+| A | panturrilha | Panturrilha Sentado (Máquina) | 01/10 | 40 kg × 16 | 3 | – |  |
 | A | panturrilha | Panturrilha em Pé Unilateral (Máquina) | 23/09 | 55 kg × 12 | 4 | – |  |
-| A | posterior | Cadeira Flexora (Máquina) | 04/09 | 30 kg × 10 | 3 | 30 kg × 20 | ↓ |
-| A | posterior | Levantamento Terra com Pernas Estendidas | 04/09 | 50 kg × 10 | 3 | – |  |
+| A | posterior | Cadeira Flexora (Máquina) | 01/10 | 55 kg × 9 | 3 | 30 kg × 10 | ↑ |
+| A | posterior | Levantamento Terra com Pernas Estendidas | 01/10 | 45 kg × 10 | 2 | 50 kg × 10 | ↓ |
 | A | posterior | Mesa Flexora (Máquina) | 23/09 | 25 kg × 20 | 2 | – |  |
+| A | quadriceps | Agachamento (Barra) | 01/10 | 80 kg × 9 | 3 | – |  |
 | A | quadriceps | Agachamento (Smith) | 23/09 | 60 kg × 10 | 4 | – |  |
 | A | quadriceps | Agachamento Búlgaro (Halter) | 23/09 | 20 kg × 20 | 4 | – |  |
+| A | quadriceps | Agachamento Hack (Máquina) | 01/10 | 50 kg × 11 | 2 | – |  |
 | A | quadriceps | Agachamento Pêndulo (Máquina) | 04/09 | 30 kg × 10 | 3 | – |  |
 | B | biceps | Rosca Scott (Máquina) | 13/09 | 30 kg × 10 | 3 | 25 kg × 8 | ↑ |
 | B | core | Abdominal | 13/09 | PC × 20 | 3 | – |  |
@@ -114,7 +119,6 @@
 | C | costas | Remada Inclinada com Apoio no Peito (Halter) | 22/09 | 35 kg × 12 | 3 | 40 kg × 13 | ↓ |
 | C | ombro | Crucifixo Invertido (Halter) | 15/09 | 14 kg × 12 | 3 | – |  |
 | C | ombro | Face Pull | 22/09 | 15 kg × 10 | 3 | 15 kg × 15 | ↓ |
-| outro | adutor | Cadeira Adutora (Máquina) | 11/09 | 75 kg × 8 | 4 | 45 kg × 10 | ↑ |
 | outro | biceps | Rosca Direta (Halter) | 28/09 | 12.5 kg × 20 | 4 | – |  |
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Scott (Halter) | 08/09 | 30 kg × 10 | 3 | – |  |
@@ -130,7 +134,7 @@
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 08/09 | 10 kg × 10 | 3 | – |  |
 | outro | triceps | Tríceps na Polia com Corda | 30/09 | 20 kg × 10 | 5 | 10 kg × 12 | ↑ |
 
-Séries por grupo muscular (últimos 7 dias): peito 14, triceps 13, costas 7, ombro 6, biceps 4, core 3
+Séries por grupo muscular (últimos 7 dias): peito 14, triceps 13, costas 7, core 6, ombro 6, quadriceps 5, posterior 5, biceps 4, panturrilha 3, adutor 2
 
 ## Recuperação
 

@@ -225,3 +225,23 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-09-30,other,Puxada Alta (Cabo),1,normal,40,11,,,20397004963
 2026-09-30,other,Puxada Alta (Cabo),2,normal,50,9,9.5,,20397004963
 2026-09-30,other,Puxada Alta (Cabo),3,failure,55,9,,,20397004963
+2026-10-01,A,Cadeira Adutora (Máquina),1,warmup,40,17,,Hevy 'Treino noturno 🏋️',20410963131
+2026-10-01,A,Cadeira Adutora (Máquina),2,normal,45,14,,,20410963131
+2026-10-01,A,Cadeira Adutora (Máquina),3,normal,50,10,,,20410963131
+2026-10-01,A,Agachamento (Barra),1,warmup,40,10,,,20410963131
+2026-10-01,A,Agachamento (Barra),2,normal,60,12,8,,20410963131
+2026-10-01,A,Agachamento (Barra),3,normal,80,8,9.5,,20410963131
+2026-10-01,A,Agachamento (Barra),4,failure,80,9,,,20410963131
+2026-10-01,A,Agachamento Hack (Máquina),1,normal,40,13,,,20410963131
+2026-10-01,A,Agachamento Hack (Máquina),2,normal,50,11,,,20410963131
+2026-10-01,A,Levantamento Terra com Pernas Estendidas,1,normal,40,14,,,20410963131
+2026-10-01,A,Levantamento Terra com Pernas Estendidas,2,normal,45,10,,,20410963131
+2026-10-01,A,Cadeira Flexora (Máquina),1,normal,30,20,,,20410963131
+2026-10-01,A,Cadeira Flexora (Máquina),2,normal,30,20,,,20410963131
+2026-10-01,A,Cadeira Flexora (Máquina),3,failure,55,9,,,20410963131
+2026-10-01,A,Panturrilha Sentado (Máquina),1,normal,40,16,,,20410963131
+2026-10-01,A,Panturrilha Sentado (Máquina),2,normal,40,14,,,20410963131
+2026-10-01,A,Panturrilha Sentado (Máquina),3,normal,20,28,,,20410963131
+2026-10-01,A,Abdominal Declinado (com Peso),1,normal,,15,,,20410963131
+2026-10-01,A,Abdominal Declinado (com Peso),2,normal,10,12,,,20410963131
+2026-10-01,A,Abdominal Declinado (com Peso),3,normal,10,10,,,20410963131
