@@ -245,3 +245,30 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-01,A,Abdominal Declinado (com Peso),1,normal,,15,,,20410963131
 2026-10-01,A,Abdominal Declinado (com Peso),2,normal,10,12,,,20410963131
 2026-10-01,A,Abdominal Declinado (com Peso),3,normal,10,10,,,20410963131
+2026-10-04,other,Rosca Acima da Cabeça (Cabo),1,warmup,20,20,,Hevy 'Treino da tarde 💪',20451627822
+2026-10-04,other,Rosca Acima da Cabeça (Cabo),2,normal,25,14,9.5,,20451627822
+2026-10-04,other,Rosca Acima da Cabeça (Cabo),3,failure,30,6,,,20451627822
+2026-10-04,other,Rosca Acima da Cabeça (Cabo),4,drop,25,7,,,20451627822
+2026-10-04,other,Rosca Acima da Cabeça (Cabo),5,failure,25,11,,,20451627822
+2026-10-04,other,Supino Inclinado (Halter),1,normal,40,12,,,20451627822
+2026-10-04,other,Supino Inclinado (Halter),2,normal,40,11,,,20451627822
+2026-10-04,other,Supino Inclinado (Halter),3,normal,45,12,,,20451627822
+2026-10-04,other,Remada Inclinada com Apoio no Peito (Halter),1,normal,40,13,,,20451627822
+2026-10-04,other,Remada Inclinada com Apoio no Peito (Halter),2,normal,40,14,,,20451627822
+2026-10-04,other,Remada Inclinada com Apoio no Peito (Halter),3,normal,40,15,,,20451627822
+2026-10-04,other,Puxada Alta (Cabo),1,normal,50,12,,,20451627822
+2026-10-04,other,Puxada Alta (Cabo),2,normal,55,10,,,20451627822
+2026-10-04,other,Puxada Alta - Pegada Fechada (Cabo),1,normal,55,10,,,20451627822
+2026-10-04,other,Puxada Alta - Pegada Fechada (Cabo),2,normal,55,9,,,20451627822
+2026-10-04,other,Elevação Lateral (Cabo),1,normal,15,20,,,20451627822
+2026-10-04,other,Elevação Lateral (Cabo),2,normal,15,20,,,20451627822
+2026-10-04,other,Face Pull,1,normal,12.5,20,,,20451627822
+2026-10-04,other,Face Pull,2,normal,15,18,,,20451627822
+2026-10-04,other,Face Pull,3,normal,17.5,20,,,20451627822
+2026-10-04,other,Rosca Scott (Barra),1,normal,30,8,,,20451627822
+2026-10-04,other,Rosca Scott (Barra),2,normal,30,10,,,20451627822
+2026-10-04,other,Rosca Scott (Barra),3,normal,30,8,,,20451627822
+2026-10-04,other,Rosca Direta (Halter),1,normal,10,6,,,20451627822
+2026-10-04,other,Rosca Direta (Halter),2,normal,10,20,,,20451627822
+2026-10-04,other,Tríceps Coice (Cabo),1,normal,5,20,,,20451627822
+2026-10-04,other,Tríceps Coice (Cabo),2,normal,5,18,,,20451627822
