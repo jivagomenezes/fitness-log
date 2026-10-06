@@ -1,8 +1,8 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-05 21:50. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-06 07:51. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** seg 05/10/2026 · **Bloco 5K:** semana 3 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** ter 06/10/2026 · **Bloco 5K:** semana 3 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
@@ -13,7 +13,8 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| seg 05/10 (hoje) | descanso / sem registro | – |
+| ter 06/10 (hoje) | descanso / sem registro | – |
+| seg 05/10 | 🏃 intervalado 8.2 km, 5:52/km, FC 152 | – |
 | dom 04/10 | 🏃 z2 4.05 km, 6:35/km, FC 145; 🏋️ treino outro (26 séries, 10 exercícios) | – · – · – · 49 ms · 1.7k passos |
 | sáb 03/10 | descanso / sem registro | – · – · – · 46 ms · 4.9k passos |
 | sex 02/10 | 🏃 z2 9.66 km, 7:03/km, FC 148 | – · – · – · 64 ms · 19.2k passos |
@@ -26,13 +27,12 @@
 | sex 25/09 | 🏃 z2 9.51 km, 6:19/km, FC 148 | 92% · 61% · 96% · 22.5k passos |
 | qui 24/09 | descanso / sem registro | 87% · 12% · 95% |
 | qua 23/09 | 🏋️ treino A (17 séries, 5 exercícios) | 82% · 62% · 93% |
-| ter 22/09 | 🏃 z2 4.09 km, 6:15/km, FC 142; 🏋️ treino C (17 séries, 5 exercícios) | – |
 
 ## Volume semanal
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 05/10 (atual) | 0 | 0 | – | 0 | 0 | 0 |
+| 05/10 (atual) | 8.2 | 1 | – | 0 | 0 | 0 |
 | 28/09 | 29 | 4 | 40% | 5 | 91 | 31664 |
 | 21/09 | 18.7 | 3 | 88% | 3 | 58 | 19862 |
 | 14/09 | 29.4 | 5 | 38% | 1 | 19 | 6049 |
@@ -54,14 +54,24 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| seg 05/10 | intervalado | esteira | 8.2 | 48:04 | 5:52/km | 152/178 | – | – | Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 5 tiros de ~3:35 com ~690–710 m, rec ~1:35; FC média dos tiros 157→171); aquecimento 2,04 km (FC média 128), desaquecimento 1,17 km (FC média 149) |
 | dom 04/10 | z2 | esteira | 4.05 | 26:39 | 6:35/km | 145/155 | – | – | Strava '20min Z2' (esteira, is_trainer); FC média 145 / máx 155; pace médio ~6:35/km; voltas do Strava somam 4,46 km (resumo da esteira 4,05 km, mantido); academia (superiores + braços) antes |
 | sex 02/10 | z2 | rua | 9.66 | 1:08:11 | 7:03/km | 148/159 | – | – | Strava 'Corrida na hora do almoço' sem descrição; tipo a confirmar (inferido z2 pela FC média 148 / máx 159); Campo Grande, Lisboa; pace médio ~7:03/km |
 | qua 30/09 | tempo | esteira | 7.04 | 42:30 | 6:02/km | 157/177 | – | – | Tempo 20 min a 12,0 km/h (5:00/km), limiar; voltas Strava: aquecimento 2,13 km (FC média 143), bloco 3,73 km em 20:08 (FC média 168, máx 177), desaquecimento 1,10 km (FC média 158); academia (remada/puxada/tríceps) logo antes |
 | seg 28/09 | intervalado | esteira | 8.21 | 48:37 | 5:55/km | 153/177 | 40% · 34% · 26% | – | VO2 5×800 m a ~4:32/km (13,2–13,3 km/h), rec 90 s a 8,5 km/h; FC nos tiros subindo 158→171; 1º treino do bloco 5K, pós-resfriado; academia de braços logo depois |
 | sex 25/09 | z2 | esteira | 9.51 | 1:00:02 | 6:19/km | 148/168 | 78% · 21% · 2% | – | 40 min Z2 + 4 strides (14 km/h por 25 s, recuperação 90 s a 8,5 km/h) |
-| ter 22/09 | z2 | esteira | 4.09 | 25:33 | 6:15/km | 142/152 | 98% · 2% · 0% | – | 5 min para entrar na Z2 + 20 min em Z2 |
 
 ## Intervalados — tiros
+
+**seg 05/10** (2026-10-05-1) — Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 5 tiros de ~3:35 com ~690–710 m, rec ~1:35; FC média dos tiros 157→171); aquecimento 2,04 km (FC média 128), desaquecimento 1,17 km (FC média 149)
+
+| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
+|---|---|---|---|---|---|---|
+| 1 | 11.65 | 5:09/km | 3:37 / 702 m | 1:36 | 166 | – |
+| 2 | 11.54 | 5:12/km | 3:34 / 686 m | 1:33 | 173 | – |
+| 3 | 11.5 | 5:13/km | 3:35 / 687 m | 1:37 | 176 | – |
+| 4 | 11.75 | 5:06/km | 3:37 / 708 m | 1:47 | 176 | – |
+| 5 | 11.67 | 5:08/km | 3:35 / 697 m | 1:43 | 178 | – |
 
 **seg 28/09** (2026-09-28-1) — VO2 5×800 m a ~4:32/km (13,2–13,3 km/h), rec 90 s a 8,5 km/h; FC nos tiros subindo 158→171; 1º treino do bloco 5K, pós-resfriado; academia de braços logo depois
 
@@ -72,15 +82,6 @@
 | 3 | 13.3 | 4:31/km | 800 m | 1:30 | – | – |
 | 4 | 13.3 | 4:31/km | 800 m | 1:30 | – | – |
 | 5 | 13.3 | 4:31/km | 800 m | 1:30 | – | – |
-
-**seg 14/09** (2026-09-14-1) — último treino forte antes do 10K: 10 min aquec + 4×1 km a ~12–12,5 km/h (≈5:00/km, aproximado) c/ 1:30 de trote. Zonas ainda com FC máx 186
-
-| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
-|---|---|---|---|---|---|---|
-| 1 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
-| 2 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
-| 3 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
-| 4 | 12 | 5:00/km | 1000 m | 1:30 | – | – |
 
 ## Academia — cargas por exercício
 
@@ -137,21 +138,21 @@
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 08/09 | 10 kg × 10 | 3 | – |  |
 | outro | triceps | Tríceps na Polia com Corda | 30/09 | 20 kg × 10 | 5 | 10 kg × 12 | ↑ |
 
-Séries por grupo muscular (últimos 7 dias): peito 17, costas 14, ombro 11, triceps 10, biceps 9, quadriceps 5, posterior 5, panturrilha 3, core 3, adutor 2
+Séries por grupo muscular (últimos 7 dias): costas 14, biceps 9, triceps 7, quadriceps 5, posterior 5, ombro 5, panturrilha 3, core 3, peito 3, adutor 2
 
 ## Recuperação
 
 | métrica | média 7d | base (28d anteriores) | dias com dado (7d/base) |
 |---|---|---|---|
-| recuperação Bevel (%) | 45 | 71.3 | 2/6 |
-| esforço Bevel (%) | 31.5 | 38.3 | 2/6 |
-| sono Bevel (%) | 80 | 88 | 2/6 |
-| HRV noite (ms) | 54.7 | 52 | 6/3 |
-| FC repouso | 61.5 | 59.5 | 6/4 |
-| sono (h) | 7.6 | 7.7 | 6/3 |
-| sono profundo (h) | 0.8 | 0.6 | 6/3 |
-| sono REM (h) | 2 | 2 | 6/3 |
-| passos | 10380 | 12574 | 6/4 |
-| kcal ativas | 840 | 853 | 6/4 |
-| kcal em repouso | 1832 | 1938 | 6/4 |
+| recuperação Bevel (%) | 55 | 66.1 | 1/7 |
+| esforço Bevel (%) | 0 | 41.9 | 1/7 |
+| sono Bevel (%) | 82 | 86.6 | 1/7 |
+| HRV noite (ms) | 55 | 52.2 | 5/4 |
+| FC repouso | 61 | 60.4 | 5/5 |
+| sono (h) | 7.9 | 7.4 | 5/4 |
+| sono profundo (h) | 0.8 | 0.7 | 5/4 |
+| sono REM (h) | 2.2 | 1.9 | 5/4 |
+| passos | 9875 | 12640 | 5/5 |
+| kcal ativas | 798 | 892 | 5/5 |
+| kcal em repouso | 1803 | 1945 | 5/5 |
 | VO2máx estimado (Watch) | 47.5 | – | 1/0 |
