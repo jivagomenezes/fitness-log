@@ -1,8 +1,8 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-06 21:50. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-07 07:51. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** ter 06/10/2026 · **Bloco 5K:** semana 3 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** qua 07/10/2026 · **Bloco 5K:** semana 3 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
@@ -13,9 +13,10 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| ter 06/10 (hoje) | descanso / sem registro | – |
-| seg 05/10 | 🏃 intervalado 8.2 km, 5:52/km, FC 152 | – |
-| dom 04/10 | 🏃 z2 4.05 km, 6:35/km, FC 145; 🏋️ treino outro (26 séries, 10 exercícios) | – · – · – · 49 ms · 1.7k passos |
+| qua 07/10 (hoje) | descanso / sem registro | – · – · – · 33 ms |
+| ter 06/10 | descanso / sem registro | – · – · – · 46 ms · 3.5k passos |
+| seg 05/10 | 🏃 intervalado 8.2 km, 5:52/km, FC 152 | – · – · – · 52 ms · 14.1k passos |
+| dom 04/10 | 🏃 z2 4.05 km, 6:35/km, FC 145; 🏋️ treino outro (26 séries, 10 exercícios) | – · – · – · 49 ms · 13.6k passos |
 | sáb 03/10 | descanso / sem registro | – · – · – · 46 ms · 4.9k passos |
 | sex 02/10 | 🏃 z2 9.66 km, 7:03/km, FC 148 | – · – · – · 64 ms · 19.2k passos |
 | qui 01/10 | 🏋️ treino A (18 séries, 7 exercícios) | – · – · – · 64 ms · 9.7k passos |
@@ -26,7 +27,6 @@
 | sáb 26/09 | descanso / sem registro | 15% · 9% · 77% · 46 ms · 4.1k passos |
 | sex 25/09 | 🏃 z2 9.51 km, 6:19/km, FC 148 | 92% · 61% · 96% · 22.5k passos |
 | qui 24/09 | descanso / sem registro | 87% · 12% · 95% |
-| qua 23/09 | 🏋️ treino A (17 séries, 5 exercícios) | 82% · 62% · 93% |
 
 ## Volume semanal
 
@@ -138,21 +138,21 @@
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 08/09 | 10 kg × 10 | 3 | – |  |
 | outro | triceps | Tríceps na Polia com Corda | 30/09 | 20 kg × 10 | 5 | 10 kg × 12 | ↑ |
 
-Séries por grupo muscular (últimos 7 dias): costas 14, biceps 9, triceps 7, quadriceps 5, posterior 5, ombro 5, panturrilha 3, core 3, peito 3, adutor 2
+Séries por grupo muscular (últimos 7 dias): biceps 9, costas 7, quadriceps 5, posterior 5, ombro 5, panturrilha 3, core 3, peito 3, adutor 2, triceps 2
 
 ## Recuperação
 
 | métrica | média 7d | base (28d anteriores) | dias com dado (7d/base) |
 |---|---|---|---|
-| recuperação Bevel (%) | 55 | 66.1 | 1/7 |
-| esforço Bevel (%) | 0 | 41.9 | 1/7 |
-| sono Bevel (%) | 82 | 86.6 | 1/7 |
-| HRV noite (ms) | 55 | 52.2 | 5/4 |
-| FC repouso | 61 | 60.4 | 5/5 |
-| sono (h) | 7.9 | 7.4 | 5/4 |
-| sono profundo (h) | 0.8 | 0.7 | 5/4 |
-| sono REM (h) | 2.2 | 1.9 | 5/4 |
-| passos | 9875 | 12640 | 5/5 |
-| kcal ativas | 798 | 892 | 5/5 |
-| kcal em repouso | 1803 | 1945 | 5/5 |
+| recuperação Bevel (%) | – | 64.8 | 0/8 |
+| esforço Bevel (%) | – | 36.6 | 0/8 |
+| sono Bevel (%) | – | 86 | 0/8 |
+| HRV noite (ms) | 50.6 | 52.2 | 7/5 |
+| FC repouso | 61.5 | 60.3 | 6/6 |
+| sono (h) | 7.8 | 7.5 | 6/5 |
+| sono profundo (h) | 0.9 | 0.7 | 6/5 |
+| sono REM (h) | 1.9 | 2 | 6/5 |
+| passos | 10824 | 12855 | 6/6 |
+| kcal ativas | 914 | 914 | 6/6 |
+| kcal em repouso | 1940 | 1948 | 6/6 |
 | VO2máx estimado (Watch) | 47.5 | – | 1/0 |
