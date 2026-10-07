@@ -272,3 +272,33 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-04,other,Rosca Direta (Halter),2,normal,10,20,,,20451627822
 2026-10-04,other,Tríceps Coice (Cabo),1,normal,5,20,,,20451627822
 2026-10-04,other,Tríceps Coice (Cabo),2,normal,5,18,,,20451627822
+2026-10-07,other,Supino Iso-Lateral (Máquina),1,warmup,30,20,,Hevy 'Treino noturno',20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),2,failure,60,14,,,20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),3,failure,70,11,,,20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),4,failure,70,8,,,20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),5,drop,60,4,,,20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),6,normal,60,9,,,20493208463
+2026-10-07,other,Supino Iso-Lateral (Máquina),7,normal,15,20,,,20493208463
+2026-10-07,other,Crucifixo Inclinado (Halter),1,failure,20,9,,,20493208463
+2026-10-07,other,Crucifixo Inclinado (Halter),2,failure,10,8,,,20493208463
+2026-10-07,other,Crucifixo Inclinado (Halter),3,failure,10,7,,,20493208463
+2026-10-07,other,Crucifixo Inclinado (Halter),4,failure,10,4,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),1,normal,12.5,20,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),2,normal,12.5,20,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),3,normal,12.5,14,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),4,drop,10,10,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),5,normal,20,10,,,20493208463
+2026-10-07,other,Rosca Direta (Halter),6,normal,20,10,,,20493208463
+2026-10-07,other,Tríceps Coice (Halter),1,normal,8,20,,,20493208463
+2026-10-07,other,Tríceps Coice (Halter),2,normal,8,20,,,20493208463
+2026-10-07,other,Tríceps Coice (Halter),3,normal,7,14,,,20493208463
+2026-10-07,other,Elevação Lateral (Halter),1,failure,20,16,,,20493208463
+2026-10-07,other,Elevação Lateral (Halter),2,normal,20,10,,,20493208463
+2026-10-07,other,Extensão de Tríceps Unilateral (Halter),1,failure,10,18,,,20493208463
+2026-10-07,other,Extensão de Tríceps Unilateral (Halter),2,failure,10,16,,,20493208463
+2026-10-07,other,Extensão de Tríceps (Máquina),1,normal,40,13,,,20493208463
+2026-10-07,other,Extensão de Tríceps (Máquina),2,failure,40,13,,,20493208463
+2026-10-07,other,Extensão de Tríceps (Máquina),3,normal,40,10,,,20493208463
+2026-10-07,other,Supino Sentado (Máquina),1,normal,40,11,,,20493208463
+2026-10-07,other,Supino Sentado (Máquina),2,normal,45,10,,,20493208463
+2026-10-07,other,Supino Sentado (Máquina),3,failure,45,8,,,20493208463
