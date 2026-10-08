@@ -302,3 +302,11 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-07,other,Supino Sentado (Máquina),1,normal,40,11,,,20493208463
 2026-10-07,other,Supino Sentado (Máquina),2,normal,45,10,,,20493208463
 2026-10-07,other,Supino Sentado (Máquina),3,failure,45,8,,,20493208463
+2026-10-08,other,Rosca Direta (Halter),1,normal,12.5,20,,Hevy 'Treino noturno',20507205694
+2026-10-08,other,Rosca Direta (Halter),2,normal,12.5,22,,,20507205694
+2026-10-08,other,Rosca Direta (Halter),3,normal,12.5,18,,,20507205694
+2026-10-08,other,Desenvolvimento de Ombros (Halter),1,normal,40,10,,,20507205694
+2026-10-08,other,Desenvolvimento de Ombros (Halter),2,normal,40,10,,,20507205694
+2026-10-08,other,Desenvolvimento de Ombros (Halter),3,failure,45,9,,,20507205694
+2026-10-08,other,Crucifixo (Máquina),1,normal,20,15,,Parcial,20507205694
+2026-10-08,other,Crucifixo (Máquina),2,normal,15,10,,,20507205694
