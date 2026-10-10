@@ -1,0 +1,44 @@
+Registrado com hevyapp.com
+
+Crucifixo (Máquina)
+"Parcial"
+Série 1: 20 kg x 16 
+Série 2: 20 kg x 22 
+Série 3: 25 kg x 18 
+
+Remada Sentada (Máquina)
+Série 1: 45 kg x 11 
+Série 2: 50 kg x 13 
+Série 3: 50 kg x 12 
+
+Rosca Scott (Máquina)
+Série 1: 30 kg x 9 [Failure]
+Série 2: 25 kg x 10 @ 10 rpe [Failure]
+Série 3: 25 kg x 8 
+
+Leg Press 45º (Máquina)
+Série 1: 70 kg x 14 @ 7.5 rpe 
+
+Leg Press Unilateral (Máquina)
+Série 1: 55 kg x 20 
+Série 2: 55 kg x 20 
+
+Puxada Alta (Cabo)
+Série 1: 40 kg x 11 
+Série 2: 50 kg x 12 
+Série 3: 55 kg x 8 
+
+Puxada Alta - Pegada Fechada (Cabo)
+Série 1: 50 kg x 10 
+Série 2: 50 kg x 10 
+
+Abdominal (Máquina)
+"Maquina da alameda"
+Série 1: 30 kg x 12 
+Série 2: 45 kg x 15 
+Série 3: 45 kg x 13 
+
+Cadeira Flexora (Máquina)
+Série 1: 30 kg x 20 
+Série 2: 30 kg x 20 
+Série 3: 30 kg x 20 
