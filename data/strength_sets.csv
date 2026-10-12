@@ -333,3 +333,25 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-10,other,Cadeira Flexora (Máquina),1,normal,30,20,,,20530065009
 2026-10-10,other,Cadeira Flexora (Máquina),2,normal,30,20,,,20530065009
 2026-10-10,other,Cadeira Flexora (Máquina),3,normal,30,20,,,20530065009
+2026-10-12,other,Crucifixo (Máquina),1,normal,25,18,,Hevy 'Treino noturno'; Parcial!,20559370262
+2026-10-12,other,Crucifixo (Máquina),2,normal,30,12,,,20559370262
+2026-10-12,other,Crucifixo (Máquina),3,failure,25,10,,,20559370262
+2026-10-12,other,Crucifixo (Máquina),4,normal,25,15,,,20559370262
+2026-10-12,other,Crucifixo (Máquina),5,normal,20,10,,,20559370262
+2026-10-12,other,Crucifixo Invertido (Máquina),1,normal,15,14,,,20559370262
+2026-10-12,other,Crucifixo Invertido (Máquina),2,normal,15,15,,,20559370262
+2026-10-12,other,Crucifixo Invertido (Máquina),3,failure,20,10,,,20559370262
+2026-10-12,other,Crucifixo Invertido (Máquina),4,drop,15,10,,,20559370262
+2026-10-12,other,Tríceps na Polia Unilateral (Cabo),1,normal,10,20,,,20559370262
+2026-10-12,other,Tríceps na Polia Unilateral (Cabo),2,normal,10,25,,,20559370262
+2026-10-12,other,Tríceps na Polia Unilateral (Cabo),3,normal,10,18,,,20559370262
+2026-10-12,other,Desenvolvimento de Ombros (Halter),1,normal,35,11,,,20559370262
+2026-10-12,other,Desenvolvimento de Ombros (Halter),2,normal,35,11,,,20559370262
+2026-10-12,other,Desenvolvimento de Ombros (Halter),3,failure,30,8,,,20559370262
+2026-10-12,other,Rosca Direta (Halter),1,normal,12.5,20,,,20559370262
+2026-10-12,other,Rosca Direta (Halter),2,normal,12.5,20,,,20559370262
+2026-10-12,other,Rosca Direta (Halter),3,failure,12.5,16,,,20559370262
+2026-10-12,other,Supino Inclinado (Halter),1,normal,40,12,,Fazendo torcendo o braço,20559370262
+2026-10-12,other,Supino Inclinado (Halter),2,normal,45,10,,,20559370262
+2026-10-12,other,Supino Inclinado (Halter),3,normal,30,12,,,20559370262
+2026-10-12,other,Supino Inclinado (Halter),4,normal,30,10,,,20559370262

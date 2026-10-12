@@ -1,0 +1,37 @@
+Registrado com hevyapp.com
+
+Crucifixo (Máquina)
+"Parcial!"
+Série 1: 25 kg x 18 
+Série 2: 30 kg x 12 
+Série 3: 25 kg x 10 [Failure]
+Série 4: 25 kg x 15 
+Série 5: 20 kg x 10 
+
+Crucifixo Invertido (Máquina)
+Série 1: 15 kg x 14 
+Série 2: 15 kg x 15 
+Série 3: 20 kg x 10 [Failure]
+Série 4: 15 kg x 10 [Drop]
+
+Tríceps na Polia Unilateral (Cabo)
+Série 1: 10 kg x 20 
+Série 2: 10 kg x 25 
+Série 3: 10 kg x 18 
+
+Desenvolvimento de Ombros (Halter)
+Série 1: 35 kg x 11 
+Série 2: 35 kg x 11 
+Série 3: 30 kg x 8 [Failure]
+
+Rosca Direta (Halter)
+Série 1: 12.5 kg x 20 
+Série 2: 12.5 kg x 20 
+Série 3: 12.5 kg x 16 [Failure]
+
+Supino Inclinado (Halter)
+"Fazendo torcendo o braço"
+Série 1: 40 kg x 12 
+Série 2: 45 kg x 10 
+Série 3: 30 kg x 12 
+Série 4: 30 kg x 10 
