@@ -355,3 +355,9 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-12,other,Supino Inclinado (Halter),2,normal,45,10,,,20559370262
 2026-10-12,other,Supino Inclinado (Halter),3,normal,30,12,,,20559370262
 2026-10-12,other,Supino Inclinado (Halter),4,normal,30,10,,,20559370262
+2026-10-13,other,Tríceps na Polia com Corda,1,normal,12.5,12,,Hevy 'Treino noturno',20571979883
+2026-10-13,other,Tríceps na Polia com Corda,2,normal,15,11,,,20571979883
+2026-10-13,other,Tríceps na Polia com Corda,3,failure,15,12,,,20571979883
+2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),1,normal,,16,,,20571979883
+2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),2,normal,,10,,,20571979883
+2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),3,normal,,10,,,20571979883
