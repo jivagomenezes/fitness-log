@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Gera docs/runs.json (dados do Painel de Corrida) a partir de data/corridas.csv.
+"""Gera docs/runs.json (dados do Painel de Corrida) a partir de data/runs.csv.
 
 Faz parte do pipeline do fitness-log: os CSVs sao a fonte de verdade; este script
 le as corridas e computa volume, ACWR, checagem 80/20, eficiencia, benchmarks e a
-tabela de corridas que o docs/index.html consome via fetch.
+tabela que o docs/index.html consome via fetch.
+
+Corridas sem quebra de zona (z1_s..z5_s vazias, p.ex. imports do Strava) entram no
+volume/ACWR/eficiencia, mas ficam de fora da checagem 80/20 (que exige tempo por zona).
 
 Uso:
     python3 scripts/gerar_painel.py                 # escreve docs/runs.json
@@ -13,8 +16,8 @@ import csv, json, argparse, datetime as dt
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-TIPO_MAP = {"prova": "race", "intervalado": "interval", "longao": "long",
-            "tempo": "tempo", "z2": "z2"}
+# tipos ja estao em ingles no runs.csv; mapeia legados/pendentes p/ as tags do painel
+TIPO_MAP = {"test": "tempo", "recovery": "z2", "longao": "long", "prova": "race"}
 FRAG_MIN_KM = 1.0  # ignora fragmentos/reinicios curtos
 
 
@@ -53,27 +56,29 @@ def load_runs(path):
     runs = []
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            dist = num(r.get("distancia_km"))
+            dist = num(r.get("distance_km"))
             if dist < FRAG_MIN_KM:
                 continue
-            d = dt.date.fromisoformat(r["data"].strip())
-            dur = dur_s(r.get("duracao"))
+            d = dt.date.fromisoformat(r["date"].strip())
+            dur = dur_s(r.get("duration"))
             z = [int(num(r.get(f"z{i}_s"), int)) for i in range(1, 6)]
-            sumz = sum(z) or 1
+            sumz = sum(z)
+            tp = r.get("type", "").strip()
             runs.append({
                 "date": d.isoformat(),
                 "_d": d,
-                "type": TIPO_MAP.get(r.get("tipo", "").strip(), r.get("tipo", "").strip()),
+                "type": TIPO_MAP.get(tp, tp),
                 "dist": round(dist, 2),
                 "dur": dur,
                 "pace": fmt_pace(dur / dist) if dist else "-",
-                "hr": int(num(r.get("fc_media"), int)),
-                "hrmax": int(num(r.get("fc_max"), int)),
-                "cad": int(num(r.get("cadencia_spm"), int)),
-                "easy": round((z[0] + z[1]) / sumz * 100),
+                "hr": int(num(r.get("hr_avg"), int)),
+                "hrmax": int(num(r.get("hr_max"), int)),
+                "cad": int(num(r.get("cadence_spm"), int)),
+                "easy": round((z[0] + z[1]) / sumz * 100) if sumz else None,
                 "z1": z[0], "z2": z[1], "z3": z[2], "z4": z[3], "z5": z[4],
-                "note": (r.get("notas") or "").strip(),
+                "note": (r.get("notes") or "").strip(),
                 "_kmh": round(dist / (dur / 3600), 2) if dur else 0,
+                "_hasz": sumz > 0,
             })
     runs.sort(key=lambda x: x["_d"])
     return runs
@@ -112,13 +117,14 @@ def build(runs):
     chronic = round(sum(r["dist"] for r in runs if (asof - r["_d"]).days < 28) / 4, 1)
     acwr = round(acute / chronic, 2) if chronic else 0
 
-    # intensidade 80/20 por tempo
-    easy = sum(r["z1"] + r["z2"] for r in runs)
-    mod = sum(r["z3"] for r in runs)
-    hard = sum(r["z4"] + r["z5"] for r in runs)
+    # intensidade 80/20 por tempo — so corridas com zona
+    zr = [r for r in runs if r["_hasz"]]
+    easy = sum(r["z1"] + r["z2"] for r in zr)
+    mod = sum(r["z3"] for r in zr)
+    hard = sum(r["z4"] + r["z5"] for r in zr)
     tot = (easy + mod + hard) or 1
     intensity = {"easy": round(easy / tot * 100), "mod": round(mod / tot * 100),
-                 "hard": round(hard / tot * 100)}
+                 "hard": round(hard / tot * 100), "n_com_zona": len(zr), "n_total": len(runs)}
 
     # distribuicao por tipo
     typedist = {}
@@ -128,7 +134,7 @@ def build(runs):
     for t in typedist.values():
         t["km"] = round(t["km"], 1)
 
-    # eficiencia (corridas faceis em Z2/longao)
+    # eficiencia (corridas faceis em Z2/longao) — nao depende de zonas
     eff = [{"date": r["date"], "kmh": r["_kmh"], "hr": r["hr"]}
            for r in runs if r["type"] in ("z2", "long") and r["hr"]]
 
@@ -158,15 +164,17 @@ def build(runs):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=str(REPO / "data" / "corridas.csv"))
+    ap.add_argument("--csv", default=str(REPO / "data" / "runs.csv"))
     ap.add_argument("--out", default=str(REPO / "docs" / "runs.json"))
     a = ap.parse_args()
     data = build(load_runs(a.csv))
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False)
+    i = data["intensity"]
     print(f"OK: {a.out} — {data['nruns']} corridas, {data['totkm']} km, "
-          f"ACWR {data['acwr']}, 80/20 {data['intensity']}")
+          f"ACWR {data['acwr']}, 80/20 {i['easy']}/{i['mod']}/{i['hard']} "
+          f"(base: {i.get('n_com_zona')} corridas c/ zona)")
 
 
 if __name__ == "__main__":
