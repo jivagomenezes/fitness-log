@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel de Corrida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F1319;--panel:#161B23;--panel2:#1C222C;--line:#252C37;--ink:#F4F6F9;--muted:#8A94A3;
+--z2:#4E9A78;--tempo:#E79A3C;--interval:#DB3B2B;--long:#5EA9C6;--race:#8E7BD1;--ok:#4E9A78;--warn:#E79A3C;--bad:#DB3B2B;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,sans-serif;line-height:1.45}
+.wrap{max-width:740px;margin:0 auto;padding:20px 16px 48px}
+h1{font-family:"Barlow Condensed";font-weight:700;font-size:36px;line-height:1}
+.sub{color:var(--muted);font-size:14px;margin:4px 0 18px}
+h2{font-family:"Barlow Condensed";font-weight:600;font-size:19px;letter-spacing:.02em;margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 10px}
+.kpi .v{font-family:"Barlow Condensed";font-weight:700;font-size:26px;line-height:1}
+.kpi .l{font-size:11px;color:var(--muted);margin-top:3px}
+.kpi .tag{font-size:10px;font-weight:600;padding:1px 6px;border-radius:10px;display:inline-block;margin-top:4px}
+@media(max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:10px}
+.row{display:grid;grid-template-columns:52px 1fr 58px;align-items:center;gap:10px;margin:6px 0}
+.row .lab{font-size:12px;color:var(--muted);text-align:right}
+.track{background:var(--panel2);border-radius:6px;height:20px;overflow:hidden}
+.fill{height:100%;border-radius:6px}
+.row .val{font-family:"Barlow Condensed";font-weight:600;font-size:14px}
+.stack{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:8px 0}
+.stack div{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#0F1319}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.verdict{font-size:13.5px;margin-top:8px;padding:10px 12px;border-radius:8px;border-left:3px solid}
+.tag{display:inline-block;font-family:"Barlow Condensed";font-weight:600;font-size:12px;padding:2px 9px;border-radius:20px}
+.t-z2{background:rgba(78,154,120,.18);color:#86C9A6}.t-tempo{background:rgba(231,154,60,.18);color:#EDB86E}
+.t-interval{background:rgba(219,59,43,.18);color:#F0897C}.t-long{background:rgba(94,169,198,.18);color:#8FCBE0}
+.t-race{background:rgba(142,123,209,.20);color:#B2A4E6}
+.bm{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.bm .b{background:var(--panel2);border-radius:10px;padding:11px 13px}
+.bm .b .bv{font-family:"Barlow Condensed";font-weight:700;font-size:22px}
+.bm .b .bl{font-size:11.5px;color:var(--muted);margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-family:"Barlow Condensed";font-weight:600;font-size:11px;color:var(--muted);text-transform:uppercase;text-align:right;padding:6px 4px;border-bottom:1px solid var(--line)}
+thead th:nth-child(-n+2){text-align:left}
+tbody td{padding:8px 4px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+tbody td:nth-child(-n+2){text-align:left}
+tbody td.num{font-family:"Barlow Condensed";font-weight:600;font-size:14px}
+.d{font-family:"Barlow Condensed";font-weight:600;font-size:14px}.wd{font-size:10px;color:var(--muted)}
+.note{font-size:10.5px;color:var(--muted);margin-top:1px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.filters button{background:var(--panel);border:1px solid var(--line);color:var(--muted);font-family:"Barlow Condensed";font-weight:600;font-size:13px;padding:5px 11px;border-radius:20px;cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.foot{color:var(--muted);font-size:12px;margin-top:22px;line-height:1.6}
+svg text{font-family:"Barlow",sans-serif}
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#0F1319"><meta name="apple-mobile-web-app-title" content="Corrida"></head><body><div class="wrap">
+<h1>Painel de Corrida</h1>
+<div class="sub" id="sub"></div>
+<div class="kpis" id="kpis"></div>
+
+<h2>Carga semanal <span style="font-size:12px;color:var(--muted);font-weight:400">· volume (km) por semana</span></h2>
+<div class="card" id="weekly"></div>
+
+<h2>Distribuição de intensidade <span style="font-size:12px;color:var(--muted);font-weight:400">· checagem do 80/20</span></h2>
+<div class="card" id="intensity"></div>
+
+<h2>Eficiência aeróbica <span style="font-size:12px;color:var(--muted);font-weight:400">· velocidade a FC ~142 ao longo do tempo</span></h2>
+<div class="card" id="eff"></div>
+
+<h2>Por tipo de treino</h2>
+<div class="card" id="bytype"></div>
+
+<h2>Benchmarks</h2>
+<div class="bm" id="bm"></div>
+
+<h2>Registro completo</h2>
+<div class="filters" id="filters"></div>
+<table><thead><tr><th>Data</th><th>Tipo</th><th>Dist</th><th>Pace</th><th>FC</th><th>Cad</th><th>%fácil</th></tr></thead><tbody id="rows"></tbody></table>
+
+<div class="foot" id="foot"></div>
+</div>
+<script>
+fetch("runs.json?t="+Date.now()).then(r=>r.json()).then(D=>{
+const T={interval:{l:"Intervalado/VO2",c:"t-interval",col:"#DB3B2B"},tempo:{l:"Tempo",c:"t-tempo",col:"#E79A3C"},
+z2:{l:"Z2/leve",c:"t-z2",col:"#4E9A78"},long:{l:"Longão",c:"t-long",col:"#5EA9C6"},race:{l:"Prova",c:"t-race",col:"#8E7BD1"}};
+const MON=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+const WD=["dom","seg","ter","qua","qui","sex","sáb"];
+const pd=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d);};
+document.getElementById("sub").textContent=`${D.nruns} corridas · ${D.totkm} km · bloco jul→out 2026`;
+
+// KPIs
+const acwrStatus=D.acwr>=0.8&&D.acwr<=1.3?["ok","sweet spot"]:(D.acwr>1.5?["bad","alto"]:(D.acwr<0.8?["warn","baixo"]:["warn","atenção"]));
+const col={ok:"var(--ok)",warn:"var(--warn)",bad:"var(--bad)"};
+const thisWeek=D.weeks[D.weeks.length-1].km;
+const kp=[["totkm",D.totkm,"km no bloco",""],["nruns",D.nruns,"corridas",""],
+ ["week",thisWeek,"km esta semana",""],
+ ["acwr",D.acwr,"carga aguda:crônica",`<span class="tag" style="background:${col[acwrStatus[0]]}22;color:${col[acwrStatus[0]]}">${acwrStatus[1]}</span>`]];
+document.getElementById("kpis").innerHTML=kp.map(k=>`<div class="kpi"><div class="v">${k[1]}</div><div class="l">${k[2]}</div>${k[3]}</div>`).join("");
+
+// weekly
+const maxw=Math.max(...D.weeks.map(w=>w.km),1);
+document.getElementById("weekly").innerHTML=D.weeks.map(w=>`<div class="row"><div class="lab">${w.label}</div><div class="track"><div class="fill" style="width:${w.km/maxw*100}%;background:#5EA9C6"></div></div><div class="val">${w.km} <span style="color:var(--muted);font-weight:400;font-size:11px">${w.n}×</span></div></div>`).join("")
+ +`<div style="font-size:12px;color:var(--muted);margin-top:8px">Carga aguda (7d): <b style="color:var(--ink)">${D.acute} km</b> · crônica (méd 4 sem): <b style="color:var(--ink)">${D.chronic} km</b> · razão <b style="color:${col[acwrStatus[0]]}">${D.acwr}</b> (ideal 0,8–1,3)</div>`;
+
+// intensity 80/20
+const I=D.intensity;
+document.getElementById("intensity").innerHTML=
+ `<div class="stack"><div style="width:${I.easy}%;background:#4E9A78">${I.easy}%</div><div style="width:${I.mod}%;background:#E79A3C">${I.mod}%</div><div style="width:${I.hard}%;background:#DB3B2B">${I.hard}%</div></div>
+ <div class="legend"><span><i class="dot" style="background:#4E9A78"></i>Fácil (Z1-2)</span><span><i class="dot" style="background:#E79A3C"></i>Moderado (Z3)</span><span><i class="dot" style="background:#DB3B2B"></i>Forte (Z4-5)</span></div>
+ <div class="verdict" style="border-color:var(--warn);background:rgba(231,154,60,.08)">⚠️ <b>${I.easy}% fácil</b> — abaixo do ideal polarizado (~80%). Teu bloco tá mais "cinza" que 80/20: muito tempo em moderado/forte. Pra chegar nos 80%, a saída é <b>mais volume fácil</b> (dias leves mais leves e/ou uma 4ª corrida Z2), não menos qualidade. Isso é o que vai sustentar os dias duros e destravar o pace.</div>`;
+
+// efficiency SVG line
+(function(){
+ const e=D.eff; const W=680,H=180,pad=36;
+ const xs=e.map(p=>pd(p.date).getTime()); const minx=Math.min(...xs),maxx=Math.max(...xs);
+ const ys=e.map(p=>p.kmh); const miny=Math.min(...ys)-0.2,maxy=Math.max(...ys)+0.2;
+ const X=t=>pad+(t-minx)/(maxx-minx)*(W-pad-10);
+ const Y=v=>H-26-(v-miny)/(maxy-miny)*(H-26-10);
+ let pts=e.map(p=>`${X(pd(p.date).getTime()).toFixed(0)},${Y(p.kmh).toFixed(0)}`).join(" ");
+ let dots=e.map(p=>`<circle cx="${X(pd(p.date).getTime()).toFixed(0)}" cy="${Y(p.kmh).toFixed(0)}" r="4" fill="#4E9A78"/>`).join("");
+ let ylab=[miny,(miny+maxy)/2,maxy].map(v=>`<text x="4" y="${Y(v)+4}" fill="#8A94A3" font-size="11">${v.toFixed(1)}</text>`).join("");
+ let first=e[0],last=e[e.length-1];
+ document.getElementById("eff").innerHTML=
+  `<svg width="100%" viewBox="0 0 ${W} ${H}"><polyline points="${pts}" fill="none" stroke="#4E9A78" stroke-width="2.5"/>${dots}${ylab}
+   <text x="${X(minx)}" y="${H-6}" fill="#8A94A3" font-size="11">${first.date.slice(5)}</text>
+   <text x="${X(maxx)-30}" y="${H-6}" fill="#8A94A3" font-size="11">${last.date.slice(5)}</text></svg>
+  <div style="font-size:13px;color:var(--muted);margin-top:4px">De <b style="color:var(--ink)">${first.kmh} km/h</b> (${first.date.slice(5)}) para <b style="color:var(--ink)">${last.kmh} km/h</b> (${last.date.slice(5)}) na <b>mesma FC ~142</b>. Motor mais eficiente = corre mais rápido com o mesmo esforço. 📈</div>`;
+})();
+
+// by type
+const maxkm=Math.max(...Object.values(D.typedist).map(t=>t.km));
+const order=["interval","tempo","z2","long","race"];
+document.getElementById("bytype").innerHTML=order.filter(t=>D.typedist[t]).map(t=>{const x=D.typedist[t];return `<div class="row"><div class="lab"><span class="tag ${T[t].c}">${x.n}</span></div><div class="track"><div class="fill" style="width:${x.km/maxkm*100}%;background:${T[t].col}"></div></div><div class="val">${x.km}</div></div>`}).join("")+`<div style="font-size:11.5px;color:var(--muted);margin-top:6px">número = corridas · barra = km por tipo</div>`;
+
+// benchmarks
+const bm=[["4:41 /km","melhor 5km contínuo (tempo, 15/out)"],
+ ["192 bpm","FC máx real (prova 19/set)"],
+ [D.longest.dist+" km","maior corrida ("+D.longest.date.slice(5)+")"],
+ [(D.best_eff?D.best_eff.kmh+" km/h":"-"),"melhor velocidade a FC baixa"],
+ ["51:17","PR 10K (nov/2025)"],
+ ["~44,6","VO₂máx estimado (High)"]];
+document.getElementById("bm").innerHTML=bm.map(b=>`<div class="b"><div class="bv">${b[0]}</div><div class="bl">${b[1]}</div></div>`).join("");
+
+// table + filters
+let flt="all";
+const fb=[["all","Tudo"]].concat(order.filter(t=>D.typedist[t]).map(t=>[t,T[t].l]));
+const fe=document.getElementById("filters");
+fe.innerHTML=fb.map(([k,l])=>`<button data-f="${k}" class="${k==="all"?"on":""}">${l}</button>`).join("");
+fe.onclick=e=>{const b=e.target.closest("button");if(!b)return;flt=b.dataset.f;[...fe.children].forEach(x=>x.classList.toggle("on",x===b));render();};
+function render(){
+ const list=D.runs.filter(r=>flt==="all"||r.type===flt).slice().reverse();
+ document.getElementById("rows").innerHTML=list.map(r=>{const d=pd(r.date);return `<tr>
+  <td><div class="d">${d.getDate()} ${MON[d.getMonth()]}</div><div class="wd">${WD[d.getDay()]}</div></td>
+  <td><span class="tag ${T[r.type].c}">${T[r.type].l.split("/")[0]}</span>${r.note?`<div class="note">${r.note}</div>`:""}</td>
+  <td class="num">${r.dist}</td><td class="num">${r.pace}</td>
+  <td>${r.hr}<span style="color:var(--muted)">/${r.hrmax}</span></td><td class="num">${r.cad}</td>
+  <td class="num">${r.easy}%</td></tr>`}).join("");
+}
+render();
+document.getElementById("foot").innerHTML=`Fonte: treinos do bloco (dados GymKit, totais corrigidos). Alimentação futura: pasta <code style="background:#1C222C;padding:1px 5px;border-radius:4px">HealthFit</code> no Google Drive (.fit) → o painel se atualiza sozinho via sync. ACWR = carga aguda (7d) ÷ crônica (méd 4 sem); 0,8–1,3 = faixa segura.`;
+
+}).catch(e=>{document.getElementById("sub").textContent="Erro ao carregar runs.json — serve via GitHub Pages (não file://).";});
+</script></body></html>
