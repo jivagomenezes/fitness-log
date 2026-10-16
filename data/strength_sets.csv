@@ -361,3 +361,32 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),1,normal,,16,,,20571979883
 2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),2,normal,,10,,,20571979883
 2026-10-13,other,Extensão Lombar (Hiperextensão com Peso),3,normal,,10,,,20571979883
+2026-10-16,other,Puxada Alta (Cabo),1,warmup,45,15,,,20608779379
+2026-10-16,other,Puxada Alta (Cabo),2,normal,50,13,,,20608779379
+2026-10-16,other,Puxada Alta (Cabo),3,failure,65,8,,,20608779379
+2026-10-16,other,Puxada Alta (Cabo),4,drop,55,4,,,20608779379
+2026-10-16,other,Puxada Alta (Cabo),5,normal,55,10,,,20608779379
+2026-10-16,other,Remada Sentada com Pegada em V (Cabo),1,warmup,45,12,,,20608779379
+2026-10-16,other,Remada Sentada com Pegada em V (Cabo),2,normal,55,11,,,20608779379
+2026-10-16,other,Remada Sentada com Pegada em V (Cabo),3,failure,65,8,,,20608779379
+2026-10-16,other,Remada Sentada com Pegada em V (Cabo),4,drop,55,3,,,20608779379
+2026-10-16,other,Remada Sentada com Pegada em V (Cabo),5,failure,55,8,,,20608779379
+2026-10-16,other,Rosca Direta (Halter),1,normal,12.5,20,,,20608779379
+2026-10-16,other,Rosca Direta (Halter),2,failure,12.5,16,,,20608779379
+2026-10-16,other,Rosca Direta (Halter),3,drop,10,4,,,20608779379
+2026-10-16,other,Rosca Direta (Halter),4,normal,12.5,10,,,20608779379
+2026-10-16,other,Rosca Direta (Halter),5,drop,10,8,,,20608779379
+2026-10-16,other,Crossover na Polia,1,normal,25,10,,,20608779379
+2026-10-16,other,Crossover na Polia,2,drop,20,6,,,20608779379
+2026-10-16,other,Crossover na Polia,3,failure,25,9,,,20608779379
+2026-10-16,other,Crossover na Polia,4,drop,20,6,,,20608779379
+2026-10-16,other,Crossover na Polia,5,normal,25,9,,,20608779379
+2026-10-16,other,Crossover na Polia,6,drop,20,6,,,20608779379
+2026-10-16,other,Cadeira Extensora (Máquina),1,normal,50,12,,,20608779379
+2026-10-16,other,Cadeira Extensora (Máquina),2,normal,60,12,,,20608779379
+2026-10-16,other,Cadeira Extensora (Máquina),3,normal,65,12,,,20608779379
+2026-10-16,other,Cadeira Flexora (Máquina),1,normal,45,15,,,20608779379
+2026-10-16,other,Cadeira Flexora (Máquina),2,normal,50,16,,,20608779379
+2026-10-16,other,Cadeira Flexora (Máquina),3,normal,50,18,,,20608779379
+2026-10-16,other,Elevação Lateral (Máquina),1,normal,15,15,,,20608779379
+2026-10-16,other,Elevação Lateral (Máquina),2,normal,20,12,,,20608779379
