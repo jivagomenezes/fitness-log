@@ -390,3 +390,34 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-16,other,Cadeira Flexora (Máquina),3,normal,50,18,,,20608779379
 2026-10-16,other,Elevação Lateral (Máquina),1,normal,15,15,,,20608779379
 2026-10-16,other,Elevação Lateral (Máquina),2,normal,20,12,,,20608779379
+2026-10-19,other,Tríceps na Polia com Corda,1,normal,15,16,,,20652680070
+2026-10-19,other,Tríceps na Polia com Corda,2,normal,15,16,,,20652680070
+2026-10-19,other,Tríceps na Polia com Corda,3,normal,15,16,,,20652680070
+2026-10-19,other,Tríceps na Polia com Corda,4,normal,15,20,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),1,normal,25,13,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),2,normal,25,12,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),3,normal,25,10,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),4,failure,25,8,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),5,drop,20,2,,,20652680070
+2026-10-19,other,Rosca Direta (Halter),6,normal,30,10,,,20652680070
+2026-10-19,other,Extensão de Tríceps Acima da Cabeça (Cabo),1,normal,15,12,,,20652680070
+2026-10-19,other,Extensão de Tríceps Acima da Cabeça (Cabo),2,normal,15,11,,,20652680070
+2026-10-19,other,Extensão de Tríceps Acima da Cabeça (Cabo),3,normal,15,9,,,20652680070
+2026-10-19,other,Extensão de Tríceps Acima da Cabeça (Cabo),4,normal,15,8,,,20652680070
+2026-10-19,other,Tríceps Coice (Cabo),1,normal,5,20,,,20652680070
+2026-10-19,other,Tríceps Coice (Cabo),2,normal,5,18,,,20652680070
+2026-10-19,other,Supino Inclinado (Máquina Smith),1,normal,50,12,,,20652680070
+2026-10-19,other,Supino Inclinado (Máquina Smith),2,normal,50,11,,,20652680070
+2026-10-19,other,Supino Inclinado (Máquina Smith),3,failure,60,8,,,20652680070
+2026-10-19,other,Supino Inclinado (Máquina Smith),4,normal,50,10,,,20652680070
+2026-10-19,other,Desenvolvimento (Halter),1,normal,35,8,,,20652680070
+2026-10-19,other,Desenvolvimento (Halter),2,normal,40,11,,,20652680070
+2026-10-19,other,Desenvolvimento (Halter),3,normal,40,10,,,20652680070
+2026-10-19,other,Pullover (Halter),1,normal,17.5,12,,,20652680070
+2026-10-19,other,Pullover (Halter),2,normal,17.5,11,,,20652680070
+2026-10-19,other,Pullover (Halter),3,normal,17.5,11,,,20652680070
+2026-10-19,other,Remada Serrote (Halter),1,normal,22.5,20,,,20652680070
+2026-10-19,other,Remada Serrote (Halter),2,normal,22.5,20,,,20652680070
+2026-10-19,other,Crossover na Polia,1,normal,25,12,,,20652680070
+2026-10-19,other,Crossover na Polia,2,normal,25,9,,,20652680070
+2026-10-19,other,Crossover na Polia,3,normal,20,13,,,20652680070
