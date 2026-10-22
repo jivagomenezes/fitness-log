@@ -1,8 +1,8 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-21 07:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-22 07:52. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** qua 21/10/2026 · **Bloco 5K:** semana 5 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** qui 22/10/2026 · **Bloco 5K:** semana 5 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
@@ -12,7 +12,8 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 21/10 (hoje) | descanso / sem registro | – · – · – · 53 ms · 0.2k passos |
+| qui 22/10 (hoje) | descanso / sem registro | – |
+| qua 21/10 | 🏃 intervalado 10 km, 5:20/km, FC 148 | – · – · – · 53 ms · 0.2k passos |
 | ter 20/10 | descanso / sem registro | – · – · – · 62 ms · 3.3k passos |
 | seg 19/10 | 🏃 z2 4.01 km, 5:40/km, FC 134; 🏋️ treino outro (31 séries, 9 exercícios) | – · – · – · 56 ms · 11.7k passos |
 | dom 18/10 | descanso / sem registro | – · – · – · 42 ms · 13.9k passos |
@@ -25,13 +26,12 @@
 | dom 11/10 | 🏃 z2 10.01 km, 6:23/km, FC 143 | – · – · – · 61 ms · 19.9k passos |
 | sáb 10/10 | 🏋️ treino outro (23 séries, 9 exercícios) | – · – · – · 61 ms · 0.2k passos |
 | sex 09/10 | descanso / sem registro | – · – · – · 59 ms · 12.4k passos |
-| qui 08/10 | 🏃 tempo 8.02 km, 5:38/km, FC 148; 🏋️ treino outro (8 séries, 3 exercícios) | – · – · – · 58 ms · 20.7k passos |
 
 ## Volume semanal
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 19/10 (atual) | 4 | 1 | – | 1 | 31 | 8755 |
+| 19/10 (atual) | 14 | 2 | – | 1 | 31 | 8755 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
 | 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
 | 28/09 | 29 | 4 | 40% | 5 | 91 | 31664 |
@@ -53,14 +53,25 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| qua 21/10 | intervalado | esteira | 10 | 53:25 | 5:20/km | 148/175 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes |
 | seg 19/10 | z2 | esteira | 4.01 | 22:45 | 5:40/km | 134/147 | – | – | Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: volta única, FC média 134 / máx 147); pace médio ~5:40/km pela esteira (volta do relógio 4,15 km); academia (tríceps, bíceps, peito, ombros, costas) logo depois |
 | sáb 17/10 | longao | rua | 16.01 | 1:36:44 | 6:03/km | 149/170 | – | – | Strava 'Corrida da tarde' sem descrição (rua, Lisboa); tipo a confirmar (inferido long: 16 km contínuos a ~6:03/km); 2 voltas: 9,55 km FC média 146 / máx 154 e 6,46 km FC média 152 / máx 170; trechos de ~1 km a ~4:50/km com FC ~163–165 perto do fim; tempo decorrido 1:36:49 |
 | qui 15/10 | teste | esteira | 7.05 | 35:55 | 5:06/km | 157/174 | – | – | Strava '5 km a 4:40/km · 23:20' sem descrição (esteira, is_trainer); tipo a confirmar (inferido test: bloco contínuo de 5 km, 23:20 pela esteira, ~4:40/km; ou tempo); aquecimento ~2,0 km (~6:00/km, FC 130–150); no bloco a FC subiu de ~160 para 172–174, sem desaquecimento; volta final de 40 m |
 | ter 13/10 | intervalado | esteira | 10.01 | 56:10 | 5:37/km | 151/175 | – | – | Strava 'VO2 · 6×800m a ~13.8 km/h' (esteira, is_trainer; atividade reenviada no Strava, strava_id antigo 20571784330); tipo interval confirmado pelo nome (voltas: 6 tiros de ~3:36 com ~700–718 m, rec ~1:36–1:46; FC média dos tiros 156→169); aquecimento 1,87 km (FC média 128), desaquecimento 2,12 km (FC média 147); pace médio ~5:37/km; academia (tríceps, lombar) depois |
 | dom 11/10 | z2 | esteira | 10.01 | 1:03:58 | 6:23/km | 143/151 | – | – | Strava 'Corrida da tarde' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2: volta única, FC média 143 / máx 151, ~74–79% da FC máx); pace médio ~6:23/km; distância da esteira 10,01 km (volta do relógio 10,71 km) |
-| qui 08/10 | tempo | esteira | 8.02 | 45:07 | 5:38/km | 148/167 | – | – | Strava 'Tempo' sem descrição (esteira, is_trainer); aquecimento 1,63 km (FC média 130); bloco tempo 3,94 km em 21:29 (~5:27/km, FC média 157 / máx 167); desaquecimento 2,10 km (FC média 148); pace médio ~5:38/km; academia (bíceps, ombros, peito) depois |
 
 ## Intervalados — tiros
+
+**qua 21/10** (2026-10-21-1) — Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes
+
+| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
+|---|---|---|---|---|---|---|
+| 1 | 13.5 | 4:27/km | 3:36 / 810 m | 1:41 | 164 | – |
+| 2 | 13.75 | 4:22/km | 3:32 / 810 m | 1:38 | 172 | – |
+| 3 | 13.69 | 4:23/km | 3:33 / 810 m | 1:41 | 171 | – |
+| 4 | 13.77 | 4:21/km | 3:37 / 830 m | 1:44 | 172 | – |
+| 5 | 13.86 | 4:20/km | 3:33 / 820 m | 1:40 | 171 | – |
+| 6 | 14.02 | 4:17/km | 3:31 / 822 m | 2:22 | 175 | – |
 
 **ter 13/10** (2026-10-13-1) — Strava 'VO2 · 6×800m a ~13.8 km/h' (esteira, is_trainer; atividade reenviada no Strava, strava_id antigo 20571784330); tipo interval confirmado pelo nome (voltas: 6 tiros de ~3:36 com ~700–718 m, rec ~1:36–1:46; FC média dos tiros 156→169); aquecimento 1,87 km (FC média 128), desaquecimento 2,12 km (FC média 147); pace médio ~5:37/km; academia (tríceps, lombar) depois
 
@@ -72,16 +83,6 @@
 | 4 | 11.97 | 5:01/km | 3:36 / 718 m | 1:38 | 171 | – |
 | 5 | 11.85 | 5:04/km | 3:36 / 711 m | 1:36 | 175 | – |
 | 6 | 11.8 | 5:05/km | 3:36 / 708 m | 1:06 | 175 | – |
-
-**seg 05/10** (2026-10-05-1) — Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 5 tiros de ~3:35 com ~690–710 m, rec ~1:35; FC média dos tiros 157→171); aquecimento 2,04 km (FC média 128), desaquecimento 1,17 km (FC média 149)
-
-| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
-|---|---|---|---|---|---|---|
-| 1 | 11.65 | 5:09/km | 3:37 / 702 m | 1:36 | 166 | – |
-| 2 | 11.54 | 5:12/km | 3:34 / 686 m | 1:33 | 173 | – |
-| 3 | 11.5 | 5:13/km | 3:35 / 687 m | 1:37 | 176 | – |
-| 4 | 11.75 | 5:06/km | 3:37 / 708 m | 1:47 | 176 | – |
-| 5 | 11.67 | 5:08/km | 3:35 / 697 m | 1:43 | 178 | – |
 
 ## Academia — cargas por exercício
 
@@ -160,12 +161,12 @@ Séries por grupo muscular (últimos 7 dias): peito 16, biceps 11, costas 10, tr
 | recuperação Bevel (%) | – | 64.8 | 0/8 |
 | esforço Bevel (%) | – | 36.6 | 0/8 |
 | sono Bevel (%) | – | 86 | 0/8 |
-| HRV noite (ms) | 56.4 | 54.2 | 7/18 |
-| FC repouso | 57.7 | 60.3 | 6/18 |
-| sono (h) | 7.4 | 7.5 | 7/17 |
-| sono profundo (h) | 0.7 | 0.8 | 7/17 |
-| sono REM (h) | 2 | 2 | 7/17 |
-| passos | 11557 | 11489 | 7/18 |
-| kcal ativas | 844 | 891 | 7/18 |
-| kcal em repouso | 1763 | 1828 | 7/18 |
+| HRV noite (ms) | 54.8 | 54.8 | 6/19 |
+| FC repouso | 57.8 | 60.2 | 5/19 |
+| sono (h) | 7.3 | 7.5 | 6/18 |
+| sono profundo (h) | 0.7 | 0.8 | 6/18 |
+| sono REM (h) | 2 | 2 | 6/18 |
+| passos | 10980 | 11675 | 6/19 |
+| kcal ativas | 812 | 898 | 6/19 |
+| kcal em repouso | 1730 | 1835 | 6/19 |
 | VO2máx estimado (Watch) | 49.4 | 48.1 | 1/2 |
