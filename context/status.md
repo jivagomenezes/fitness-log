@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-23 07:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-23 21:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** sex 23/10/2026 · **Bloco 5K:** semana 5 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -13,7 +13,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| sex 23/10 (hoje) | descanso / sem registro | – · – · – · 26 ms |
+| sex 23/10 (hoje) | 🏃 z2 9.07 km, 6:34/km, FC 146 | – · – · – · 26 ms |
 | qui 22/10 | 🏋️ treino outro (32 séries, 10 exercícios) | – · – · – · 49 ms · 12.5k passos |
 | qua 21/10 | 🏃 intervalado 10 km, 5:20/km, FC 148 | – · – · – · 53 ms · 21.5k passos |
 | ter 20/10 | descanso / sem registro | – · – · – · 62 ms · 3.3k passos |
@@ -32,7 +32,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 19/10 (atual) | 14 | 2 | – | 2 | 63 | 20462 |
+| 19/10 (atual) | 23.1 | 3 | – | 2 | 63 | 20462 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
 | 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
 | 28/09 | 29 | 4 | 40% | 5 | 91 | 31664 |
@@ -54,12 +54,12 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| sex 23/10 | z2 | rua | 9.07 | 59:34 | 6:34/km | 146/171 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 6× 'Quadrado' de 162 m a ~60 s); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~6:34/km, FC média 146 / máx 171); melhor 1 km 5:42, melhor 5 km 31:22; tempo decorrido 59:37 |
 | qua 21/10 | intervalado | esteira | 10 | 53:25 | 5:20/km | 148/175 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes |
 | seg 19/10 | z2 | esteira | 4.01 | 22:45 | 5:40/km | 134/147 | – | – | Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: volta única, FC média 134 / máx 147); pace médio ~5:40/km pela esteira (volta do relógio 4,15 km); academia (tríceps, bíceps, peito, ombros, costas) logo depois |
 | sáb 17/10 | longao | rua | 16.01 | 1:36:44 | 6:03/km | 149/170 | – | – | Strava 'Corrida da tarde' sem descrição (rua, Lisboa); tipo a confirmar (inferido long: 16 km contínuos a ~6:03/km); 2 voltas: 9,55 km FC média 146 / máx 154 e 6,46 km FC média 152 / máx 170; trechos de ~1 km a ~4:50/km com FC ~163–165 perto do fim; tempo decorrido 1:36:49 |
 | qui 15/10 | teste | esteira | 7.05 | 35:55 | 5:06/km | 157/174 | – | – | Strava '5 km a 4:40/km · 23:20' sem descrição (esteira, is_trainer); tipo a confirmar (inferido test: bloco contínuo de 5 km, 23:20 pela esteira, ~4:40/km; ou tempo); aquecimento ~2,0 km (~6:00/km, FC 130–150); no bloco a FC subiu de ~160 para 172–174, sem desaquecimento; volta final de 40 m |
 | ter 13/10 | intervalado | esteira | 10.01 | 56:10 | 5:37/km | 151/175 | – | – | Strava 'VO2 · 6×800m a ~13.8 km/h' (esteira, is_trainer; atividade reenviada no Strava, strava_id antigo 20571784330); tipo interval confirmado pelo nome (voltas: 6 tiros de ~3:36 com ~700–718 m, rec ~1:36–1:46; FC média dos tiros 156→169); aquecimento 1,87 km (FC média 128), desaquecimento 2,12 km (FC média 147); pace médio ~5:37/km; academia (tríceps, lombar) depois |
-| dom 11/10 | z2 | esteira | 10.01 | 1:03:58 | 6:23/km | 143/151 | – | – | Strava 'Corrida da tarde' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2: volta única, FC média 143 / máx 151, ~74–79% da FC máx); pace médio ~6:23/km; distância da esteira 10,01 km (volta do relógio 10,71 km) |
 
 ## Intervalados — tiros
 
