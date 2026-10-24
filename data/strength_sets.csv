@@ -454,3 +454,33 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-10-22,other,Cadeira Flexora (Máquina),2,normal,30,24,,,20692295132
 2026-10-22,other,Cadeira Flexora (Máquina),3,normal,30,24,,,20692295132
 2026-10-22,other,Cadeira Flexora (Máquina),4,normal,50,10,,,20692295132
+2026-10-24,other,Crucifixo (Máquina),1,warmup,10,22,,Hevy 'Treino de madrugada',20717873678
+2026-10-24,other,Crucifixo (Máquina),2,normal,15,14,,,20717873678
+2026-10-24,other,Crucifixo (Máquina),3,normal,15,12,,,20717873678
+2026-10-24,other,Crucifixo Invertido (Máquina),1,warmup,10,12,,,20717873678
+2026-10-24,other,Crucifixo Invertido (Máquina),2,warmup,10,12,,,20717873678
+2026-10-24,other,Crucifixo Invertido (Máquina),3,normal,15,12,,,20717873678
+2026-10-24,other,Cadeira Abdutora (Máquina),1,normal,55,15,,,20717873678
+2026-10-24,other,Cadeira Abdutora (Máquina),2,normal,55,15,,,20717873678
+2026-10-24,other,Cadeira Abdutora (Máquina),3,normal,60,13,,,20717873678
+2026-10-24,other,Cadeira Adutora (Máquina),1,warmup,60,12,,,20717873678
+2026-10-24,other,Cadeira Adutora (Máquina),2,normal,65,13,,,20717873678
+2026-10-24,other,Cadeira Adutora (Máquina),3,normal,75,10,,,20717873678
+2026-10-24,other,Crucifixo Baixo (Cabo),1,normal,15,12,,,20717873678
+2026-10-24,other,Crucifixo Baixo (Cabo),2,normal,15,12,,,20717873678
+2026-10-24,other,Crucifixo Baixo (Cabo),3,normal,15,12,,,20717873678
+2026-10-24,other,Supino Inclinado (Halter),1,normal,45,12,,,20717873678
+2026-10-24,other,Supino Inclinado (Halter),2,normal,45,11,,,20717873678
+2026-10-24,other,Supino Inclinado (Halter),3,normal,45,11,,,20717873678
+2026-10-24,other,Rosca Direta (Halter),1,normal,30,10,,,20717873678
+2026-10-24,other,Rosca Direta (Halter),2,normal,30,16,,,20717873678
+2026-10-24,other,Rosca Direta (Halter),3,normal,30,16,,,20717873678
+2026-10-24,other,Tríceps na Polia com Corda,1,normal,12.5,15,,,20717873678
+2026-10-24,other,Tríceps na Polia com Corda,2,normal,12.5,12,,,20717873678
+2026-10-24,other,Tríceps na Polia com Corda,3,normal,10,10,,,20717873678
+2026-10-24,other,Tríceps na Polia Unilateral (Cabo),1,normal,5,20,,,20717873678
+2026-10-24,other,Tríceps na Polia Unilateral (Cabo),2,normal,5,20,,,20717873678
+2026-10-24,other,Tríceps na Polia Unilateral (Cabo),3,normal,5,20,,,20717873678
+2026-10-24,other,Puxada Alta (Cabo),1,normal,55,11,,,20717873678
+2026-10-24,other,Puxada Alta (Cabo),2,normal,65,8,,,20717873678
+2026-10-24,other,Puxada Alta (Cabo),3,normal,55,10,,,20717873678
