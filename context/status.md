@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-28 08:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-28 22:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 28/10/2026 · **Bloco 5K:** semana 6 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -12,8 +12,8 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 28/10 (hoje) | descanso / sem registro | – · – · – · 54 ms |
-| ter 27/10 | 🏃 z2 6.01 km, 5:54/km, FC 146 | – · – · – · 69 ms · 18.3k passos |
+| qua 28/10 (hoje) | 🏋️ treino outro (31 séries, 9 exercícios) | – · – · – · 53 ms · 11.9k passos |
+| ter 27/10 | 🏃 z2 6.01 km, 5:54/km, FC 146 | – · – · – · 69 ms · 19.0k passos |
 | seg 26/10 | descanso / sem registro | – · – · – · 40 ms · 13.9k passos |
 | dom 25/10 | descanso / sem registro | – · – · – · 56 ms · 6.9k passos |
 | sáb 24/10 | 🏃 z2 3.02 km, 5:53/km, FC 141; 🏋️ treino outro (26 séries, 10 exercícios) | – · – · – · 59 ms · 10.8k passos |
@@ -31,7 +31,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 26/10 (atual) | 6 | 1 | – | 0 | 0 | 0 |
+| 26/10 (atual) | 6 | 1 | – | 1 | 31 | 10295 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
 | 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
@@ -92,7 +92,6 @@
 | A | panturrilha | Panturrilha Sentado (Máquina) | 01/10 | 40 kg × 16 | 3 | – |  |
 | A | panturrilha | Panturrilha em Pé Unilateral (Máquina) | 23/09 | 55 kg × 12 | 4 | – |  |
 | A | posterior | Levantamento Terra com Pernas Estendidas | 01/10 | 45 kg × 10 | 2 | 50 kg × 10 | ↓ |
-| A | posterior | Mesa Flexora (Máquina) | 23/09 | 25 kg × 20 | 2 | – |  |
 | A | quadriceps | Agachamento (Barra) | 01/10 | 80 kg × 9 | 3 | – |  |
 | A | quadriceps | Agachamento (Smith) | 23/09 | 60 kg × 10 | 4 | – |  |
 | A | quadriceps | Agachamento Búlgaro (Halter) | 23/09 | 20 kg × 20 | 4 | – |  |
@@ -107,7 +106,7 @@
 | C | ombro | Crucifixo Invertido (Halter) | 15/09 | 14 kg × 12 | 3 | – |  |
 | outro | adutor | Cadeira Adutora (Máquina) | 24/10 | 75 kg × 10 | 2 | 50 kg × 10 | ↑ |
 | outro | biceps | Rosca Acima da Cabeça (Cabo) | 04/10 | 30 kg × 6 | 4 | – |  |
-| outro | biceps | Rosca Direta (Halter) | 24/10 | 30 kg × 16 | 3 | 30 kg × 10 | ↑ |
+| outro | biceps | Rosca Direta (Halter) | 28/10 | 30 kg × 10 | 4 | 30 kg × 16 | ↓ |
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Martelo (Cabo) | 22/10 | 17.5 kg × 11 | 2 | – |  |
 | outro | biceps | Rosca Scott (Barra) | 04/10 | 30 kg × 10 | 3 | 25 kg × 15 | ↑ |
@@ -120,10 +119,10 @@
 | outro | costas | Remada Alta Iso-Lateral (Máquina) | 22/10 | 50 kg × 11 | 3 | – |  |
 | outro | costas | Remada Inclinada com Apoio no Peito (Halter) | 04/10 | 40 kg × 15 | 3 | 35 kg × 12 | ↑ |
 | outro | costas | Remada Sentada (Máquina) | 10/10 | 50 kg × 13 | 3 | 55 kg × 8 | ↓ |
-| outro | costas | Remada Sentada com Pegada em V (Cabo) | 16/10 | 65 kg × 8 | 4 | – |  |
+| outro | costas | Remada Sentada com Pegada em V (Cabo) | 28/10 | 50 kg × 10 | 1 | 65 kg × 8 | ↓ |
 | outro | costas | Remada Serrote (Halter) | 19/10 | 22.5 kg × 20 | 2 | – |  |
 | outro | gluteo | Cadeira Abdutora (Máquina) | 24/10 | 60 kg × 13 | 3 | 70 kg × 10 | ↓ |
-| outro | lower_back | Extensão Lombar (Hiperextensão com Peso) | 22/10 | PC × 13 | 4 | PC × 16 | ↓ |
+| outro | lower_back | Extensão Lombar (Hiperextensão com Peso) | 28/10 | PC × 20 | 2 | PC × 13 | ↑ |
 | outro | ombro | Crucifixo Invertido (Máquina) | 24/10 | 15 kg × 12 | 1 | 20 kg × 10 | ↓ |
 | outro | ombro | Desenvolvimento (Halter) | 19/10 | 40 kg × 11 | 3 | 35 kg × 10 | ↑ |
 | outro | ombro | Desenvolvimento de Ombros (Halter) | 12/10 | 35 kg × 11 | 3 | 45 kg × 9 | ↓ |
@@ -132,17 +131,18 @@
 | outro | ombro | Elevação Lateral (Halter) | 07/10 | 20 kg × 16 | 2 | – |  |
 | outro | ombro | Elevação Lateral (Máquina) | 16/10 | 20 kg × 12 | 2 | 20 kg × 13 | ↓ |
 | outro | ombro | Face Pull | 04/10 | 17.5 kg × 20 | 3 | 15 kg × 10 | ↑ |
-| outro | peito | Crossover na Polia | 19/10 | 25 kg × 12 | 3 | 25 kg × 10 | ↑ |
-| outro | peito | Crucifixo (Máquina) | 24/10 | 15 kg × 14 | 2 | 30 kg × 12 | ↓ |
+| outro | peito | Crossover na Polia | 28/10 | 40 kg × 9 | 7 | 25 kg × 12 | ↑ |
+| outro | peito | Crucifixo (Máquina) | 28/10 | 25 kg × 13 | 3 | 15 kg × 14 | ↑ |
 | outro | peito | Crucifixo Baixo (Cabo) | 24/10 | 15 kg × 12 | 3 | – |  |
 | outro | peito | Crucifixo Inclinado (Halter) | 07/10 | 20 kg × 9 | 4 | 20 kg × 10 | ↓ |
 | outro | peito | Pullover (Halter) | 19/10 | 17.5 kg × 12 | 3 | – |  |
-| outro | peito | Supino Inclinado (Halter) | 24/10 | 45 kg × 12 | 3 | 45 kg × 10 | ↑ |
+| outro | peito | Supino Inclinado (Halter) | 28/10 | 50 kg × 10 | 3 | 45 kg × 12 | ↑ |
 | outro | peito | Supino Inclinado (Máquina Smith) | 19/10 | 60 kg × 8 | 4 | – |  |
 | outro | peito | Supino Iso-Lateral (Máquina) | 07/10 | 70 kg × 11 | 6 | 70 kg × 10 | ↑ |
 | outro | peito | Supino Reto (Barra) | 11/09 | 65 kg × 9 | 4 | – |  |
 | outro | peito | Supino Sentado (Máquina) | 07/10 | 45 kg × 10 | 3 | – |  |
-| outro | posterior | Cadeira Flexora (Máquina) | 22/10 | 50 kg × 10 | 4 | 50 kg × 18 | ↓ |
+| outro | posterior | Cadeira Flexora (Máquina) | 28/10 | 35 kg × 20 | 4 | 50 kg × 10 | ↓ |
+| outro | posterior | Mesa Flexora (Máquina) | 28/10 | 25 kg × 20 | 3 | 25 kg × 20 | → |
 | outro | quadriceps | Cadeira Extensora (Máquina) | 16/10 | 65 kg × 12 | 3 | – |  |
 | outro | quadriceps | Cadeira Extensora Unilateral (Máquina) | 22/10 | 30 kg × 24 | 2 | – |  |
 | outro | quadriceps | Leg Press 45º (Máquina) | 10/10 | 70 kg × 14 | 1 | – |  |
@@ -153,10 +153,10 @@
 | outro | triceps | Extensão de Tríceps Unilateral (Halter) | 07/10 | 10 kg × 18 | 2 | 10 kg × 24 | ↓ |
 | outro | triceps | Tríceps Coice (Cabo) | 19/10 | 5 kg × 20 | 2 | 5 kg × 20 | → |
 | outro | triceps | Tríceps Coice (Halter) | 07/10 | 8 kg × 20 | 3 | – |  |
-| outro | triceps | Tríceps na Polia Unilateral (Cabo) | 24/10 | 5 kg × 20 | 3 | 10 kg × 25 | ↓ |
+| outro | triceps | Tríceps na Polia Unilateral (Cabo) | 28/10 | 15 kg × 10 | 4 | 5 kg × 20 | ↑ |
 | outro | triceps | Tríceps na Polia com Corda | 24/10 | 12.5 kg × 15 | 3 | 15 kg × 20 | ↓ |
 
-Séries por grupo muscular (últimos 7 dias): biceps 10, costas 9, triceps 9, peito 8, ombro 4, lower_back 4, posterior 4, core 3, gluteo 3, quadriceps 2, adutor 2
+Séries por grupo muscular (últimos 7 dias): peito 21, biceps 14, triceps 13, posterior 11, costas 10, lower_back 6, ombro 4, core 3, gluteo 3, quadriceps 2, adutor 2
 
 ## Recuperação
 
@@ -165,12 +165,12 @@ Séries por grupo muscular (últimos 7 dias): biceps 10, costas 9, triceps 9, pe
 | recuperação Bevel (%) | – | 62.3 | 0/7 |
 | esforço Bevel (%) | – | 33 | 0/7 |
 | sono Bevel (%) | – | 85 | 0/7 |
-| HRV noite (ms) | 53.9 | 54.8 | 7/25 |
-| FC repouso | 61 | 59.5 | 6/25 |
-| sono (h) | 7 | 7.5 | 6/24 |
-| sono profundo (h) | 0.7 | 0.8 | 6/24 |
-| sono REM (h) | 2 | 2 | 6/24 |
-| passos | 13118 | 12361 | 6/25 |
-| kcal ativas | 979 | 935 | 6/25 |
-| kcal em repouso | 1956 | 1864 | 6/25 |
+| HRV noite (ms) | 53.7 | 54.8 | 7/25 |
+| FC repouso | 60.6 | 59.5 | 7/25 |
+| sono (h) | 7 | 7.5 | 7/24 |
+| sono profundo (h) | 0.7 | 0.8 | 7/24 |
+| sono REM (h) | 2 | 2 | 7/24 |
+| passos | 13038 | 12361 | 7/25 |
+| kcal ativas | 998 | 935 | 7/25 |
+| kcal em repouso | 1957 | 1864 | 7/25 |
 | VO2máx estimado (Watch) | 50.1 | 48.6 | 2/3 |
