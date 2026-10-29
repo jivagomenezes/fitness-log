@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-10-29 08:53. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-10-29 22:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qui 29/10/2026 · **Bloco 5K:** semana 6 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -12,7 +12,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qui 29/10 (hoje) | descanso / sem registro | – · – · – · 60 ms · 0.2k passos |
+| qui 29/10 (hoje) | 🏃 z2 7.49 km, 5:59/km, FC 147 | – · – · – · 60 ms · 0.2k passos |
 | qua 28/10 | 🏋️ treino outro (31 séries, 9 exercícios) | – · – · – · 53 ms · 12.3k passos |
 | ter 27/10 | 🏃 z2 6.01 km, 5:54/km, FC 146 | – · – · – · 69 ms · 19.0k passos |
 | seg 26/10 | descanso / sem registro | – · – · – · 40 ms · 13.9k passos |
@@ -31,7 +31,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 26/10 (atual) | 6 | 1 | – | 1 | 31 | 10295 |
+| 26/10 (atual) | 13.5 | 2 | – | 1 | 31 | 10295 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
 | 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
@@ -53,12 +53,12 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| qui 29/10 | z2 | rua | 7.49 | 44:49 | 5:59/km | 147/172 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 20× 'Quadrado' de 162 m, a maioria 53–62 s, um a 33 s com FC 163); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~5:59/km, FC média 147 / máx 172); melhor 1 km 5:21, melhor 5 km 29:10; tempo decorrido 45:01 |
 | ter 27/10 | z2 | esteira | 6.01 | 35:26 | 5:54/km | 146/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido z2/rodagem: 6 voltas de 1 km em 6:21 / 5:53 / 5:43 / 5:49 / 5:51 / 5:48, FC média 148 / 139 / 145 / 147 / 147 / 147; máx 168 no 1º km); pace médio ~5:54/km pela esteira |
 | sáb 24/10 | z2 | esteira | 3.02 | 17:46 | 5:53/km | 141/152 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: 3 voltas de 1 km em 6:06 / 5:41 / 5:49, FC média 129 / 148 / 147, máx 152); pace médio ~5:53/km pela esteira; tempo decorrido 18:20; logo depois da academia (peito, ombros, braços, adutores/abdutores, puxada) |
 | sex 23/10 | z2 | rua | 9.07 | 59:34 | 6:34/km | 146/171 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 6× 'Quadrado' de 162 m a ~60 s); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~6:34/km, FC média 146 / máx 171); melhor 1 km 5:42, melhor 5 km 31:22; tempo decorrido 59:37 |
 | qua 21/10 | intervalado | esteira | 10 | 53:25 | 5:20/km | 148/175 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes |
 | seg 19/10 | z2 | esteira | 4.01 | 22:45 | 5:40/km | 134/147 | – | – | Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: volta única, FC média 134 / máx 147); pace médio ~5:40/km pela esteira (volta do relógio 4,15 km); academia (tríceps, bíceps, peito, ombros, costas) logo depois |
-| sáb 17/10 | longao | rua | 16.01 | 1:36:44 | 6:03/km | 149/170 | – | – | Strava 'Corrida da tarde' sem descrição (rua, Lisboa); tipo a confirmar (inferido long: 16 km contínuos a ~6:03/km); 2 voltas: 9,55 km FC média 146 / máx 154 e 6,46 km FC média 152 / máx 170; trechos de ~1 km a ~4:50/km com FC ~163–165 perto do fim; tempo decorrido 1:36:49 |
 
 ## Intervalados — tiros
 
