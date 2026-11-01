@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-01 08:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-01 22:52. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** dom 01/11/2026 · **Bloco 5K:** semana 6 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -13,7 +13,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| dom 01/11 (hoje) | descanso / sem registro | – |
+| dom 01/11 (hoje) | 🏃 tempo 8.01 km, 5:47/km, FC 152; 🏋️ treino outro (22 séries, 7 exercícios) | – |
 | sáb 31/10 | descanso / sem registro | – · – · – · 37 ms |
 | sex 30/10 | descanso / sem registro | – · – · – · 49 ms · 6.1k passos |
 | qui 29/10 | 🏃 z2 7.49 km, 5:59/km, FC 147 | – · – · – · 58 ms · 19.6k passos |
@@ -32,7 +32,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 26/10 (atual) | 13.5 | 2 | – | 1 | 31 | 10295 |
+| 26/10 (atual) | 21.5 | 3 | – | 2 | 53 | 18040 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
 | 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
@@ -54,12 +54,12 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| dom 01/11 | tempo | esteira | 8.01 | 46:19 | 5:47/km | 152/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido tempo: 3 voltas — 2,01 km aquecimento em 13:01 (~6:29/km, FC 138/152), 4,11 km a ~4:53/km em 20:06 (FC média 162, máx 168), 1,89 km desaquecimento em 13:12 (~6:59/km, FC 150/164)); tempo decorrido 46:52; logo depois da academia (bíceps, remada, tríceps, peito, ombros) |
 | qui 29/10 | z2 | rua | 7.49 | 44:49 | 5:59/km | 147/172 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 20× 'Quadrado' de 162 m, a maioria 53–62 s, um a 33 s com FC 163); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~5:59/km, FC média 147 / máx 172); melhor 1 km 5:21, melhor 5 km 29:10; tempo decorrido 45:01 |
 | ter 27/10 | z2 | esteira | 6.01 | 35:26 | 5:54/km | 146/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido z2/rodagem: 6 voltas de 1 km em 6:21 / 5:53 / 5:43 / 5:49 / 5:51 / 5:48, FC média 148 / 139 / 145 / 147 / 147 / 147; máx 168 no 1º km); pace médio ~5:54/km pela esteira |
 | sáb 24/10 | z2 | esteira | 3.02 | 17:46 | 5:53/km | 141/152 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: 3 voltas de 1 km em 6:06 / 5:41 / 5:49, FC média 129 / 148 / 147, máx 152); pace médio ~5:53/km pela esteira; tempo decorrido 18:20; logo depois da academia (peito, ombros, braços, adutores/abdutores, puxada) |
 | sex 23/10 | z2 | rua | 9.07 | 59:34 | 6:34/km | 146/171 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 6× 'Quadrado' de 162 m a ~60 s); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~6:34/km, FC média 146 / máx 171); melhor 1 km 5:42, melhor 5 km 31:22; tempo decorrido 59:37 |
 | qua 21/10 | intervalado | esteira | 10 | 53:25 | 5:20/km | 148/175 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes |
-| seg 19/10 | z2 | esteira | 4.01 | 22:45 | 5:40/km | 134/147 | – | – | Strava 'Corrida ao entardecer' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: volta única, FC média 134 / máx 147); pace médio ~5:40/km pela esteira (volta do relógio 4,15 km); academia (tríceps, bíceps, peito, ombros, costas) logo depois |
 
 ## Intervalados — tiros
 
@@ -107,7 +107,7 @@
 | C | ombro | Crucifixo Invertido (Halter) | 15/09 | 14 kg × 12 | 3 | – |  |
 | outro | adutor | Cadeira Adutora (Máquina) | 24/10 | 75 kg × 10 | 2 | 50 kg × 10 | ↑ |
 | outro | biceps | Rosca Acima da Cabeça (Cabo) | 04/10 | 30 kg × 6 | 4 | – |  |
-| outro | biceps | Rosca Direta (Halter) | 28/10 | 30 kg × 10 | 4 | 30 kg × 16 | ↓ |
+| outro | biceps | Rosca Direta (Halter) | 01/11 | 30 kg × 10 | 3 | 30 kg × 10 | → |
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Martelo (Cabo) | 22/10 | 17.5 kg × 11 | 2 | – |  |
 | outro | biceps | Rosca Scott (Barra) | 04/10 | 30 kg × 10 | 3 | 25 kg × 15 | ↑ |
@@ -120,7 +120,7 @@
 | outro | costas | Remada Alta Iso-Lateral (Máquina) | 22/10 | 50 kg × 11 | 3 | – |  |
 | outro | costas | Remada Inclinada com Apoio no Peito (Halter) | 04/10 | 40 kg × 15 | 3 | 35 kg × 12 | ↑ |
 | outro | costas | Remada Sentada (Máquina) | 10/10 | 50 kg × 13 | 3 | 55 kg × 8 | ↓ |
-| outro | costas | Remada Sentada com Pegada em V (Cabo) | 28/10 | 50 kg × 10 | 1 | 65 kg × 8 | ↓ |
+| outro | costas | Remada Sentada com Pegada em V (Cabo) | 01/11 | 55 kg × 10 | 3 | 50 kg × 10 | ↑ |
 | outro | costas | Remada Serrote (Halter) | 19/10 | 22.5 kg × 20 | 2 | – |  |
 | outro | gluteo | Cadeira Abdutora (Máquina) | 24/10 | 60 kg × 13 | 3 | 70 kg × 10 | ↓ |
 | outro | lower_back | Extensão Lombar (Hiperextensão com Peso) | 28/10 | PC × 20 | 2 | PC × 13 | ↑ |
@@ -130,10 +130,10 @@
 | outro | ombro | Desenvolvimento de Ombros Sentado (Máquina) | 22/10 | 75 kg × 10 | 3 | 78 kg × 8 | ↓ |
 | outro | ombro | Elevação Lateral (Cabo) | 04/10 | 15 kg × 20 | 2 | 12.5 kg × 24 | ↑ |
 | outro | ombro | Elevação Lateral (Halter) | 07/10 | 20 kg × 16 | 2 | – |  |
-| outro | ombro | Elevação Lateral (Máquina) | 16/10 | 20 kg × 12 | 2 | 20 kg × 13 | ↓ |
+| outro | ombro | Elevação Lateral (Máquina) | 01/11 | 25 kg × 8 | 4 | 20 kg × 12 | ↑ |
 | outro | ombro | Face Pull | 04/10 | 17.5 kg × 20 | 3 | 15 kg × 10 | ↑ |
-| outro | peito | Crossover na Polia | 28/10 | 40 kg × 9 | 7 | 25 kg × 12 | ↑ |
-| outro | peito | Crucifixo (Máquina) | 28/10 | 25 kg × 13 | 3 | 15 kg × 14 | ↑ |
+| outro | peito | Crossover na Polia | 01/11 | 25 kg × 12 | 2 | 40 kg × 9 | ↓ |
+| outro | peito | Crucifixo (Máquina) | 01/11 | 30 kg × 11 | 3 | 25 kg × 13 | ↑ |
 | outro | peito | Crucifixo Baixo (Cabo) | 24/10 | 15 kg × 12 | 3 | – |  |
 | outro | peito | Crucifixo Inclinado (Halter) | 07/10 | 20 kg × 9 | 4 | 20 kg × 10 | ↓ |
 | outro | peito | Pullover (Halter) | 19/10 | 17.5 kg × 12 | 3 | – |  |
@@ -141,6 +141,7 @@
 | outro | peito | Supino Inclinado (Máquina Smith) | 19/10 | 60 kg × 8 | 4 | – |  |
 | outro | peito | Supino Iso-Lateral (Máquina) | 07/10 | 70 kg × 11 | 6 | 70 kg × 10 | ↑ |
 | outro | peito | Supino Reto (Barra) | 11/09 | 65 kg × 9 | 4 | – |  |
+| outro | peito | Supino Reto (Smith) | 01/11 | 60 kg × 10 | 3 | – |  |
 | outro | peito | Supino Sentado (Máquina) | 07/10 | 45 kg × 10 | 3 | – |  |
 | outro | posterior | Cadeira Flexora (Máquina) | 28/10 | 35 kg × 20 | 4 | 50 kg × 10 | ↓ |
 | outro | posterior | Mesa Flexora (Máquina) | 28/10 | 25 kg × 20 | 3 | 25 kg × 20 | → |
@@ -150,14 +151,14 @@
 | outro | quadriceps | Leg Press Unilateral (Máquina) | 10/10 | 55 kg × 20 | 2 | – |  |
 | outro | triceps | Extensão de Tríceps (Corda) | 28/09 | 21 kg × 10 | 3 | – |  |
 | outro | triceps | Extensão de Tríceps (Máquina) | 07/10 | 40 kg × 13 | 3 | 45 kg × 10 | ↓ |
-| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 22/10 | 17.5 kg × 11 | 3 | 15 kg × 12 | ↑ |
+| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 01/11 | 15 kg × 15 | 4 | 17.5 kg × 11 | ↓ |
 | outro | triceps | Extensão de Tríceps Unilateral (Halter) | 07/10 | 10 kg × 18 | 2 | 10 kg × 24 | ↓ |
 | outro | triceps | Tríceps Coice (Cabo) | 19/10 | 5 kg × 20 | 2 | 5 kg × 20 | → |
 | outro | triceps | Tríceps Coice (Halter) | 07/10 | 8 kg × 20 | 3 | – |  |
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 28/10 | 15 kg × 10 | 4 | 5 kg × 20 | ↑ |
 | outro | triceps | Tríceps na Polia com Corda | 24/10 | 12.5 kg × 15 | 3 | 15 kg × 20 | ↓ |
 
-Séries por grupo muscular (últimos 7 dias): peito 13, posterior 7, biceps 4, triceps 4, lower_back 2, costas 1
+Séries por grupo muscular (últimos 7 dias): peito 21, triceps 8, biceps 7, posterior 7, costas 4, ombro 4, lower_back 2
 
 ## Recuperação
 
