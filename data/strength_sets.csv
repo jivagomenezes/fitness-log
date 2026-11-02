@@ -539,3 +539,24 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-11-01,other,Supino Reto (Smith),1,normal,60,10,,,20819038347
 2026-11-01,other,Supino Reto (Smith),2,normal,60,10,,,20819038347
 2026-11-01,other,Supino Reto (Smith),3,normal,60,10,,,20819038347
+2026-11-02,other,Extensão de Tríceps Acima da Cabeça (Cabo),1,normal,17.5,12,,,20835245228
+2026-11-02,other,Extensão de Tríceps Acima da Cabeça (Cabo),2,failure,17.5,5,,,20835245228
+2026-11-02,other,Extensão de Tríceps Acima da Cabeça (Cabo),3,normal,15,5,,,20835245228
+2026-11-02,other,Extensão de Tríceps Acima da Cabeça (Cabo),4,normal,15,11,,,20835245228
+2026-11-02,other,Elevação Lateral (Cabo),1,normal,5,22,,,20835245228
+2026-11-02,other,Elevação Lateral (Cabo),2,normal,5,22,,,20835245228
+2026-11-02,other,Elevação Lateral (Cabo),3,failure,7.5,15,,,20835245228
+2026-11-02,other,Elevação Lateral (Cabo),4,normal,7.5,10,,,20835245228
+2026-11-02,other,Elevação Lateral (Cabo),5,drop,5,10,,,20835245228
+2026-11-02,other,Puxada com Corda e Braços Estendidos (Cabo),1,normal,25,11,,,20835245228
+2026-11-02,other,Puxada com Corda e Braços Estendidos (Cabo),2,normal,25,12,,,20835245228
+2026-11-02,other,Puxada com Corda e Braços Estendidos (Cabo),3,normal,27.5,11,,,20835245228
+2026-11-02,other,Abdominal na Polia (Corda),1,normal,20,15,,,20835245228
+2026-11-02,other,Abdominal na Polia (Corda),2,normal,25,14,,,20835245228
+2026-11-02,other,Abdominal na Polia (Corda),3,normal,27.5,13,,,20835245228
+2026-11-02,other,Agachamento (Barra),1,warmup,40,11,,,20835245228
+2026-11-02,other,Agachamento (Barra),2,warmup,60,10,,,20835245228
+2026-11-02,other,Agachamento (Barra),3,warmup,60,10,,,20835245228
+2026-11-02,other,Levantamento Terra (Barra),1,normal,40,10,,,20835245228
+2026-11-02,other,Levantamento Terra (Barra),2,normal,60,10,,,20835245228
+2026-11-02,other,Levantamento Terra com Pernas Estendidas,1,normal,60,10,,,20835245228
