@@ -30,3 +30,7 @@ run_id,rep,distance_m,duration,speed_kmh,recovery,hr_peak,hr_end_recovery,notes
 2026-10-21-1,4,830,3:37,,1:44,172,,
 2026-10-21-1,5,820,3:33,,1:40,171,,
 2026-10-21-1,6,822,3:31,,2:22,175,,última rec 2:22 (346 m) antes do desaquecimento
+2026-11-03-2,1,808,3:28,,1:39,175,,voltas do Strava
+2026-11-03-2,2,803,3:27,,1:59,184,,
+2026-11-03-2,3,810,3:32,,2:01,180,,
+2026-11-03-2,4,797,3:28,,2:01,180,,última rec 2:01 (211 m) antes do desaquecimento

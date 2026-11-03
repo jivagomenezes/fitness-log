@@ -1,18 +1,19 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-03 08:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-03 22:52. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** ter 03/11/2026 · **Bloco 5K:** semana 7 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
+- Tiro 2 de 03/11 com FC pico 184 (≥ 183) — conferir se era a intenção da fase.
 - Semana de 26/10: só 63% do km em treinos fáceis (alvo ~80%; sem dados de zona).
 
 ## Últimos 14 dias
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| ter 03/11 (hoje) | descanso / sem registro | – · – · – · 46 ms |
+| ter 03/11 (hoje) | 🏃 z2 1.28 km, 6:04/km, FC 143; 🏃 intervalado 8.01 km, 6:12/km, FC 157 | – · – · – · 46 ms |
 | seg 02/11 | 🏋️ treino outro (18 séries, 6 exercícios) | – · – · – · 55 ms · 7.4k passos |
 | dom 01/11 | 🏃 tempo 8.01 km, 5:47/km, FC 152; 🏋️ treino outro (22 séries, 7 exercícios) | – · – · – · 56 ms · 16.7k passos |
 | sáb 31/10 | descanso / sem registro | – · – · – · 48 ms · 11.7k passos |
@@ -31,7 +32,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 02/11 (atual) | 0 | 0 | – | 1 | 18 | 4480 |
+| 02/11 (atual) | 9.3 | 2 | – | 1 | 18 | 4480 |
 | 26/10 | 21.5 | 3 | – | 2 | 53 | 18040 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
@@ -53,14 +54,23 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| ter 03/11 | intervalado | esteira | 8.01 | 49:38 | 6:12/km | 157/184 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido interval pelas voltas: 4 tiros de ~3:27–3:32 com ~800–810 m (~13.8–14.0 km/h), rec ~1:39–2:01; FC média dos tiros 166 / 179 / 170 / 171, máx 184 no 2º tiro); aquecimento 1,01 km (FC média 142) + 1,28 km na rua antes, desaquecimento 2,92 km (FC média 149); pace médio ~6:12/km; tempo decorrido 50:16 |
+| ter 03/11 | z2 | rua | 1.28 | 7:46 | 6:04/km | 143/150 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa); tipo a confirmar (trecho curto de 1,28 km a ~6:04/km, FC média 143 / máx 150, logo antes da esteira das 20:01 — provável aquecimento/deslocamento); tempo decorrido 7:49 |
 | dom 01/11 | tempo | esteira | 8.01 | 46:19 | 5:47/km | 152/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido tempo: 3 voltas — 2,01 km aquecimento em 13:01 (~6:29/km, FC 138/152), 4,11 km a ~4:53/km em 20:06 (FC média 162, máx 168), 1,89 km desaquecimento em 13:12 (~6:59/km, FC 150/164)); tempo decorrido 46:52; logo depois da academia (bíceps, remada, tríceps, peito, ombros) |
 | qui 29/10 | z2 | rua | 7.49 | 44:49 | 5:59/km | 147/172 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 20× 'Quadrado' de 162 m, a maioria 53–62 s, um a 33 s com FC 163); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~5:59/km, FC média 147 / máx 172); melhor 1 km 5:21, melhor 5 km 29:10; tempo decorrido 45:01 |
 | ter 27/10 | z2 | esteira | 6.01 | 35:26 | 5:54/km | 146/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido z2/rodagem: 6 voltas de 1 km em 6:21 / 5:53 / 5:43 / 5:49 / 5:51 / 5:48, FC média 148 / 139 / 145 / 147 / 147 / 147; máx 168 no 1º km); pace médio ~5:54/km pela esteira |
 | sáb 24/10 | z2 | esteira | 3.02 | 17:46 | 5:53/km | 141/152 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido z2/rodagem leve: 3 voltas de 1 km em 6:06 / 5:41 / 5:49, FC média 129 / 148 / 147, máx 152); pace médio ~5:53/km pela esteira; tempo decorrido 18:20; logo depois da academia (peito, ombros, braços, adutores/abdutores, puxada) |
-| sex 23/10 | z2 | rua | 9.07 | 59:34 | 6:34/km | 146/171 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: Parque da Bela Vista/Vale da Montanha, segmentos repetidos — 6× 'Quadrado' de 162 m a ~60 s); tipo a confirmar (inferido z2/rodagem: volta única, pace médio ~6:34/km, FC média 146 / máx 171); melhor 1 km 5:42, melhor 5 km 31:22; tempo decorrido 59:37 |
-| qua 21/10 | intervalado | esteira | 10 | 53:25 | 5:20/km | 148/175 | – | – | Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes |
 
 ## Intervalados — tiros
+
+**ter 03/11** (2026-11-03-2) — Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido interval pelas voltas: 4 tiros de ~3:27–3:32 com ~800–810 m (~13.8–14.0 km/h), rec ~1:39–2:01; FC média dos tiros 166 / 179 / 170 / 171, máx 184 no 2º tiro); aquecimento 1,01 km (FC média 142) + 1,28 km na rua antes, desaquecimento 2,92 km (FC média 149); pace médio ~6:12/km; tempo decorrido 50:16
+
+| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
+|---|---|---|---|---|---|---|
+| 1 | 13.98 | 4:17/km | 3:28 / 808 m | 1:39 | 175 | – |
+| 2 | 13.97 | 4:18/km | 3:27 / 803 m | 1:59 | 184 | – |
+| 3 | 13.75 | 4:22/km | 3:32 / 810 m | 2:01 | 180 | – |
+| 4 | 13.79 | 4:21/km | 3:28 / 797 m | 2:01 | 180 | – |
 
 **qua 21/10** (2026-10-21-1) — Strava 'Indoor Running' sem descrição (esteira, is_trainer); tipo a confirmar (inferido interval pelas voltas: 6 tiros de ~3:31–3:37 com ~810–830 m, rec ~1:38–1:44 com ~240–250 m; FC média dos tiros 158→169); aquecimento 2,07 km (FC média 109), desaquecimento 1,46 km (FC média 147); pace médio ~5:21/km; alongamento/fisioterapia antes
 
@@ -72,17 +82,6 @@
 | 4 | 13.77 | 4:21/km | 3:37 / 830 m | 1:44 | 172 | – |
 | 5 | 13.86 | 4:20/km | 3:33 / 820 m | 1:40 | 171 | – |
 | 6 | 14.02 | 4:17/km | 3:31 / 822 m | 2:22 | 175 | – |
-
-**ter 13/10** (2026-10-13-1) — Strava 'VO2 · 6×800m a ~13.8 km/h' (esteira, is_trainer; atividade reenviada no Strava, strava_id antigo 20571784330); tipo interval confirmado pelo nome (voltas: 6 tiros de ~3:36 com ~700–718 m, rec ~1:36–1:46; FC média dos tiros 156→169); aquecimento 1,87 km (FC média 128), desaquecimento 2,12 km (FC média 147); pace médio ~5:37/km; academia (tríceps, lombar) depois
-
-| # | vel. km/h | pace | duração/dist. | recup. | FC pico | FC fim rec. |
-|---|---|---|---|---|---|---|
-| 1 | 11.68 | 5:08/km | 3:36 / 701 m | 1:39 | 164 | – |
-| 2 | 11.6 | 5:10/km | 3:36 / 696 m | 1:37 | 165 | – |
-| 3 | 11.72 | 5:07/km | 3:35 / 700 m | 1:46 | 170 | – |
-| 4 | 11.97 | 5:01/km | 3:36 / 718 m | 1:38 | 171 | – |
-| 5 | 11.85 | 5:04/km | 3:36 / 711 m | 1:36 | 175 | – |
-| 6 | 11.8 | 5:05/km | 3:36 / 708 m | 1:06 | 175 | – |
 
 ## Academia — cargas por exercício
 
