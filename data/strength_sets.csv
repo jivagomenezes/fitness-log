@@ -560,3 +560,28 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-11-02,other,Levantamento Terra (Barra),1,normal,40,10,,,20835245228
 2026-11-02,other,Levantamento Terra (Barra),2,normal,60,10,,,20835245228
 2026-11-02,other,Levantamento Terra com Pernas Estendidas,1,normal,60,10,,,20835245228
+2026-11-05,other,Rosca Direta (Halter),1,normal,30,12,,,20874921099
+2026-11-05,other,Rosca Direta (Halter),2,normal,30,12,,,20874921099
+2026-11-05,other,Rosca Direta (Halter),3,normal,30,10,,,20874921099
+2026-11-05,other,Rosca Direta (Halter),4,failure,35,2,,,20874921099
+2026-11-05,other,Rosca Direta (Halter),5,drop,30,5,,,20874921099
+2026-11-05,other,Desenvolvimento de Ombros (Halter),1,normal,40,12,,,20874921099
+2026-11-05,other,Desenvolvimento de Ombros (Halter),2,normal,45,12,,,20874921099
+2026-11-05,other,Desenvolvimento de Ombros (Halter),3,normal,45,10,,,20874921099
+2026-11-05,other,Elevação Lateral (Halter),1,failure,20,20,,,20874921099
+2026-11-05,other,Elevação Lateral (Halter),2,normal,20,11,,,20874921099
+2026-11-05,other,Elevação Lateral (Halter),3,normal,20,11,,,20874921099
+2026-11-05,other,Supino Reto em Pé,1,warmup,40,12,,,20874921099
+2026-11-05,other,Supino Reto em Pé,2,normal,50,10,,,20874921099
+2026-11-05,other,Supino Reto em Pé,3,normal,60,10,,,20874921099
+2026-11-05,other,Supino Reto em Pé,4,failure,60,8,,,20874921099
+2026-11-05,other,Crucifixo Inclinado (Halter),1,normal,20,11,,,20874921099
+2026-11-05,other,Crucifixo Inclinado (Halter),2,normal,20,10,,,20874921099
+2026-11-05,other,Crucifixo Inclinado (Halter),3,failure,20,9,,,20874921099
+2026-11-05,other,Crossover na Polia,1,normal,30,10,,,20874921099
+2026-11-05,other,Crossover na Polia,2,normal,30,10,,,20874921099
+2026-11-05,other,Crossover na Polia,3,normal,30,10,,,20874921099
+2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),1,normal,27.5,15,,,20874921099
+2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),2,normal,32.5,13,,,20874921099
+2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),3,failure,35,7,,,20874921099
+2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),4,drop,30,4,,,20874921099
