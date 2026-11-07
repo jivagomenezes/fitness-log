@@ -585,3 +585,18 @@ date,workout,exercise,set,set_type,weight_kg,reps,rpe,notes,source_id
 2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),2,normal,32.5,13,,,20874921099
 2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),3,failure,35,7,,,20874921099
 2026-11-05,other,Extensão de Tríceps Acima da Cabeça (Cabo),4,drop,30,4,,,20874921099
+2026-11-07,other,Supino Inclinado (Máquina Smith),1,normal,50,11,,,20899526784
+2026-11-07,other,Supino Inclinado (Máquina Smith),2,normal,50,11,,,20899526784
+2026-11-07,other,Supino Inclinado (Máquina Smith),3,normal,60,10,,,20899526784
+2026-11-07,other,Rosca Direta (Halter),1,normal,30,10,,,20899526784
+2026-11-07,other,Rosca Direta (Halter),2,normal,35,8,,,20899526784
+2026-11-07,other,Rosca Direta (Halter),3,failure,35,7,,,20899526784
+2026-11-07,other,Extensão de Tríceps Acima da Cabeça (Cabo),1,normal,25,15,,,20899526784
+2026-11-07,other,Extensão de Tríceps Acima da Cabeça (Cabo),2,normal,25,13,,,20899526784
+2026-11-07,other,Extensão de Tríceps Acima da Cabeça (Cabo),3,failure,25,10,,,20899526784
+2026-11-07,other,Desenvolvimento de Ombros Sentado (Máquina),1,warmup,45,10,,,20899526784
+2026-11-07,other,Desenvolvimento de Ombros Sentado (Máquina),2,normal,45,10,,,20899526784
+2026-11-07,other,Desenvolvimento de Ombros Sentado (Máquina),3,normal,45,10,,,20899526784
+2026-11-07,other,Puxada Alta (Cabo),1,normal,55,11,,,20899526784
+2026-11-07,other,Puxada Alta (Cabo),2,normal,55,10,,,20899526784
+2026-11-07,other,Puxada Alta (Cabo),3,normal,55,10,,,20899526784
