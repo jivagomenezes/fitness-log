@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-09 08:50. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-09 22:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** seg 09/11/2026 · **Bloco 5K:** semana 8 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -13,9 +13,9 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| seg 09/11 (hoje) | descanso / sem registro | – |
-| dom 08/11 | descanso / sem registro | – · – · – · 51 ms |
-| sáb 07/11 | 🏋️ treino outro (14 séries, 5 exercícios) | – · – · – · 63 ms · 15.3k passos |
+| seg 09/11 (hoje) | descanso / sem registro | – · – · – · 57 ms · 6.3k passos |
+| dom 08/11 | descanso / sem registro | – · – · – · 51 ms · 4.1k passos |
+| sáb 07/11 | 🏋️ treino outro (14 séries, 5 exercícios) | – · – · – · 63 ms · 17.2k passos |
 | sex 06/11 | descanso / sem registro | – · – · – · 59 ms · 7.1k passos |
 | qui 05/11 | 🏋️ treino outro (24 séries, 7 exercícios) | – · – · – · 63 ms · 16.6k passos |
 | qua 04/11 | descanso / sem registro | – · – · – · 51 ms · 14.5k passos |
@@ -167,12 +167,12 @@ Séries por grupo muscular (últimos 7 dias): peito 12, biceps 8, ombro 8, trice
 | recuperação Bevel (%) | – | – | 0/0 |
 | esforço Bevel (%) | – | – | 0/0 |
 | sono Bevel (%) | – | – | 0/0 |
-| HRV noite (ms) | 57.3 | 54.7 | 6/27 |
-| FC repouso | 58 | 59.5 | 5/26 |
-| sono (h) | 7.3 | 7.2 | 5/26 |
-| sono profundo (h) | 0.7 | 0.7 | 5/26 |
-| sono REM (h) | 2.1 | 2 | 5/26 |
-| passos | 15015 | 12443 | 5/26 |
-| kcal ativas | 1015 | 935 | 5/26 |
-| kcal em repouso | 1936 | 1868 | 5/26 |
+| HRV noite (ms) | 57.3 | 54.7 | 7/27 |
+| FC repouso | 59 | 59.5 | 7/26 |
+| sono (h) | 7.4 | 7.2 | 7/26 |
+| sono profundo (h) | 0.7 | 0.7 | 7/26 |
+| sono REM (h) | 2.2 | 2 | 7/26 |
+| passos | 12492 | 12443 | 7/26 |
+| kcal ativas | 869 | 935 | 7/26 |
+| kcal em repouso | 1939 | 1868 | 7/26 |
 | VO2máx estimado (Watch) | 50.4 | 49.6 | 1/5 |
