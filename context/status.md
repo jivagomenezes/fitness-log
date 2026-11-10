@@ -1,8 +1,8 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-09 22:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-10 08:50. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** seg 09/11/2026 · **Bloco 5K:** semana 8 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** ter 10/11/2026 · **Bloco 5K:** semana 8 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
@@ -13,7 +13,8 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| seg 09/11 (hoje) | descanso / sem registro | – · – · – · 57 ms · 6.3k passos |
+| ter 10/11 (hoje) | descanso / sem registro | – · – · – · 64 ms |
+| seg 09/11 | descanso / sem registro | – · – · – · 57 ms · 6.3k passos |
 | dom 08/11 | descanso / sem registro | – · – · – · 51 ms · 4.1k passos |
 | sáb 07/11 | 🏋️ treino outro (14 séries, 5 exercícios) | – · – · – · 63 ms · 17.2k passos |
 | sex 06/11 | descanso / sem registro | – · – · – · 59 ms · 7.1k passos |
@@ -26,7 +27,6 @@
 | sex 30/10 | descanso / sem registro | – · – · – · 49 ms · 6.1k passos |
 | qui 29/10 | 🏃 z2 7.49 km, 5:59/km, FC 147 | – · – · – · 58 ms · 19.6k passos |
 | qua 28/10 | 🏋️ treino outro (31 séries, 9 exercícios) | – · – · – · 53 ms · 12.3k passos |
-| ter 27/10 | 🏃 z2 6.01 km, 5:54/km, FC 146 | – · – · – · 69 ms · 19.0k passos |
 
 ## Volume semanal
 
@@ -167,12 +167,12 @@ Séries por grupo muscular (últimos 7 dias): peito 12, biceps 8, ombro 8, trice
 | recuperação Bevel (%) | – | – | 0/0 |
 | esforço Bevel (%) | – | – | 0/0 |
 | sono Bevel (%) | – | – | 0/0 |
-| HRV noite (ms) | 57.3 | 54.7 | 7/27 |
-| FC repouso | 59 | 59.5 | 7/26 |
-| sono (h) | 7.4 | 7.2 | 7/26 |
-| sono profundo (h) | 0.7 | 0.7 | 7/26 |
-| sono REM (h) | 2.2 | 2 | 7/26 |
-| passos | 12492 | 12443 | 7/26 |
-| kcal ativas | 869 | 935 | 7/26 |
-| kcal em repouso | 1939 | 1868 | 7/26 |
-| VO2máx estimado (Watch) | 50.4 | 49.6 | 1/5 |
+| HRV noite (ms) | 58.3 | 55.1 | 7/27 |
+| FC repouso | 59.2 | 59.5 | 6/26 |
+| sono (h) | 7.4 | 7.2 | 6/26 |
+| sono profundo (h) | 0.7 | 0.7 | 6/26 |
+| sono REM (h) | 2.2 | 2.1 | 6/26 |
+| passos | 10978 | 13140 | 6/26 |
+| kcal ativas | 782 | 976 | 6/26 |
+| kcal em repouso | 1933 | 1871 | 6/26 |
+| VO2máx estimado (Watch) | – | 49.8 | 0/6 |
