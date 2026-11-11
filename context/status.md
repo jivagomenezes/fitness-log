@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-11 08:50. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-11 22:52. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 11/11/2026 · **Bloco 5K:** semana 8 de 13 (início 21/09/2026) · **FC máx:** 192
 
@@ -13,7 +13,7 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 11/11 (hoje) | descanso / sem registro | – · – · – · 49 ms |
+| qua 11/11 (hoje) | 🏋️ treino outro (25 séries, 8 exercícios) | – · – · – · 49 ms |
 | ter 10/11 | 🏃 intervalado 10.02 km, 6:07/km, FC 156 | – · – · – · 64 ms · 17.6k passos |
 | seg 09/11 | descanso / sem registro | – · – · – · 57 ms · 7.4k passos |
 | dom 08/11 | descanso / sem registro | – · – · – · 51 ms · 4.1k passos |
@@ -32,7 +32,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 09/11 (atual) | 10 | 1 | – | 0 | 0 | 0 |
+| 09/11 (atual) | 10 | 1 | – | 1 | 25 | 9245 |
 | 02/11 | 16.3 | 3 | – | 3 | 56 | 18390 |
 | 26/10 | 21.5 | 3 | – | 2 | 53 | 18040 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
@@ -90,7 +90,6 @@
 | A | panturrilha | Panturrilha Sentado (Máquina) | 01/10 | 40 kg × 16 | 3 | – |  |
 | A | panturrilha | Panturrilha em Pé Unilateral (Máquina) | 23/09 | 55 kg × 12 | 4 | – |  |
 | A | quadriceps | Agachamento (Barra) | 01/10 | 80 kg × 9 | 3 | – |  |
-| A | quadriceps | Agachamento (Smith) | 23/09 | 60 kg × 10 | 4 | – |  |
 | A | quadriceps | Agachamento Búlgaro (Halter) | 23/09 | 20 kg × 20 | 4 | – |  |
 | A | quadriceps | Agachamento Hack (Máquina) | 01/10 | 50 kg × 11 | 2 | – |  |
 | A | quadriceps | Agachamento Pêndulo (Máquina) | 04/09 | 30 kg × 10 | 3 | – |  |
@@ -102,7 +101,7 @@
 | C | ombro | Crucifixo Invertido (Halter) | 15/09 | 14 kg × 12 | 3 | – |  |
 | outro | adutor | Cadeira Adutora (Máquina) | 24/10 | 75 kg × 10 | 2 | 50 kg × 10 | ↑ |
 | outro | biceps | Rosca Acima da Cabeça (Cabo) | 04/10 | 30 kg × 6 | 4 | – |  |
-| outro | biceps | Rosca Direta (Halter) | 07/11 | 35 kg × 8 | 3 | 35 kg × 2 | ↑ |
+| outro | biceps | Rosca Direta (Halter) | 11/11 | 35 kg × 8 | 3 | 35 kg × 8 | → |
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Martelo (Cabo) | 22/10 | 17.5 kg × 11 | 2 | – |  |
 | outro | biceps | Rosca Scott (Barra) | 04/10 | 30 kg × 10 | 3 | 25 kg × 15 | ↑ |
@@ -123,6 +122,7 @@
 | outro | lower_back | Levantamento Terra (Barra) | 02/11 | 60 kg × 10 | 2 | – |  |
 | outro | ombro | Crucifixo Invertido (Máquina) | 24/10 | 15 kg × 12 | 1 | 20 kg × 10 | ↓ |
 | outro | ombro | Desenvolvimento (Halter) | 19/10 | 40 kg × 11 | 3 | 35 kg × 10 | ↑ |
+| outro | ombro | Desenvolvimento (Máquina Smith) | 11/11 | 40 kg × 10 | 3 | – |  |
 | outro | ombro | Desenvolvimento de Ombros (Halter) | 05/11 | 45 kg × 12 | 3 | 35 kg × 11 | ↑ |
 | outro | ombro | Desenvolvimento de Ombros Sentado (Máquina) | 07/11 | 45 kg × 10 | 2 | 75 kg × 10 | ↓ |
 | outro | ombro | Elevação Lateral (Cabo) | 02/11 | 7.5 kg × 15 | 5 | 15 kg × 20 | ↓ |
@@ -130,8 +130,8 @@
 | outro | ombro | Elevação Lateral (Máquina) | 01/11 | 25 kg × 8 | 4 | 20 kg × 12 | ↑ |
 | outro | ombro | Face Pull | 04/10 | 17.5 kg × 20 | 3 | 15 kg × 10 | ↑ |
 | outro | peito | Crossover na Polia | 05/11 | 30 kg × 10 | 3 | 25 kg × 12 | ↑ |
-| outro | peito | Crucifixo (Máquina) | 01/11 | 30 kg × 11 | 3 | 25 kg × 13 | ↑ |
-| outro | peito | Crucifixo Baixo (Cabo) | 24/10 | 15 kg × 12 | 3 | – |  |
+| outro | peito | Crucifixo (Máquina) | 11/11 | 30 kg × 11 | 3 | 30 kg × 11 | → |
+| outro | peito | Crucifixo Baixo (Cabo) | 11/11 | 15 kg × 12 | 2 | 15 kg × 12 | → |
 | outro | peito | Crucifixo Inclinado (Halter) | 05/11 | 20 kg × 11 | 3 | 20 kg × 9 | ↑ |
 | outro | peito | Pullover (Halter) | 19/10 | 17.5 kg × 12 | 3 | – |  |
 | outro | peito | Supino Inclinado (Halter) | 28/10 | 50 kg × 10 | 3 | 45 kg × 12 | ↑ |
@@ -140,24 +140,25 @@
 | outro | peito | Supino Reto (Barra) | 11/09 | 65 kg × 9 | 4 | – |  |
 | outro | peito | Supino Reto (Smith) | 01/11 | 60 kg × 10 | 3 | – |  |
 | outro | peito | Supino Reto em Pé | 05/11 | 60 kg × 10 | 3 | 60 kg × 10 | → |
-| outro | peito | Supino Sentado (Máquina) | 07/10 | 45 kg × 10 | 3 | – |  |
-| outro | posterior | Cadeira Flexora (Máquina) | 28/10 | 35 kg × 20 | 4 | 50 kg × 10 | ↓ |
+| outro | peito | Supino Sentado (Máquina) | 11/11 | 40 kg × 11 | 3 | 45 kg × 10 | ↓ |
+| outro | posterior | Cadeira Flexora (Máquina) | 11/11 | 30 kg × 30 | 4 | 35 kg × 20 | ↓ |
 | outro | posterior | Levantamento Terra com Pernas Estendidas | 02/11 | 60 kg × 10 | 1 | 45 kg × 10 | ↑ |
 | outro | posterior | Mesa Flexora (Máquina) | 28/10 | 25 kg × 20 | 3 | 25 kg × 20 | → |
+| outro | quadriceps | Agachamento (Smith) | 11/11 | 70 kg × 10 | 3 | 60 kg × 10 | ↑ |
 | outro | quadriceps | Cadeira Extensora (Máquina) | 16/10 | 65 kg × 12 | 3 | – |  |
 | outro | quadriceps | Cadeira Extensora Unilateral (Máquina) | 22/10 | 30 kg × 24 | 2 | – |  |
 | outro | quadriceps | Leg Press 45º (Máquina) | 10/10 | 70 kg × 14 | 1 | – |  |
 | outro | quadriceps | Leg Press Unilateral (Máquina) | 10/10 | 55 kg × 20 | 2 | – |  |
 | outro | triceps | Extensão de Tríceps (Corda) | 28/09 | 21 kg × 10 | 3 | – |  |
 | outro | triceps | Extensão de Tríceps (Máquina) | 07/10 | 40 kg × 13 | 3 | 45 kg × 10 | ↓ |
-| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 07/11 | 25 kg × 15 | 3 | 35 kg × 7 | ↓ |
+| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 11/11 | 7.5 kg × 30 | 4 | 25 kg × 15 | ↓ |
 | outro | triceps | Extensão de Tríceps Unilateral (Halter) | 07/10 | 10 kg × 18 | 2 | 10 kg × 24 | ↓ |
 | outro | triceps | Tríceps Coice (Cabo) | 19/10 | 5 kg × 20 | 2 | 5 kg × 20 | → |
 | outro | triceps | Tríceps Coice (Halter) | 07/10 | 8 kg × 20 | 3 | – |  |
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 28/10 | 15 kg × 10 | 4 | 5 kg × 20 | ↑ |
 | outro | triceps | Tríceps na Polia com Corda | 24/10 | 12.5 kg × 15 | 3 | 15 kg × 20 | ↓ |
 
-Séries por grupo muscular (últimos 7 dias): peito 12, biceps 8, ombro 8, triceps 7, costas 3
+Séries por grupo muscular (últimos 7 dias): peito 20, biceps 11, ombro 11, triceps 11, posterior 4, costas 3, quadriceps 3
 
 ## Recuperação
 
