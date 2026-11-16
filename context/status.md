@@ -1,19 +1,21 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-15 22:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-16 08:51. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** dom 15/11/2026 · **Bloco 5K:** semana 8 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** seg 16/11/2026 · **Bloco 5K:** semana 9 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
 - Tiro 2 de 03/11 com FC pico 184 (≥ 183) — conferir se era a intenção da fase.
-- Semana de 02/11: só 51% do km em treinos fáceis (alvo ~80%; sem dados de zona).
+- Semana de 09/11: 21.0 km, +29% sobre a anterior (16.3 km).
+- Semana de 09/11: só 52% do km em treinos fáceis (alvo ~80%; sem dados de zona).
 
 ## Últimos 14 dias
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| dom 15/11 (hoje) | descanso / sem registro | – · – · – · 62 ms |
+| seg 16/11 (hoje) | descanso / sem registro | – |
+| dom 15/11 | descanso / sem registro | – · – · – · 62 ms |
 | sáb 14/11 | descanso / sem registro | – · – · – · 69 ms · 2.8k passos |
 | sex 13/11 | descanso / sem registro | – · – · – · 54 ms · 10.6k passos |
 | qui 12/11 | 🏃 z2 11 km, 6:34/km, FC 147 | – · – · – · 53 ms · 22.5k passos |
@@ -26,18 +28,17 @@
 | qui 05/11 | 🏋️ treino outro (24 séries, 7 exercícios) | – · – · – · 63 ms · 16.6k passos |
 | qua 04/11 | descanso / sem registro | – · – · – · 51 ms · 14.5k passos |
 | ter 03/11 | 🏃 z2 1.28 km, 6:04/km, FC 143; 🏃 intervalado 8.01 km, 6:12/km, FC 157 | – · – · – · 57 ms · 21.6k passos |
-| seg 02/11 | 🏋️ treino outro (18 séries, 6 exercícios) | – · – · – · 55 ms · 7.4k passos |
 
 ## Volume semanal
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 09/11 (atual) | 21 | 2 | – | 1 | 25 | 9245 |
+| 16/11 (atual) | 0 | 0 | – | 0 | 0 | 0 |
+| 09/11 | 21 | 2 | – | 1 | 25 | 9245 |
 | 02/11 | 16.3 | 3 | – | 3 | 56 | 18390 |
 | 26/10 | 21.5 | 3 | – | 2 | 53 | 18040 |
 | 19/10 | 26.1 | 4 | – | 3 | 89 | 30800 |
 | 12/10 | 33.1 | 3 | – | 3 | 55 | 17210 |
-| 05/10 | 32 | 4 | – | 3 | 60 | 23923 |
 
 ## Provas e recordes
 
@@ -167,12 +168,12 @@ Séries por grupo muscular (últimos 7 dias): peito 8, triceps 4, posterior 4, b
 | recuperação Bevel (%) | – | – | 0/0 |
 | esforço Bevel (%) | – | – | 0/0 |
 | sono Bevel (%) | – | – | 0/0 |
-| HRV noite (ms) | 58.3 | 55.6 | 7/27 |
-| FC repouso | 60.2 | 59.6 | 5/27 |
-| sono (h) | 7 | 7.3 | 5/27 |
-| sono profundo (h) | 0.6 | 0.7 | 5/27 |
-| sono REM (h) | 2 | 2.1 | 5/27 |
-| passos | 12191 | 12890 | 5/27 |
-| kcal ativas | 901 | 951 | 5/27 |
-| kcal em repouso | 1892 | 1911 | 5/27 |
+| HRV noite (ms) | 58.5 | 55.6 | 6/27 |
+| FC repouso | 61.2 | 59.6 | 4/27 |
+| sono (h) | 7.2 | 7.3 | 4/27 |
+| sono profundo (h) | 0.5 | 0.7 | 4/27 |
+| sono REM (h) | 2 | 2.1 | 4/27 |
+| passos | 13380 | 12815 | 4/27 |
+| kcal ativas | 996 | 933 | 4/27 |
+| kcal em repouso | 1874 | 1910 | 4/27 |
 | VO2máx estimado (Watch) | 50 | 50 | 1/5 |
