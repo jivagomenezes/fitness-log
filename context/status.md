@@ -1,6 +1,6 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-17 08:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-17 22:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** ter 17/11/2026 · **Bloco 5K:** semana 9 de 13 (início 21/09/2026) · **FC máx:** 192
 
