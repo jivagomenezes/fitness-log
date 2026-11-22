@@ -1,8 +1,8 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-21 08:50. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-22 08:51. Não editar à mão. O plano está em `plano.md`.
 
-**Hoje:** sáb 21/11/2026 · **Bloco 5K:** semana 9 de 13 (início 21/09/2026) · **FC máx:** 192
+**Hoje:** dom 22/11/2026 · **Bloco 5K:** semana 9 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
@@ -13,7 +13,8 @@
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| sáb 21/11 (hoje) | descanso / sem registro | – · – · – · 59 ms · 0.2k passos |
+| dom 22/11 (hoje) | descanso / sem registro | – |
+| sáb 21/11 | descanso / sem registro | – · – · – · 59 ms · 0.2k passos |
 | sex 20/11 | descanso / sem registro | – · – · – · 57 ms · 7.4k passos |
 | qui 19/11 | descanso / sem registro | – · – · – · 51 ms · 3.9k passos |
 | qua 18/11 | descanso / sem registro | – · – · – · 49 ms · 12.4k passos |
@@ -26,7 +27,6 @@
 | qua 11/11 | 🏋️ treino outro (25 séries, 8 exercícios) | – · – · – · 49 ms |
 | ter 10/11 | 🏃 intervalado 10.02 km, 6:07/km, FC 156 | – · – · – · 64 ms · 17.6k passos |
 | seg 09/11 | descanso / sem registro | – · – · – · 57 ms · 7.4k passos |
-| dom 08/11 | descanso / sem registro | – · – · – · 51 ms · 4.1k passos |
 
 ## Volume semanal
 
@@ -165,12 +165,12 @@
 | recuperação Bevel (%) | – | – | 0/0 |
 | esforço Bevel (%) | – | – | 0/0 |
 | sono Bevel (%) | – | – | 0/0 |
-| HRV noite (ms) | 56.2 | 55.2 | 6/28 |
-| FC repouso | 58.4 | 59.9 | 5/27 |
-| sono (h) | 6.8 | 7.2 | 4/27 |
-| sono profundo (h) | 0.6 | 0.6 | 4/27 |
-| sono REM (h) | 1.6 | 2.1 | 4/27 |
-| passos | 7291 | 12799 | 5/27 |
-| kcal ativas | 461 | 941 | 5/27 |
-| kcal em repouso | 1686 | 1940 | 5/27 |
+| HRV noite (ms) | 55 | 55.9 | 5/28 |
+| FC repouso | 58.4 | 59.9 | 5/26 |
+| sono (h) | 6.8 | 7.2 | 4/26 |
+| sono profundo (h) | 0.6 | 0.6 | 4/26 |
+| sono REM (h) | 1.6 | 2.1 | 4/26 |
+| passos | 7291 | 12758 | 5/26 |
+| kcal ativas | 461 | 946 | 5/26 |
+| kcal em repouso | 1686 | 1938 | 5/26 |
 | VO2máx estimado (Watch) | 50.1 | 50.1 | 1/5 |
