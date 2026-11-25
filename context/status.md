@@ -1,20 +1,20 @@
 # Estado atual — fitness_log
 
-> Gerado automaticamente por `scripts/build_status.py` em 2026-11-25 08:51. Não editar à mão. O plano está em `plano.md`.
+> Gerado automaticamente por `scripts/build_status.py` em 2026-11-25 22:51. Não editar à mão. O plano está em `plano.md`.
 
 **Hoje:** qua 25/11/2026 · **Bloco 5K:** semana 10 de 13 (início 21/09/2026) · **FC máx:** 192
 
 ## Alertas
 
-- Último registro em 21/11 (4 dias) — pode haver treinos não registrados.
+- Nenhum.
 
 ## Últimos 14 dias
 
 | dia | atividades | recup. · esforço · sono (Bevel) · HRV · passos |
 |---|---|---|
-| qua 25/11 (hoje) | descanso / sem registro | – |
-| ter 24/11 | descanso / sem registro | – |
-| seg 23/11 | descanso / sem registro | – |
+| qua 25/11 (hoje) | 🏃 z2 5.02 km, 7:12/km, FC 146; 🏋️ treino outro (19 séries, 6 exercícios) | – · – · – · 63 ms · 10.9k passos |
+| ter 24/11 | descanso / sem registro | – · – · – · 52 ms · 10.2k passos |
+| seg 23/11 | 🏃 z2 6.09 km, 6:27/km, FC 143 | – · – · – · 49 ms · 12.5k passos |
 | dom 22/11 | descanso / sem registro | – |
 | sáb 21/11 | descanso / sem registro | – · – · – · 59 ms · 0.2k passos |
 | sex 20/11 | descanso / sem registro | – · – · – · 57 ms · 7.4k passos |
@@ -31,7 +31,7 @@
 
 | semana (seg) | km | corridas | % tempo Z1–2 (FC) | sessões academia | séries | tonelagem (kg) |
 |---|---|---|---|---|---|---|
-| 23/11 (atual) | 0 | 0 | – | 0 | 0 | 0 |
+| 23/11 (atual) | 11.1 | 2 | – | 1 | 19 | 6597 |
 | 16/11 | 0 | 0 | – | 0 | 0 | 0 |
 | 09/11 | 21 | 2 | – | 1 | 25 | 9245 |
 | 02/11 | 16.3 | 3 | – | 3 | 56 | 18390 |
@@ -53,12 +53,12 @@
 
 | data | tipo | local | km | tempo | pace | FC méd/máx | zonas Z1-2 · Z3 · Z4-5 | RPE | notas |
 |---|---|---|---|---|---|---|---|---|---|
+| qua 25/11 | z2 | esteira | 5.02 | 36:11 | 7:12/km | 146/159 | – | – | Strava 'Indoor Running' sem descrição (esteira), logo depois da academia (Treino noturno 20:18); tipo a confirmar (inferido z2/recovery: 5 voltas de 1 km em 7:01–7:17 com FC média 142–147, máx 159 no 1º km); pace médio ~7:12/km; tempo decorrido 36:11 |
+| seg 23/11 | z2 | esteira | 6.09 | 39:18 | 6:27/km | 143/153 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido z2: volta inicial de 380 m a ~7:09/km (FC 124) + 5,71 km a ~6:24/km constante com FC média 144, máx 153); pace médio ~6:27/km; tempo decorrido 39:28 |
 | qui 12/11 | z2 | rua | 11 | 1:12:15 | 6:34/km | 147/163 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa: voltas no Jardim do Campo Grande); tipo a confirmar (inferido z2: ritmo constante ~6:34/km, voltas de 1000 m em 6:35–6:41 com FC média 146–149, máx 163; quinta-feira, fora dos dias de corrida do plano); melhores esforços no Strava: 5 km 32:27, 10 km 1:05:18; tempo decorrido 1:12:45 |
 | ter 10/11 | intervalado | esteira | 10.02 | 1:01:16 | 6:07/km | 156/180 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido interval pelas voltas: 5 tiros de 800–820 m em 3:37–3:56 (~13.6→12.5 km/h, mais lentos a cada tiro), rec ~1:38–2:09; FC média dos tiros 172/173/174/172/172, pico 177→180); aquecimento 2,77 km (FC média 134) + volta de 250 m; desaquecimento 1,08 km em 10:12 + 0,98 km em 7:20; tempo decorrido 1:02:06 |
 | sáb 07/11 | z2 | esteira | 7.06 | 40:02 | 5:40/km | 150/166 | – | – | Strava 'Indoor Running' sem descrição (esteira), logo depois da academia (Treino noturno 18:32); tipo a confirmar (inferido z2 com final progressivo: km 1–3 a ~5:57/5:41/5:44 (FC 130/146/148), km 4–5 a ~4:59/4:57 (FC média 158/164, máx 166, acima da Z2), km 6–7 a ~6:11/6:00 (FC 155/149)); tempo decorrido 40:02 |
 | ter 03/11 | intervalado | esteira | 8.01 | 49:38 | 6:12/km | 157/184 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido interval pelas voltas: 4 tiros de ~3:27–3:32 com ~800–810 m (~13.8–14.0 km/h), rec ~1:39–2:01; FC média dos tiros 166 / 179 / 170 / 171, máx 184 no 2º tiro); aquecimento 1,01 km (FC média 142) + 1,28 km na rua antes, desaquecimento 2,92 km (FC média 149); pace médio ~6:12/km; tempo decorrido 50:16 |
-| ter 03/11 | z2 | rua | 1.28 | 7:46 | 6:04/km | 143/150 | – | – | Strava 'Corrida ao entardecer' sem descrição (rua, Lisboa); tipo a confirmar (trecho curto de 1,28 km a ~6:04/km, FC média 143 / máx 150, logo antes da esteira das 20:01 — provável aquecimento/deslocamento); tempo decorrido 7:49 |
-| dom 01/11 | tempo | esteira | 8.01 | 46:19 | 5:47/km | 152/168 | – | – | Strava 'Indoor Running' sem descrição (esteira); tipo a confirmar (inferido tempo: 3 voltas — 2,01 km aquecimento em 13:01 (~6:29/km, FC 138/152), 4,11 km a ~4:53/km em 20:06 (FC média 162, máx 168), 1,89 km desaquecimento em 13:12 (~6:59/km, FC 150/164)); tempo decorrido 46:52; logo depois da academia (bíceps, remada, tríceps, peito, ombros) |
 
 ## Intervalados — tiros
 
@@ -100,7 +100,7 @@
 | C | ombro | Crucifixo Invertido (Halter) | 15/09 | 14 kg × 12 | 3 | – |  |
 | outro | adutor | Cadeira Adutora (Máquina) | 24/10 | 75 kg × 10 | 2 | 50 kg × 10 | ↑ |
 | outro | biceps | Rosca Acima da Cabeça (Cabo) | 04/10 | 30 kg × 6 | 4 | – |  |
-| outro | biceps | Rosca Direta (Halter) | 11/11 | 35 kg × 8 | 3 | 35 kg × 8 | → |
+| outro | biceps | Rosca Direta (Halter) | 25/11 | 35 kg × 8 | 4 | 35 kg × 8 | → |
 | outro | biceps | Rosca Direta (Máquina) | 02/09 | 20 kg × 20 | 3 | – |  |
 | outro | biceps | Rosca Martelo (Cabo) | 22/10 | 17.5 kg × 11 | 2 | – |  |
 | outro | biceps | Rosca Scott (Barra) | 04/10 | 30 kg × 10 | 3 | 25 kg × 15 | ↑ |
@@ -122,7 +122,7 @@
 | outro | ombro | Crucifixo Invertido (Máquina) | 24/10 | 15 kg × 12 | 1 | 20 kg × 10 | ↓ |
 | outro | ombro | Desenvolvimento (Halter) | 19/10 | 40 kg × 11 | 3 | 35 kg × 10 | ↑ |
 | outro | ombro | Desenvolvimento (Máquina Smith) | 11/11 | 40 kg × 10 | 3 | – |  |
-| outro | ombro | Desenvolvimento de Ombros (Halter) | 05/11 | 45 kg × 12 | 3 | 35 kg × 11 | ↑ |
+| outro | ombro | Desenvolvimento de Ombros (Halter) | 25/11 | 50 kg × 8 | 3 | 45 kg × 12 | ↑ |
 | outro | ombro | Desenvolvimento de Ombros Sentado (Máquina) | 07/11 | 45 kg × 10 | 2 | 75 kg × 10 | ↓ |
 | outro | ombro | Elevação Lateral (Cabo) | 02/11 | 7.5 kg × 15 | 5 | 15 kg × 20 | ↓ |
 | outro | ombro | Elevação Lateral (Halter) | 05/11 | 20 kg × 20 | 3 | 20 kg × 16 | ↑ |
@@ -130,16 +130,16 @@
 | outro | ombro | Face Pull | 04/10 | 17.5 kg × 20 | 3 | 15 kg × 10 | ↑ |
 | outro | peito | Crossover na Polia | 05/11 | 30 kg × 10 | 3 | 25 kg × 12 | ↑ |
 | outro | peito | Crucifixo (Máquina) | 11/11 | 30 kg × 11 | 3 | 30 kg × 11 | → |
-| outro | peito | Crucifixo Baixo (Cabo) | 11/11 | 15 kg × 12 | 2 | 15 kg × 12 | → |
+| outro | peito | Crucifixo Baixo (Cabo) | 25/11 | 25 kg × 10 | 3 | 15 kg × 12 | ↑ |
 | outro | peito | Crucifixo Inclinado (Halter) | 05/11 | 20 kg × 11 | 3 | 20 kg × 9 | ↑ |
 | outro | peito | Pullover (Halter) | 19/10 | 17.5 kg × 12 | 3 | – |  |
 | outro | peito | Supino Inclinado (Halter) | 28/10 | 50 kg × 10 | 3 | 45 kg × 12 | ↑ |
-| outro | peito | Supino Inclinado (Máquina Smith) | 07/11 | 60 kg × 10 | 3 | 60 kg × 8 | ↑ |
+| outro | peito | Supino Inclinado (Máquina Smith) | 25/11 | 60 kg × 19 | 3 | 60 kg × 10 | ↑ |
 | outro | peito | Supino Iso-Lateral (Máquina) | 07/10 | 70 kg × 11 | 6 | 70 kg × 10 | ↑ |
 | outro | peito | Supino Reto (Barra) | 11/09 | 65 kg × 9 | 4 | – |  |
 | outro | peito | Supino Reto (Smith) | 01/11 | 60 kg × 10 | 3 | – |  |
 | outro | peito | Supino Reto em Pé | 05/11 | 60 kg × 10 | 3 | 60 kg × 10 | → |
-| outro | peito | Supino Sentado (Máquina) | 11/11 | 40 kg × 11 | 3 | 45 kg × 10 | ↓ |
+| outro | peito | Supino Sentado (Máquina) | 25/11 | 45 kg × 9 | 2 | 40 kg × 11 | ↑ |
 | outro | posterior | Cadeira Flexora (Máquina) | 11/11 | 30 kg × 30 | 4 | 35 kg × 20 | ↓ |
 | outro | posterior | Levantamento Terra com Pernas Estendidas | 02/11 | 60 kg × 10 | 1 | 45 kg × 10 | ↑ |
 | outro | posterior | Mesa Flexora (Máquina) | 28/10 | 25 kg × 20 | 3 | 25 kg × 20 | → |
@@ -150,12 +150,14 @@
 | outro | quadriceps | Leg Press Unilateral (Máquina) | 10/10 | 55 kg × 20 | 2 | – |  |
 | outro | triceps | Extensão de Tríceps (Corda) | 28/09 | 21 kg × 10 | 3 | – |  |
 | outro | triceps | Extensão de Tríceps (Máquina) | 07/10 | 40 kg × 13 | 3 | 45 kg × 10 | ↓ |
-| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 11/11 | 7.5 kg × 30 | 4 | 25 kg × 15 | ↓ |
+| outro | triceps | Extensão de Tríceps Acima da Cabeça (Cabo) | 25/11 | 10 kg × 20 | 4 | 7.5 kg × 30 | ↑ |
 | outro | triceps | Extensão de Tríceps Unilateral (Halter) | 07/10 | 10 kg × 18 | 2 | 10 kg × 24 | ↓ |
 | outro | triceps | Tríceps Coice (Cabo) | 19/10 | 5 kg × 20 | 2 | 5 kg × 20 | → |
 | outro | triceps | Tríceps Coice (Halter) | 07/10 | 8 kg × 20 | 3 | – |  |
 | outro | triceps | Tríceps na Polia Unilateral (Cabo) | 28/10 | 15 kg × 10 | 4 | 5 kg × 20 | ↑ |
 | outro | triceps | Tríceps na Polia com Corda | 24/10 | 12.5 kg × 15 | 3 | 15 kg × 20 | ↓ |
+
+Séries por grupo muscular (últimos 7 dias): peito 8, biceps 4, triceps 4, ombro 3
 
 ## Recuperação
 
@@ -164,12 +166,12 @@
 | recuperação Bevel (%) | – | – | 0/0 |
 | esforço Bevel (%) | – | – | 0/0 |
 | sono Bevel (%) | – | – | 0/0 |
-| HRV noite (ms) | 55.7 | 55.6 | 3/27 |
-| FC repouso | 56.7 | 60.4 | 3/25 |
-| sono (h) | 7.2 | 7.2 | 2/25 |
-| sono profundo (h) | 0.5 | 0.7 | 2/25 |
-| sono REM (h) | 1.5 | 2.1 | 2/25 |
-| passos | 3817 | 12807 | 3/25 |
-| kcal ativas | 286 | 926 | 3/25 |
-| kcal em repouso | 1478 | 1945 | 3/25 |
+| HRV noite (ms) | 55.2 | 55.6 | 6/27 |
+| FC repouso | 57.2 | 60.4 | 6/25 |
+| sono (h) | 7 | 7.2 | 5/25 |
+| sono profundo (h) | 0.7 | 0.7 | 5/25 |
+| sono REM (h) | 1.4 | 2.1 | 5/25 |
+| passos | 7520 | 12807 | 6/25 |
+| kcal ativas | 558 | 926 | 6/25 |
+| kcal em repouso | 1692 | 1945 | 6/25 |
 | VO2máx estimado (Watch) | – | 50.1 | 0/6 |
